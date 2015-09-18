@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{5}{0}{1}
+\beamer@subsectionintoc {1}{1}{Why Measurement Theory?}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Our Game}{10}{0}{1}
+\beamer@subsectionintoc {1}{3}{The Math of Measurement Theory}{15}{0}{1}
+\beamer@subsectionintoc {1}{4}{Discrimination Strategies}{25}{0}{1}
+\beamer@sectionintoc {2}{Subspace Measurements}{38}{0}{2}
+\beamer@subsectionintoc {2}{1}{Two Subspaces}{38}{0}{2}
+\beamer@subsectionintoc {2}{2}{General Solution}{45}{0}{2}
+\beamer@sectionintoc {3}{Future Work}{74}{0}{3}
+\beamer@subsectionintoc {3}{1}{2D Mixed States}{74}{0}{3}

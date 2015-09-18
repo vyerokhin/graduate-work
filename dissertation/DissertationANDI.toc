@@ -1,0 +1,43 @@
+\select@language {english}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{viii}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Quantum State Discrimination }}{1}
+\contentsline {subsection}{\tocsubsection {}{1.0.1}{Standard Quantum Measurements}}{2}
+\contentsline {subsection}{\tocsubsection {}{1.0.2}{POVMs}}{3}
+\contentsline {section}{\tocsection {}{1.1}{Unambiguous Discrimination}}{4}
+\contentsline {subsection}{\tocsubsection {}{1.1.1}{Unambiguous Discrimination: Two pure states via POVM}}{4}
+\contentsline {subsection}{\tocsubsection {}{1.1.2}{Unambiguous Discrimination: Two pure states via Neumark's Theorem}}{9}
+\contentsline {section}{\tocsection {}{1.2}{Minimum Error Discrimination}}{11}
+\contentsline {subsection}{\tocsubsection {}{1.2.1}{Minimum Error: Two mixed states via POVM }}{12}
+\contentsline {subsection}{\tocsubsection {}{1.2.2}{Minimum Error: Two pure states via Neumark's theorem }}{14}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Optimal discrimination of a certain class of mixed states with a fixed rate of inconclusive outcome (FRIO)}}{18}
+\contentsline {section}{\tocsection {}{2.1}{Review of the FRIO solution for two pure states}}{18}
+\contentsline {section}{\tocsection {}{2.2}{FRIO discrimination of two Rank 2 mixed states}}{23}
+\contentsline {section}{\tocsection {}{2.3}{FRIO discrimination of two Rank $N$ mixed states, POVM regime}}{29}
+\contentsline {section}{\tocsection {}{2.4}{Projective regime}}{33}
+\contentsline {section}{\tocsection {}{2.5}{Summary and conclusion}}{35}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Quantum Cloning}}{37}
+\contentsline {section}{\tocsection {}{3.1}{No-Cloning Theorem}}{38}
+\contentsline {section}{\tocsection {}{3.2}{Exact cloning with failure rate}}{40}
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{Equal priors. }}{42}
+\contentsline {subsection}{\tocsubsection {}{3.2.2}{Unequal priors I}}{42}
+\contentsline {subsection}{\tocsubsection {}{3.2.3}{Unequal priors II}}{50}
+\contentsline {section}{\tocsection {}{3.3}{Exact Cloning then Unambiguous Discrimination. }}{53}
+\contentsline {subsection}{\tocsubsection {}{}{Equal priors}}{53}
+\contentsline {section}{\tocsection {}{3.4}{State Separation}}{55}
+\contentsline {subsection}{\tocsubsection {}{3.4.1}{State Separation: equal priors}}{56}
+\contentsline {subsection}{\tocsubsection {}{3.4.2}{State Separation: unequal priors }}{58}
+\contentsline {section}{\tocsection {}{3.5}{Deterministic State Dependent Quantum Cloning}}{61}
+\contentsline {section}{\tocsection {}{3.6}{Hybrid Cloning: Interpolation between exact and approximate cloning }}{67}
+\contentsline {subsection}{\tocsubsection {}{3.6.1}{Equal priors}}{67}
+\contentsline {subsection}{\tocsubsection {}{3.6.2}{General case}}{71}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Experimental realization to FRIO}}{73}
+\contentsline {section}{\tocsection {}{4.1}{Analytical Solution of Interpolation}}{74}
+\contentsline {subsection}{\tocsubsection {}{4.1.1}{Equal priors. }}{75}
+\contentsline {subsection}{\tocsubsection {}{4.1.2}{Arbitrary priors }}{76}
+\contentsline {subsection}{\tocsubsection {}{4.1.3}{Transformation of the problem into the Helstrom form}}{77}
+\contentsline {section}{\tocsection {}{4.2}{Lagrange Multipliers Method}}{79}
+\contentsline {section}{\tocsection {}{4.3}{Choosing the physical implementation }}{83}
+\contentsline {section}{\tocsection {}{4.4}{Implementation: equal priors}}{85}
+\contentsline {section}{\tocsection {}{4.5}{Implementation: Unequal priors}}{89}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Appendix 1: Reck-Zeilinger Algorithm }}{95}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Appendix 2: Lagrange Multipliers}}{99}

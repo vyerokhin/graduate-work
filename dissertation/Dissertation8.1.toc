@@ -1,0 +1,60 @@
+\select@language {english}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Acknowledgements}}{v}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{vii}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}
+\contentsline {section}{\tocsection {}{1.1}{On Why Quantum Information Theory Is Interesting}}{1}
+\contentsline {section}{\tocsection {}{1.2}{State Representation and Measurements }}{1}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Discrimination of Pure States}}{3}
+\contentsline {section}{\tocsection {}{2.1}{Minimum Error Discrimination}}{4}
+\contentsline {section}{\tocsection {}{2.2}{Unambiguous Discrimination}}{7}
+\contentsline {section}{\tocsection {}{2.3}{Interpolative Discrimination}}{9}
+\contentsline {subsection}{\tocsubsection {}{2.3.1}{Operator Transformation}}{9}
+\contentsline {subsection}{\tocsubsection {}{2.3.2}{Neumark Solution of Interpolation}}{9}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.3.2.1}{Equal Weights Solution}}{10}
+\contentsline {subsection}{\tocsubsection {}{2.3.3}{Full Solution}}{11}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Discrimination of Mixed States}}{13}
+\contentsline {section}{\tocsection {}{3.1}{Introduction}}{13}
+\contentsline {subsection}{\tocsubsection {}{3.1.1}{Minimum Error Discrimination}}{13}
+\contentsline {section}{\tocsection {}{3.2}{Mixed States with Jordan Structure}}{14}
+\contentsline {subsection}{\tocsubsection {}{3.2.1}{Subspaces formalism}}{17}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.1}{Two Subspaces}}{17}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.1.2}{Generalization to n subspaces}}{19}
+\contentsline {subsection}{\tocsubsection {}{3.2.2}{Lagrangian Optimization}}{20}
+\contentsline {subsection}{\tocsubsection {}{3.2.3}{Threshold Structure}}{20}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.3.1}{First iteration}}{21}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.3.2}{General iteration}}{21}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.3.3}{Continuity and intersection}}{22}
+\contentsline {subsection}{\tocsubsection {}{3.2.4}{Single-State Domain}}{22}
+\contentsline {subsection}{\tocsubsection {}{3.2.5}{Example}}{24}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.5.1}{First elimination}}{24}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.2.5.2}{Second elimination}}{25}
+\contentsline {section}{\tocsection {}{3.3}{Interpolative Mixed Qubit Discrimination}}{25}
+\contentsline {subsection}{\tocsubsection {}{3.3.1}{Case: ME limit}}{27}
+\contentsline {section}{\tocsection {}{3.4}{Confidence-Valued Measurements}}{27}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Cloning Pure States}}{28}
+\contentsline {subsection}{\tocsubsection {}{4.0.1}{No-Cloning Theorem}}{29}
+\contentsline {section}{\tocsection {}{4.1}{Deterministic Approximate Cloning}}{29}
+\contentsline {section}{\tocsection {}{4.2}{Probabilistic Exact Cloning}}{31}
+\contentsline {subsection}{\tocsubsection {}{4.2.1}{Geometric description of optimality}}{32}
+\contentsline {subsection}{\tocsubsection {}{4.2.2}{Parametrization}}{32}
+\contentsline {subsection}{\tocsubsection {}{4.2.3}{Optimization}}{34}
+\contentsline {subsection}{\tocsubsection {}{4.2.4}{Relation of perfect cloning with discrimination}}{35}
+\contentsline {section}{\tocsection {}{4.3}{Hybrid Cloning: Interpolation between exact and approximate cloning }}{37}
+\contentsline {subsection}{\tocsubsection {}{4.3.1}{Equal priors}}{38}
+\contentsline {subsection}{\tocsubsection {}{4.3.2}{General case}}{41}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{State Separation}}{43}
+\contentsline {section}{\tocsection {}{5.1}{State Separation: unequal priors }}{45}
+\contentsline {section}{\tocsection {}{5.2}{Maximum separation}}{45}
+\contentsline {section}{\tocsection {}{5.3}{Tradeoff between Maximum separation and failure rate}}{50}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Linear Optical Experimental Realizations}}{52}
+\contentsline {section}{\tocsection {}{6.1}{Reck-Zeilinger Algorithm and Single-Photon Interferometry }}{52}
+\contentsline {section}{\tocsection {}{6.2}{Implementation of Pure State Interpolative Discrimination}}{52}
+\contentsline {section}{\tocsection {}{6.3}{Implementation of State Separation }}{57}
+\contentsline {section}{\tocsection {}{6.4}{Implementation of Probabilistic Approximate Cloning}}{59}
+\contentsline {subsection}{\tocsubsection {}{6.4.1}{Shorter Separation Implementation}}{60}
+\contentsline {subsection}{\tocsubsection {}{6.4.2}{Deterministic Cloning Implementation}}{61}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Multi-Step Measurements and Information Loss}}{62}
+\contentsline {section}{\tocsection {}{7.1}{Measure and Prepare}}{62}
+\contentsline {section}{\tocsection {}{7.2}{Prepare and Measure}}{62}
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Appendix}}{63}
+\contentsline {section}{\tocsection {}{8.1}{Appendix 2: Lagrange Multipliers}}{63}

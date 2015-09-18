@@ -1,0 +1,1 @@
+\@doendnote{endnote3}{The value $t=1$ is most easily found by inspection. For $t=1$, the argument of $\protect \qopname  \relax o{cos}$ in the expression of $\protect \sqrt  p_1$ reads $$ {1\over 2}\protect \qopname  \relax o{arccos}(-s^m)+{1\over 2}\protect \qopname  \relax o{arccos}(s^m)={\pi \over 2} $$ for any value of $s^m>0$. }

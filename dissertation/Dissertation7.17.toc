@@ -1,0 +1,71 @@
+\select@language {english}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Acknowledgements}}{v}
+\contentsline {chapter}{\tocchapter {Chapter}{}{List of Figures}}{viii}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{1}
+\contentsline {section}{\tocsection {}{1.1}{Properties of Measurement Theory}}{1}
+\contentsline {section}{\tocsection {}{1.2}{State Representation and Measurements }}{1}
+\contentsline {subsection}{\tocsubsection {}{1.2.1}{Standard Quantum Measurements}}{3}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Discrimination of Pure States}}{4}
+\contentsline {section}{\tocsection {}{2.1}{Minimum Error Discrimination}}{5}
+\contentsline {section}{\tocsection {}{2.2}{Unambiguous Discrimination}}{8}
+\contentsline {section}{\tocsection {}{2.3}{Interpolative Discrimination}}{9}
+\contentsline {subsection}{\tocsubsection {}{2.3.1}{Operator Transformation}}{10}
+\contentsline {subsection}{\tocsubsection {}{2.3.2}{Neumark Solution of Interpolation}}{10}
+\contentsline {subsubsection}{\tocsubsubsection {}{2.3.2.1}{Equal Weights Solution}}{11}
+\contentsline {subsection}{\tocsubsection {}{2.3.3}{Full Solution}}{11}
+\contentsline {subsection}{\tocsubsection {}{2.3.4}{Transformation of the problem into the Helstrom form}}{13}
+\contentsline {subsection}{\tocsubsection {}{2.3.5}{Lagrange Multipliers Method}}{13}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Discrimination of Mixed States}}{14}
+\contentsline {section}{\tocsection {}{3.1}{Minimum Error Discrimination}}{14}
+\contentsline {section}{\tocsection {}{3.2}{Minimum Error: Two mixed states via POVM }}{14}
+\contentsline {section}{\tocsection {}{3.3}{Mixed States with Jordan Structure}}{14}
+\contentsline {subsection}{\tocsubsection {}{3.3.1}{Jordan Basis Structure}}{14}
+\contentsline {subsection}{\tocsubsection {}{3.3.2}{Subspaces formalism}}{17}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.2.1}{Two Subspaces}}{17}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.2.2}{Generalization to n subspaces}}{19}
+\contentsline {subsection}{\tocsubsection {}{3.3.3}{Lagrangian Optimization}}{19}
+\contentsline {subsection}{\tocsubsection {}{3.3.4}{Threshold Structure}}{20}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.4.1}{First iteration}}{21}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.4.2}{General iteration}}{21}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.4.3}{Continuity and intersection}}{22}
+\contentsline {subsection}{\tocsubsection {}{3.3.5}{Single-State Domain}}{22}
+\contentsline {subsection}{\tocsubsection {}{3.3.6}{Example}}{24}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.6.1}{First elimination}}{24}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.3.6.2}{Second elimination}}{24}
+\contentsline {section}{\tocsection {}{3.4}{Interpolative Mixed Qubit Discrimination}}{24}
+\contentsline {subsection}{\tocsubsection {}{3.4.1}{b Solution}}{27}
+\contentsline {subsection}{\tocsubsection {}{3.4.2}{Case: p=d}}{28}
+\contentsline {subsection}{\tocsubsection {}{3.4.3}{Case: d = 1}}{29}
+\contentsline {subsubsection}{\tocsubsubsection {}{3.4.3.1}{$\eta _1 = \eta _2$}}{29}
+\contentsline {subsection}{\tocsubsection {}{3.4.4}{Case: ME limit}}{29}
+\contentsline {subsection}{\tocsubsection {}{3.4.5}{Case: MC limit}}{30}
+\contentsline {subsection}{\tocsubsection {}{3.4.6}{General Optimization Arguments}}{30}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Cloning of Known States}}{32}
+\contentsline {section}{\tocsection {}{4.1}{No-Cloning Theorem}}{32}
+\contentsline {section}{\tocsection {}{4.2}{Deterministic Approximate Cloning}}{32}
+\contentsline {section}{\tocsection {}{4.3}{Probabilistic Exact Cloning}}{33}
+\contentsline {subsection}{\tocsubsection {}{4.3.1}{Equal priors. }}{40}
+\contentsline {subsection}{\tocsubsection {}{4.3.2}{Unequal priors I}}{40}
+\contentsline {subsection}{\tocsubsection {}{4.3.3}{Unequal priors II}}{40}
+\contentsline {section}{\tocsection {}{4.4}{Exact Cloning then Unambiguous Discrimination. *RENAME* }}{41}
+\contentsline {section}{\tocsection {}{4.5}{Hybrid Cloning: Interpolation between exact and approximate cloning }}{41}
+\contentsline {subsection}{\tocsubsection {}{4.5.1}{Equal priors}}{41}
+\contentsline {subsection}{\tocsubsection {}{4.5.2}{General case}}{41}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{State Separation}}{42}
+\contentsline {section}{\tocsection {}{5.1}{Minimum failure probability for a fixed degree of separation}}{48}
+\contentsline {section}{\tocsection {}{5.2}{State Separation: unequal priors }}{50}
+\contentsline {section}{\tocsection {}{5.3}{Maximum separation}}{50}
+\contentsline {section}{\tocsection {}{5.4}{Tradeoff between Maximum separation and failure rate}}{56}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Linear Optical Experimental Realizations}}{58}
+\contentsline {section}{\tocsection {}{6.1}{Implementation of Pure State Interpolative Discrimination}}{58}
+\contentsline {section}{\tocsection {}{6.2}{First Measurement}}{58}
+\contentsline {subsection}{\tocsubsection {}{6.2.1}{Equal A-priori Probabilities}}{60}
+\contentsline {subsection}{\tocsubsection {}{6.2.2}{General A-priori Probabilities}}{62}
+\contentsline {subsection}{\tocsubsection {}{6.2.3}{Second Measurement}}{63}
+\contentsline {subsubsection}{\tocsubsubsection {}{6.2.3.1}{Example}}{64}
+\contentsline {section}{\tocsection {}{6.3}{Implementation of State Separation }}{64}
+\contentsline {section}{\tocsection {}{6.4}{Implementation of Probabilistic Approximate Cloning}}{66}
+\contentsline {section}{\tocsection {}{6.5}{Implementation: Unequal priors}}{67}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Appendix}}{68}
+\contentsline {section}{\tocsection {}{7.1}{Appendix 1: Reck-Zeilinger Algorithm }}{68}
+\contentsline {section}{\tocsection {}{7.2}{Appendix 2: Lagrange Multipliers}}{68}

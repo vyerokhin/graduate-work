@@ -1,0 +1,384 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twocolumn,aps,pra,eqsecnum,showpacs]{revtex4}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{3}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\@ifundefined{textcolor}{}
+{%
+ \definecolor{BLACK}{gray}{0}
+ \definecolor{WHITE}{gray}{1}
+ \definecolor{RED}{rgb}{1,0,0}
+ \definecolor{GREEN}{rgb}{0,1,0}
+ \definecolor{BLUE}{rgb}{0,0,1}
+ \definecolor{CYAN}{cmyk}{1,0,0,0}
+ \definecolor{MAGENTA}{cmyk}{0,1,0,0}
+ \definecolor{YELLOW}{cmyk}{0,0,1,0}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+\usepackage{bm}\usepackage{bbm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \newcommand{\abs}[1]{\left|{#1}\right|}
+ \newcommand{\av}[1]{\left\langle #1 \right\rangle}
+ 
+  \newcommand{\br}[1]{\langle #1|}
+  \newcommand{\ke}[1]{|#1\rangle}
+  \newcommand{\bk}[2]{\langle #1|#2\rangle}
+  \newcommand{\kb}[2]{\ke{#1}\br{#2}}
+  \newcommand{\var}[2]{\langle #1,#2\rangle} 
+  
+  \newcommand{\al}[1]{^{(#1)}}
+  \newcommand{\da}{^\dagger} 
+  
+  \newcommand{\pt}[1]{\left( #1 \right)}
+  \newcommand{\pq}[1]{\left[ #1 \right]}
+  \newcommand{\pg}[1]{\left\{ #1 \right\}} 
+  
+  \newcommand{\lpt}[1]{\left( #1 \right.}
+  \newcommand{\lpq}[1]{\left[ #1 \right.]}
+  \newcommand{\lpg}[1]{\left\{ #1 \right.}
+  \newcommand{\rpt}[1]{\left. #1 \right)}
+  \newcommand{\rpq}[1]{\left. #1 \right]}
+  \newcommand{\rpg}[1]{\left. #1 \right\}} 
+  
+  \newcommand{\pp}[2]{ {\mbox{\scriptsize$
+  \begin{array}{c}
+  #1\\
+  #2
+  \end{array}$} } }  
+  
+  
+
+\makeatother
+
+\begin{document}
+\global\long\def\sandwich#1#2#3{ \left\langle #1\left|#2\right|#3\right\rangle }
+\global\long\def\ket#1{\left|#1\right>}
+\global\long\def\braket#1#2{\left\langle #1\mid#2\right\rangle }
+\global\long\def\bra#1{\left\langle #1\right|}
+\global\long\def\indep{\perp\!\!\!\perp}
+
+
+
+\title{Quantum State Separation and Interpolation Between Approximate and
+Probabilistic Exact Cloning}
+
+
+\author{$^{1}$, $^{2}$ }
+
+
+\affiliation{$^{1}$Department of Physics and Astronomy, Hunter College of the
+City University of New York, 695 Park Avenue, New York, NY 10065,
+USA\\
+\\
+ $^{2}$F\'{i}sica Teòrica: Informació i Fenòmens Quàntics, Universitat
+Autònoma de Barcelona, 08193 Bellaterra (Barcelona), Spain }
+
+
+\date{\today}
+\begin{abstract}
+%\cite{Chiribella2006,Chiribella2013,Fiurasek2002,Jimenez2010,Pomarico2011}\cite{Fiurasek2002} 
+We
+solve the problem of state separation of two known
+pure states in the general case where they have arbitrary
+a-priori probabilities. The solution emerges from a geometric formulation
+of the problem. This formulation also reveals a deeper connection
+between cloning and state discrimination. The results are then applied
+in designing a scheme for hybrid cloning which interpolates between
+approximate and probabilistic exact cloning. State separation and
+hybrid cloning are generalized schemes to well established state discrimination
+and cloning strategies. 
+\end{abstract}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Introduction}
+
+The strange nature of the microscopic world allows for communications (cite security) and computational(cite shor) tasks
+ impossible without quantum mechanics.  We aim to investigate the ultimate limits imposed by quantum mechanics on
+ communication and information processing in the more general context of probabilistic protocols. Examples are quantum cloning
+ and quantum discrimination, which we describe below. 
+The important common feature of these examples is that the output states must have a smaller overlap, thereby more distinguishable,
+ than the input states. A process by which the overlap of the output states is smaller than that of the input states is known as state separation.
+ State separation cannot be done deterministically, since it would imply that quantum states become more distinguishable.
+ No result concerning general prior probabilities are known so far. For reasons analogous to those discussed
+ in our PRL (symmetry,…), the equal prior solution may not be representative of general case. We provide 
+the general solution here and use it to obtain the optimal interpolating scheme for cloning (perfect-max fidelity).
+
+While it is impossible to always clone quantum states perfectly \cite{Dieks1982,Wootters1982},
+this leads to some unexpected advantages for quantum systems over
+classical ones in some communications protocols of practical relevance.
+A common example is stronger security in cryptographic key distribution,
+with recent works showing more applications \cite{Pomarico2011,Bartkiewicz2014}.
+Developments in cloning, including probabilistically perfect \cite{Duan1998}
+and approximate cloning \cite{Buzek1998} {[}{]} provide anchors for
+better understanding quantum theory as a whole, such as the relationship
+between the no-cloning and no-signaling theorems \cite{Barnum2007a},
+and fundamental limits on quantum measurements . In particular, cloning’s
+relationship with the fundamental limits of state discrimination will
+be central to this paper.
+
+In Exact Cloning one prepares perfect clones of the input states while
+allowing for some failure rate in which no clones have been produced
+and the states are discarded. In optimal unambigious discrimination
+(UD) the input states are made orthogonal and hence fully distinguishable.
+It was shown by Chefles and Barnett \cite{Chefles1998a} that these
+strategies are a special case of a more general scheme. Both have
+two outcomes: failure and success. In each strategy the overlap of
+the input states is decreased, in UD the overlap becomes zer, in Exact
+Cloning it is the overlap of the input states raised to the power
+of the desired number of the clones to be made, $s^{N}$. State separation
+unifies the two schemes as it produces states with an overlap in the
+range zero to $s^{N}.$ The authors showed the results for the case
+when the states are preapared with equal apriori probabilities. In
+liu of our recent work on probabilistic Exact Cloning {[} {]} where
+a geometric picture emerges we use similar tools to solve the more
+general state separation when the input states are prepared with different
+a priori probabilities. 
+
+The results are then applied to hybrid cloning, interpolation between
+probabilistic exact cloning and approximate cloning non-orthogonal
+quantum states which are also prepared with different a priori probabilities.
+Strategies for hybrid cloning when the incoming states are prepared
+with equal apriori probabilities are derived in \cite{Chefles1999}.
+In the limit of infinite number of copies the scheme reproduces that
+of minimum error state discrimination with a fixed rate of inconclusive
+results in \cite{Bagan2012}. 
+
+Both state separation and hybrid cloning can be seen as generalization
+schemes of well established state discrimination and cloning strategies.
+In essence state separation unified two well established strategies:
+The optimal UD and probabilistic Exact Cloning. Hybrid cloning unifies
+approximate cloning with probabilistic exact cloning. In the limit
+of producing infinite copies in unifies ME with UD. 
+
+
+\section{State Separation}
+
+We approach state separation via the Neumark formulation. The system
+is embedded in a larger Hilbert space where the extra degrees of freedom
+are customarily called the ancilla. Then a unitary transformation
+entangles the system degrees of freedom with those of the ancilla.
+The input states $\{|\psi_{1}\rangle_{s},|\psi_{2}\rangle_{s}\}$
+which live in the state Hilbert space $S$ are embedded with the ancilla
+$|i\rangle_{a}$ which live in the Hilbert space $A.$ Now the system
+and the ancilla live in the larger Hilbert space $H=S\varotimes A.$
+The incoming states in this larger Hilbert space can be written in
+the product form $\{|\psi_{1}\rangle_{s}|i\rangle_{a},|\psi_{2}\rangle_{s}|i\rangle_{a}\}.$
+The unitary should do the following: 
+
+\begin{eqnarray}
+U|\psi_{1}\rangle|i\rangle & = & \sqrt{p_{1}}|\phi_{1}\rangle|\alpha\rangle+\sqrt{q_{1}}|\Phi_{o}\rangle|f\rangle,\label{eq:separation1}\\
+U|\psi_{2}\rangle|i\rangle & = & \sqrt{p_{2}}|\phi_{2}\rangle|\alpha\rangle+\sqrt{q_{2}}|\Phi_{o}\rangle|f\rangle,\label{eq:separation2}
+\end{eqnarray}
+
+
+were $\ket{\alpha}$ and $\ket f$ are orthogonal. A projective measurement
+along the ancilla $\ket{\alpha}$ means that the states have succesfully
+become more distinguishable with a success rate of $p_{i}$, otherwise
+a measurement in the $\ket f$ space means that the process has failed
+to produce more distinguishable states and the states are discarded
+with a probability of $q_{i}.$ 
+
+The inner product of (\ref{eq:separation1}) with (\ref{eq:separation2})
+gives the unitarity constraint:
+
+\begin{equation}
+s=\sqrt{p_{1}p_{2}}s'+\sqrt{q_{1}q_{2}},\label{eq:constraint}
+\end{equation}
+
+
+where $s=|\braket{\psi_{1}}{\psi_{2}}|$ and $s'=|\braket{\phi_{1}}{\phi_{2}}|.$
+
+When the input states are prepared with equal priors $\eta_{1}=\eta_{2},$
+the solution is directly derived from Eq. (\ref{eq:constraint}) and no
+further optimization is neccessary: $s=ps'+q\Rightarrow p=(1-s)/(1-s').$
+For $s'=0$ the IDP limit is reached, while for $s'=s^{N}$ probabilistic
+exact cloning limit is reached. 
+
+For given a priori probabilities $\eta_{1}$, $\eta_{2}$ of our states $\ke{\psi_1}$ and $\ke{\psi_2}$, and average failure probability
+\begin{equation}
+Q = \eta_1 q_1 + \eta_2 q_2,
+\label{failure}
+\end{equation}
+we wish to find the minimum value of the final overlap $s'$
+as a function of the initial overlap $s$. For general a-priori probabilities,
+rather than attempting to write the optimal output overlap $s'$ as an explicit function
+of $s$, which would require solving a high degree polynomial equation, we will give the curve $(s,\min s')$ in parametric
+form.  
+
+We solve the problem by linearizing the constraint, (\ref{eq:constraint}), and finding the point at which it is tangent to the failure rate curve (\ref{failure}).
+We choose a change of variables 
+\begin{equation}
+p_{1}p_{1}=t^{2}, \quad   q_{1}q_{2}=z^{2}
+\end{equation}
+ which linearizes the unitarity constraint
+ (\ref{eq:constraint}) as 
+$z=s-s't$ where $0\le t,z\le1$ and $0\le s'\le s$.
+From the first of these substitutions we have $t^{2}=(1-q_{1})(1-q_{2})=1+z^{2}-q_{1}-q_{2}.$
+Solving for $q_{2}$ and substituting back in the second equation
+results in a quadratic equation which can be solved for $q_{1}$, giving the individual failure rates as 
+\[
+q_{i}=\frac{1+z^{2}-t^{2}\mp (-1)^i\sqrt{(1+z^{2}-t^{2})^{2}-4z^{2}}}{2}.
+\]
+Therefore, the failure rate (\ref{failure}) becomes
+\[
+Q=\frac{1}{2}\left(1+z^{2}-t^{2}\pm(\eta_{1}-\eta_{2})\sqrt{(1+z^{2}-t^{2})^{2}-4z^{2}}\right).
+\]
+We now solve for $z^{2}$. After a bit of algebra we obtain %$$%(\eta_1-\eta_2)^2\left[(1+z^2-t^2)^2-4z^2\right]=(1-2Q+z^2-t^2)^2%$$%$$%-\eta_1\eta_2\left[(1+z^2-t^2)^2-4z^2\right]=%Q^2-Q+(1-Q)z^2+Q t^2%$$%$$%\eta_1\eta_2z^4+\left[1-Q-2\eta_1\eta_2(1+t^2)\right]z^2+\eta_1\eta_2(1-t^2)^2+Q t^2-Q(1-Q)=0%$$%$$%z^2={2\eta_1\eta_2(1+t^2)-1+Q\pm\sqrt{(1-Q)^2+16\eta_1^2\eta_2^2t^2-4\eta_1\eta_2(1-Q)^2-4\eta_1\eta_2t^2}\over 2\eta_1\eta_2}%$$%$$%z^2={2\eta_1\eta_2(1+t^2)-1+Q\pm\sqrt{(1-4\eta_1\eta_2)(1-Q)^2-4\eta_1\eta_2(1-4\eta_1\eta_2)t^2}\over 2\eta_1\eta_2}%$$
+\begin{widetext}
+\begin{equation}
+z^{2}=\frac{2\eta_{1}\eta_{2}(1+\tau)-(1-Q)+\sqrt{(1-4\eta_{1}\eta_{2})\left[(1-Q)^{2}-4\eta_{1}\eta_{2}\tau\right]}}{2\eta_{1}\eta_{2}}\equiv\zeta(\tau),
+\label{zeta}
+\end{equation}
+\end{widetext}
+
+where $\tau\equiv t^{2}$. %$$%z^2={Q-\left[1-2\eta_1\eta_2(1+t^2)\right]\pm\sqrt{(1-4\eta_1\eta_2)\left[(1-Q)^2-4\eta_1\eta_2t^2\right]}\over 2 \eta_1\eta_2}%$$
+Since $z^{2}$ cannot be less than zero, we picked up the plus sign for
+the root. %The maximum value of $t$ is then%$$%t_{\rm max}={1-Q\over 2\sqrt{\eta_1\eta_2}},%$$%and we note that %$$%1\le t_{\rm max}\qquad\mbox{\rm if $\quad Q\le 1-2\sqrt{\eta_1\eta_2}$}.%$$%For $t>t_{\rm max}$ the argument of the square root in the definition of $\zeta$ becomes negative. Thus, $\zeta(t^2)$ is singular at $t=t_{\rm max}$ and, in particular $\zeta'(t^2_{\rm max})$ does not exists ($\zeta'$ goes to $-\infty$ as $t\to t_{\rm max}$). %The values of $t$ at which $z=0$ ($\zeta=0$) are%$$%t_{0,1}=\sqrt{1-{Q\over\eta_1}},\qquad t_{0,2}=\sqrt{1-{Q\over\eta_2}}.%$$Let
+
+We assume that $0\le\eta_{1}\le1/2$ to simplify the analysis. %Then,%$$%t_{0,1}\le t_{0,2}.%$$We
+To locate the extrema of $z$, we find $dz/dt=(d\zeta/d\tau)(t/z)$.
+The derivative $d\zeta/d\tau$ is immediate, given by
+\[
+\zeta'(\tau)=1-\frac{\sqrt{1-4\eta_{1}\eta_{2}}}{\sqrt{(1-Q)^{2}-4\eta_{1}\eta_{2}\tau}}.
+\]
+We find that the minimum
+is located at %$$%t_{\rm th}%=\sqrt{(2\eta_1-Q)(2\eta_2-Q)\over 4\eta_1\eta_2}%=\sqrt{\left(1-{Q\over2\eta_1}\right)\left(1-{Q\over2\eta_2}\right)}, \quad   z_{\rm th}={Q\over2\sqrt{\eta_1\eta_2}}%\quad\mbox{\rm if $\quad Q\le2\eta_1$},%$$%or it is located at%$$%t'_{\rm th}%=0, \quad   z'_{\rm th}=\sqrt{Q-\eta_1\over\eta_2}%\quad\mbox{\rm if $\quad 2\eta_1\le Q$}.%$$
+\[
+t_{{\rm min}}=\left\{ \begin{array}{lll}
+{\displaystyle \sqrt{\left(1-\frac{Q}{2\eta_{1}}\right)\left(1-\frac{Q}{2\eta_{2}}\right)},\quad} & {\rm if} & \quad0\le Q\le2\eta_{1}\\[2em]
+0,\quad & {\rm if} & \quad2\eta_{1}<Q\le1.
+\end{array}\right.
+\]
+The corresponding values of $z$ are %$$%z_{\rm min}={Q\over2\sqrt{\eta_1\eta_2}},\quad%z_{\rm min}=\sqrt{Q-\eta_1\over\eta_2}.%$$
+\[
+z_{{\rm min}}=\left\{ \begin{array}{lll}
+{\displaystyle \frac{Q}{2\sqrt{\eta_{1}\eta_{2}}},\quad} & {\rm if} & \quad0\le Q\le2\eta_{1}\\[2em]
+{\displaystyle \sqrt{\frac{Q-\eta_{1}}{\eta_{2}}},\quad} & {\rm if} & \quad2\eta_{1}<Q\le1.
+\end{array}\right.
+\]
+
+Now that we have mapped out the shape of the failure rate (\ref{failure}), we want to know where it is tangent to the constraint (\ref{eq:constraint}).  We first note that
+for equal priors the curve (\ref{zeta}) is simply the hyperbola $z^{2}=t^{2}+2Q-1$, which intersects the straight line 
+$z=1-t$ at the point $(z,t)=(Q,1-Q)$.
+
+ We note that this is actually a general solution of (\ref{zeta}) for any $\eta_{1}$, $\eta_{2}$. Moreover,
+the straight line $z=1-t$ is tangent to~$(\ref{zeta})$ at
+$(Q,1-Q)$ for any values of $\eta_{1}$, $\eta_{2}$, as can be checked
+by substituting in the formula $dz/dt=(t/z)(d\zeta/d\tau)$. Since $z=1-t$ is the limiting line for the family $z=s-s't$, an obvious parametrization for the curve $(s,s')$ is obtained
+as follows: {\em i}.~define 
+\[
+s'(t)=-\frac{dz}{dt}=-\frac{t\,\zeta'(t^{2})}{\sqrt{\zeta(t^{2})}},\qquad t_{{\rm min}}\le t\le1-Q,
+\]
+and next {\em ii}.~define 
+\[
+s(t)=z+ts'(t)=\sqrt{\zeta(t^{2})}+ts'(t),\qquad t_{{\rm min}}\le t\le1-Q.
+\]
+where 
+
+
+
+For $s<z_{{\rm min}}$ is is always possible to separate the initial
+states, i.e., $|\Psi_{1}\rangle$ and~$|\Psi_{2}\rangle$ can be
+made orthogonal. We note that the condition $s=z_{{\rm min}}$ is
+equivalent to the unambiguous discrimination result 
+\[
+Q=2\sqrt{\eta_{1}\eta_{2}}s,\quad Q=\eta_{1}+\eta_{2}s^{2}.
+\]
+
+
+The next plot is for $\eta_{1}=0.1$. As $\eta_{1}$ approaches $1/2$
+the curves approach a straight line. The difference is more noticeable
+for very small values of $\eta_{1}$.
+
+
+\section{Hybrid Cloning}
+
+In this section we seek to interpolate between probabilistic exact
+cloning and approximate cloning machines using our results from state
+separation. Exact cloning machines produce perfect clones while allowing
+for some inconclusive outcomes. Approximate cloning machines produce
+copies on demand which resemble the input states while maximizing
+the fidelity. One can imagine a scheme where fidelity can be higher
+then maximum fidelity in the approximate cloning machine while it
+allowes for a fixed rate of inconlusive outcomes, $FRIO.$ This scheme
+should reproduce exact cloning and approximate cloning machines by
+setting $FRIO$ to $Q_{o}$ and zero respectively. Chefles and Barnett
+\cite{Chefles1999} solve the problem for when the input states are
+prepared with equal a priori probabilities. We extend the solution
+to the more general case when the states are prepared with different
+aprioris. Such a solution is possible due to our recent work in making
+$n$ perfect clones from $m$ copies of one of two known pure states
+with minimum failure probability in the general case where the known
+states have arbitrary a-priori probabilities.
+
+We can imagine a state dependent approximate cloner as a machine with
+an input and an output port. The input states $|\psi_{i}^{M}\rangle=|\psi_{i}\rangle^{\otimes M}$,
+$i=1,2$ ($m$ identical copies of either $|\psi_{1}\rangle$ or $|\psi_{2}\rangle$)
+are fed through the input port for processing. The output states are
+$n$ approximate clones ~$|\phi_{i}^{M}\rangle=|\phi_{i}\rangle^{\otimes M}.$
+This is deterministic cloning, although imperfect, clones are generated
+on demand while optimizing the global fidelity. Thus given a set $K$
+of non orthogonal states $|\psi_{i}\rangle^{\otimes M},$ we wish
+to produce a set $K$ of $N$ clones $|\phi_{j}\rangle^{\otimes N}$
+while optimizing the global fidelity:
+
+\begin{equation}
+F_{MN}=\sum_{j=1}^{K}\eta_{j}|\langle\psi_{j}^{N}|\phi_{j}\rangle|^{2}.
+\end{equation}
+
+
+A unitary produces $N$ copies $|\phi_{1}\rangle$ or $|\phi_{2}\rangle,$
+to resemble the original states as closely as possible:
+
+\begin{eqnarray}
+U|\psi_{1}^{M}\rangle|i\rangle & = & |\phi_{1}^{n}\rangle,\\
+U|\psi_{2}^{M}\rangle|i\rangle & = & |\phi_{2}^{n}\rangle.
+\end{eqnarray}
+
+
+The inner product of the above two equations gives a relationship
+between the input and the output states. 
+
+\begin{eqnarray}
+|\langle\psi_{1}|\psi_{2}\rangle|^{M} & = & |\langle\Phi_{1}|\Phi_{2}\rangle|^{N}\\
+\cos^{M}2\theta & = & \cos^{N}(\phi_{1}+\phi_{2})\label{eq:3.4.6}
+\end{eqnarray}
+
+
+Where the input states are expressed as $|\psi_{1,2}^{N}\rangle=\cos\theta|1\rangle\pm\sin\theta|0\rangle$
+and the clones as $|\phi_{1,2}\rangle=\cos\phi_{1}|1\rangle\pm\sin\phi_{1}|0\rangle.$
+
+It was shown in \cite{Chefles1999} that the maximum fidelity is:
+
+\begin{equation}
+F_{MN}=\frac{1}{2}[1+\sqrt{1-4\eta_{1}\eta_{2}\sin^{2}(2\theta-(\phi_{1}+\phi_{2}))}]\label{eq:Fidelity}
+\end{equation}
+
+
+To see the connection with state separation expand the $\sin$ term:
+
+$\sin(2\theta-(\phi_{1}+\phi_{2}))=\sin(2\theta)\cos(\phi_{1}+\phi_{2})+\cos(2\theta)[1-\cos^{2}(\phi_{1}+\phi_{2})]$
+
+The overlap of the output states $\cos(\phi_{1}+\phi_{2})$ can be
+viewd as state separation. In this case we are in the limit $s'=s$,
+approximate cloning. To interpolate between approximate cloning and
+deterministic cloning $s'$ takes on the optimal values derived in
+Section II. 
+
+\bibliographystyle{unsrt}
+\bibliography{/Users/ashehu/Desktop/mendeley}
+
+\end{document}

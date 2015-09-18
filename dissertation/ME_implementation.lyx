@@ -1,0 +1,202 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Minimum error
+\end_layout
+
+\begin_layout Standard
+Solution to the minimum error problem was derived in Chapter II.
+ Here we use the explicit solution to error and success rates to construct
+ the unitary operator which in turn will be expressed in terms of beamsplitters.
+ We start with the Neumark setup where a unitary operator entangles the
+ input states with the ancilla.
+ Let the input states be 
+\begin_inset Formula $|\psi_{1}\rangle_{in}=|1\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $|\psi_{2}\rangle_{in}=\cos\theta|1\rangle+\sin\theta|2\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+U|1\rangle_{in}|0\rangle & =\sqrt{p_{1}}|1\rangle+\sqrt{r_{1}}|2\rangle\\
+U(\cos\theta|1\rangle+\sin\theta|2\rangle)|0\rangle & =\sqrt{r_{2}}|1\rangle+\sqrt{p_{2}}|2\rangle
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where the error and success rates were calculated in chapter one:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+r_{i} & = & \frac{1}{2}[1-\frac{1-2\eta_{j}s^{2}}{\sqrt{1-4\eta_{1}\eta_{2}s^{2}}}]\\
+p_{i} & = & \frac{1}{2}[1-\frac{1-2\eta_{j}s^{2}}{\sqrt{1-4\eta_{1}\eta_{2}s^{2}}}]
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To get the unitary elements multiply on the left by 
+\begin_inset Formula $\langle1|$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle2|$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+First column is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\langle1|U|1\rangle=U_{11}=\sqrt{p_{1}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\langle2|U|1\rangle=U_{21}=\sqrt{r_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the elements of the first column the second column can be calculated
+ and is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos\theta\langle1|U|1\rangle+\sin\theta\langle1|U|2\rangle=\cos\theta U_{11}+\sin\theta U_{12}=\cos\theta\sqrt{p_{1}}+\sin\theta U_{12}=\sqrt{r_{2}}\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $U_{12}=\frac{\sqrt{r_{2}}-\cos\theta\sqrt{p_{1}}}{\sin\theta},$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\cos\theta\langle2|U|1\rangle+\sin\theta\langle2|U|2\rangle=\cos\theta U_{21}+\sin\theta U_{22}=\cos\theta\sqrt{r_{1}}+\sin\theta U_{22}=\sqrt{p_{2}}\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $U_{22}=\frac{\sqrt{p_{2}}-\cos\theta\sqrt{r_{1}}}{\sin\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The Unitary matrix is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=\begin{pmatrix}U_{11} & U_{12}\\
+U_{21} & U_{22}
+\end{pmatrix}=\begin{pmatrix}\sqrt{p_{1}} & \frac{\sqrt{r_{2}}-\cos\theta\sqrt{p_{1}}}{\sin\theta}\\
+\sqrt{r_{1}} & \frac{\sqrt{p_{2}}-\sin\theta\sqrt{r_{1}}}{\sin\theta}
+\end{pmatrix}.
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Only one beam splitter is necessary.
+ 
+\end_layout
+
+\end_body
+\end_document

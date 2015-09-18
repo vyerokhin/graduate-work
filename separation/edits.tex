@@ -1,0 +1,76 @@
+
+%\documentclass[aps,prl,twocolumn,eqsecnum,showpacs]{revtex4}
+\documentclass[aps,prl,twocolumn,showpacs]{revtex4}
+\usepackage{amssymb,amsmath}
+\usepackage{bm, graphicx, amsmath}
+\usepackage{bbm}
+\usepackage[section]{placeins}
+
+
+\usepackage[mathscr]{eucal}
+\usepackage{graphicx}
+\usepackage{color}
+
+\newcommand{\id}{{\mathbb I}}
+\newcommand{\tr}{{\rm tr}\,}
+\parskip=1em
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \newcommand{\abs}[1]{\left|{#1}\right|}
+ \newcommand{\av}[1]{\left\langle #1 \right\rangle}
+ 
+  \newcommand{\br}[1]{\langle #1|}
+  \newcommand{\ke}[1]{|#1\rangle}
+  \newcommand{\bk}[2]{\langle #1|#2\rangle}
+  \newcommand{\kb}[2]{\ke{#1}\br{#2}}
+  \newcommand{\var}[2]{\langle #1,#2\rangle} 
+  
+  \newcommand{\al}[1]{^{(#1)}}
+  \newcommand{\da}{^\dagger} 
+  
+  \newcommand{\pt}[1]{\left( #1 \right)}
+  \newcommand{\pq}[1]{\left[ #1 \right]}
+  \newcommand{\pg}[1]{\left\{ #1 \right\}} 
+  
+  \newcommand{\lpt}[1]{\left( #1 \right.}
+  \newcommand{\lpq}[1]{\left[ #1 \right.]}
+  \newcommand{\lpg}[1]{\left\{ #1 \right.}
+  \newcommand{\rpt}[1]{\left. #1 \right)}
+  \newcommand{\rpq}[1]{\left. #1 \right]}
+  \newcommand{\rpg}[1]{\left. #1 \right\}} 
+  
+  \newcommand{\pp}[2]{ {\mbox{\scriptsize$
+  \begin{array}{c}
+  #1\\
+  #2
+  \end{array}$} } }  
+    \begin{document}
+
+
+The complete UD solution in Eq.~(\ref{UD}) emerges in the hyperbolic limit. In this case the right hand side of Eq.~(\ref{unit cond}) becomes $q_1 q_2=s^{2m}$ (dashed lines in Figs.~\ref{fig:1} and~\ref{fig:2}).  A unique point of tangency with the line~(\ref{obj fun}) exists for $s^{2m}<\eta_1/\eta_2\le1$, leading the optimal failure rate in the second line of Eq.~(\ref{UD}).  For $0 \leq \eta_1 \leq s^{2m}/(1+s^{2m})$, the straight line~(\ref{obj fun}) pivots on the end point $(1,s^{2m})$, producing the first line of the solution.
+
+In the limit  $Q_{\rm min} \to Q_{\rm UD}$ a phenomenon analogous to a second order phase transition takes place. Our geometrical approach shows that the average failure probability $Q_{\rm min}(\eta_1)$ is an infinitely differentiable function of~$\eta_1$ for finite $n$. However, as $n$ goes to infinity (corresponding to $\alpha=0$) the limiting function $Q_{\rm UD}(\eta_1)$ has a discontinuous second derivative. Moreover, the symmetry $q_1\leftrightarrow q_2$ breaks  in the ``phase" corresponding to the first line in Eq.~(\ref{UD}). A~similar phenomenon arises in UD of more than two pure states~\cite{Bergou1}.
+
+It has been argued above that cloning by discrimination is strictly suboptimal (unless $n\to \infty$).
+One could likewise wonder if discrimination by cloning can be optimal. On heuristic grounds, one should not expect this to be so, as cloning involves a measurement and some information can be drawn from the observed outcome. However, the equal-prior and the $\eta_1\to 0$ cases provide remarkable exceptions.
+
+Using our main result in Eqs.~(\ref{main}), and~(\ref{par sqrt}) one can check that these are the only cases where discrimination by cloning is optimal. These are also the only cases where no information gain can be drawn from the cloning measurement.  This hints at how special these cases are and justifies the need of the derived solution for arbitrary priors to have a full account of two-state cloning. 
+
+In summary, we have provided a full solution to the perfect two-state cloning problem and thorouhly examined its relationship with state discrimination.  The geometric interpretation provides a clear view of the optimization conditions and the parametrization allows for easy calculation of all variables.  We have demonstrated the importance of this work as a solution to a long standing problem, as a means of insight into and control over the general cloning process in practical applications, and as the starting point for new and exciting topics of research.  Aside from those already mentioned, further topics of import include cloning of more than two states, of cloning where partial or no information is given of the states or their preparation probabilities, and cloning protocols that allow for errors or imperfect clones.
++++++++
+++++
+
++++++
+
+The complete UD solution in Eq.~(\ref{UD}) emerges from our geometrical approach in a straightforward manner. First, we recall that in this case the right hand side of Eq.~(\ref{unit cond}) becomes $q_1 q_2=s^{2m}$ (dashed lines in Figs.~\ref{fig:1} and~\ref{fig:2}). The maximum slopes of these curves are at their end points and all have the value~$-s^{2m}$. This implies that the boundary of $S_0$ has a cusp at $(1,s^{2m})$. It follows that a unique point of tangency with the line~(\ref{obj fun}) exists for $s^{2m}<\eta_1/\eta_2\le1$ (recall that we are assuming~$\eta_1\le1/2$). This condition gives the $\eta_1$ interval for that solution.  At the point of tangency, the normal vectors of the two curves are parallel, $(q_2,q_1)\propto (\eta_1,\eta_2)$, leading to the optimal failure rate in the second line of Eq.~(\ref{UD}). For $s^{2m}>\eta_1/\eta_2\ge0$ tangency is not possible, and the optimal line~(\ref{obj fun}) merely touches the cusp on the boundary of~$S_0$, so the expression of $Q$ becomes the first line of Eq.~(\ref{UD}). In geometrical terms, the straight line~(\ref{obj fun}) pivots on the end point for $0 \leq \eta_1 \leq s^{2m}/(1+s^{2m})$.
+
+For the second case in Eq.~(\ref{UD}), one has $q_1,p_1\in(0,1)$ and there are three orthogonal flag states in Eqs.~(\ref{Ui}), the success states $|\alpha_1\rangle$, $|\alpha_2\rangle$, and the failure state~$|\alpha_{0}\rangle$. This $3$-outcome measurement can be represented by a $3$-element positive operator valued measure (POVM) on ${\mathscr H}^{\otimes m}$. For the first line in Eq.~(\ref{UD}), $p_1=1-q_1=0$, which leads to a $2$-outcome projective measurement, as only one success flag state ($|\alpha_2\rangle$) is needed in Eqs.~(\ref{Ui}). 
+
+This short re-derivation of Eq.~(\ref{UD}) proves the convergence of the optimal cloning failure probability, $Q_{\rm min}$, to that of cloning by discrimination, $Q_{\rm UD}$ in Eq.~(\ref{UD}). It follows from the convergence of the general unitarity curve in Eq.~(\ref{unit cond}) to the hyperbola $q_1q_2=s^{2m}$, i.e., from $\lim_{{\mathrm n}\to 0} S_\alpha=S_0$. Interestingly, in this limit a phenomenon analogous to a second order phase transition takes place. Our geometrical approach shows that the average failure probability $Q_{\rm min}(\eta_1)$ is an infinitely differentiable function of~$\eta_1$ for finite $n$. However, as $n$ goes to infinity (corresponding to $\alpha=0$) the limiting function $Q_{\rm UD}(\eta_1)$ has a discontinuous second derivative. Moreover, the symmetry $q_1\leftrightarrow q_2$ breaks  in the ``phase" corresponding to the first line in Eq.~(\ref{UD}). A~similar phenomenon arises in UD of more than two pure states~\cite{Bergou1}.
+
+
+It has been argued above that cloning by discrimination is strictly suboptimal (unless $n\to \infty$).
+One could likewise wonder if discrimination by cloning can be optimal. On heuristic grounds, one should not expect this to be so, as cloning involves a measurement and some information can be drawn from the observed outcome. However, the equal-prior and the $\eta_1\to 0$ cases provide remarkable exceptions. For both we may write the total failure rate as $Q_{\rm C} + (1-Q_{\rm C})Q_{\rm UD}$, where C stands for cloning. For $\eta_1 = \eta_2= 1/2$, Eq.~(\ref{Q's}) implies $Q_{\rm C}=Q_{-1}$, in which case the produced $n$-clone states are equally likely. The UD of these states fails with probability $s^{n}$, as follows from Eq.~(\ref{UD}) applied to $n$ copies. The total failure rate is then $s^m$, which is the optimal UD failure rate of the original input states, Eq.~(\ref{UD}). If $\eta_1\to 0$ then only $|\psi^n_2\rangle$ is produced with non-vanishing probability and  $Q_{\rm C}=Q_{0}$. Failure in the second step (UD) is given by the top line in Eq.~(\ref{UD}) applied to $n$ copies. The total failure rate is $s^{2m}$, also achieving optimality. 
+
+Using our main result in Eqs.~(\ref{main}), and~(\ref{par sqrt}) one can check that these are the only cases where discrimination by cloning is optimal. These are also the only cases where no information gain can be drawn from the cloning measurement.  This hints at how special these cases are and justifies the need of the derived solution for arbitrary priors to have a full account of two-state cloning. 
+\end{document}

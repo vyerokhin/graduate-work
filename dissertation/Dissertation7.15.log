@@ -1,0 +1,1116 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  17 JUL 2015 12:10
+entering extended mode
+**Dissertation7.15.tex
+(C:\Users\Vadim\Documents\work\dissertation\Dissertation7.15.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsbook.cls"
+Document Class: amsbook 2009/07/02 v2.20.1
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip42
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count79
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count80
+\leftroot@=\count81
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count82
+\DOTSCASE@=\count83
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
+\dotsspace@=\muskip10
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
+\tag@help=\toks15
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 367.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert233
+\abstractbox=\box28
+\listisep=\skip45
+\c@part=\count91
+\c@chapter=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen113
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks24
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin9.def"
+File: latin9.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count100
+\Gm@cntv=\count101
+\c@Gm@tempcnt=\count102
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks28
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\stmaryrd.sty"
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count104
+\U@D=\dimen124
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(C:\Users\Vadim\Documents\work\dissertation\Dissertation7.15.aux
+
+LaTeX Warning: Label `Qmax' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 59.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 59.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 59.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 59.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 28.73001pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-22.0pt
+* \headheight=8.0pt
+* \headsep=14.0pt
+* \topskip=10.0pt
+* \footskip=18.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 11.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen125
+\scratchbox=\box29
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen126
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks30
+) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 122.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [2] [3]
+
+LaTeX Warning: Citation `Neumark' on page iv undefined on input line 254.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5]
+Acknowledgements
+[6
+
+
+]
+Contents
+(C:\Users\Vadim\Documents\work\dissertation\Dissertation7.15.toc
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+
+
+])
+\tf@toc=\write3
+
+[8]
+List of Figures
+(C:\Users\Vadim\Documents\work\dissertation\Dissertation7.15.lof
+Overfull \hbox (6.14685pt too wide) detected at line 5
+\T1/cmr/m/n/12 2.1.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 6
+\T1/cmr/m/n/12 2.3.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 8
+\T1/cmr/m/n/12 3.3.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 9
+\T1/cmr/m/n/12 3.3.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 10
+\T1/cmr/m/n/12 3.4.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 11
+\T1/cmr/m/n/12 3.4.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 12
+\T1/cmr/m/n/12 3.5.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 13
+\T1/cmr/m/n/12 3.5.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 15
+\T1/cmr/m/n/12 4.3.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 16
+\T1/cmr/m/n/12 4.3.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 17
+\T1/cmr/m/n/12 4.3.3 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 19
+\T1/cmr/m/n/12 5.0.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 20
+\T1/cmr/m/n/12 5.2.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 22
+\T1/cmr/m/n/12 6.3.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 24
+\T1/cmr/m/n/12 6.3.2 
+ []
+
+)
+\tf@lof=\write4
+ [9
+
+
+]
+Chapter 1
+
+LaTeX Warning: Citation `Shor1994' on page 1 undefined on input line 351.
+
+
+LaTeX Warning: Citation `Bennett1992' on page 1 undefined on input line 352.
+
+
+LaTeX Warning: Citation `Neumark1' on page 1 undefined on input line 370.
+
+[1
+
+
+] [2]
+
+LaTeX Warning: Citation `Neumann1955' on page 3 undefined on input line 415.
+
+
+LaTeX Warning: Citation `Bergou2013' on page 3 undefined on input line 450.
+
+
+LaTeX Warning: Citation `Peres1995' on page 3 undefined on input line 451.
+
+
+LaTeX Warning: Citation `Holevo2011' on page 3 undefined on input line 464.
+
+
+LaTeX Warning: Citation `Ivanovic1987' on page 3 undefined on input line 470.
+
+
+LaTeX Warning: Citation `Chefles1998b' on page 3 undefined on input line 481.
+
+[3]
+
+LaTeX Warning: Citation `Bergou2010' on page 4 undefined on input line 493.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5]
+Chapter 2
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6
+
+
+]
+
+LaTeX Warning: Citation `Helstrom1969' on page 7 undefined on input line 534.
+
+<ME.png, id=66, 405.01312pt x 372.64218pt>
+File: ME.png Graphic file (type png)
+ <use ME.png>
+Package pdftex.def Info: ME.png used on input line 551.
+(pdftex.def)             Requested size: 241.85408pt x 241.84494pt.
+ [7] [8 <C:/Users/Vadim/Documents/work/dissertation/ME.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+
+LaTeX Warning: Citation `Helstrom1969' on page 10 undefined on input line 652.
+
+
+LaTeX Warning: Reference `eq:3povms' on page 10 undefined on input line 676.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+
+LaTeX Warning: Citation `Bagan2012' on page 11 undefined on input line 713.
+
+[11]
+
+LaTeX Warning: Citation `Chefles1998' on page 12 undefined on input line 746.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 12 undefined on input line 754.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+<Fig1.png, id=97, 254.45062pt x 183.68625pt>
+File: Fig1.png Graphic file (type png)
+ <use Fig1.png>
+Package pdftex.def Info: Fig1.png used on input line 895.
+(pdftex.def)             Requested size: 177.37653pt x 128.0374pt.
+ [15 <C:/Users/Vadim/Documents/work/dissertation/Fig1.png>]
+Overfull \hbox (14.46721pt too wide) detected at line 928
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 [][] ;
+ []
+
+[16]
+
+LaTeX Warning: Citation `Chefles1998' on page 17 undefined on input line 986.
+
+
+Underfull \vbox (badness 5802) has occurred while \output is active []
+
+ [17]
+
+LaTeX Warning: Citation `Helstrom1969' on page 18 undefined on input line 1025.
+
+
+
+LaTeX Warning: Citation `Ivanovic1987' on page 18 undefined on input line 1034.
+
+
+
+LaTeX Warning: Citation `Dieks1988' on page 18 undefined on input line 1034.
+
+
+LaTeX Warning: Citation `Peres1988' on page 18 undefined on input line 1034.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 18 undefined on input line 1052.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+[25]
+Chapter 3
+
+LaTeX Warning: Citation `Helstrom1969' on page 26 undefined on input line 1329.
+
+
+
+LaTeX Warning: Citation `Herzog2004' on page 26 undefined on input line 1330.
+
+
+LaTeX Warning: Citation `Fuchs1996' on page 26 undefined on input line 1331.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [28]
+Overfull \hbox (1.26317pt too wide) in paragraph at lines 1470--1476
+\T1/cmr/m/n/12 In this case the first sub-space is spanned by $\OMS/cmsy/m/n/12
+ fj\OML/cmm/m/it/12 r[]\OMS/cmsy/m/n/12 i\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\
+OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 ig$ \T1/cmr/m/n/12 and the sec-ond sub-spac
+e by $\OMS/cmsy/m/n/12 fj\OML/cmm/m/it/12 r[]\OMS/cmsy/m/n/12 i\OML/cmm/m/it/12
+ ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 ig$\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+Overfull \hbox (54.30952pt too wide) in alignment at lines 1569--1574
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+<Fig2a.png, id=156, 386.94562pt x 245.41687pt>
+File: Fig2a.png Graphic file (type png)
+ <use Fig2a.png>
+Package pdftex.def Info: Fig2a.png used on input line 1624.
+(pdftex.def)             Requested size: 201.88007pt x 128.0374pt.
+
+<Fig2b.png, id=157, 477.28313pt x 301.8778pt>
+File: Fig2b.png Graphic file (type png)
+ <use Fig2b.png>
+Package pdftex.def Info: Fig2b.png used on input line 1626.
+(pdftex.def)             Requested size: 202.43117pt x 128.0374pt.
+
+Underfull \vbox (badness 2922) has occurred while \output is active []
+
+ [33 <C:/Users/Vadim/Documents/work/dissertation/Fig2a.png> <C:/Users/Vadim/Doc
+uments/work/dissertation/Fig2b.png>]
+Overfull \hbox (36.57706pt too wide) detected at line 1650
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = []
+ []
+
+
+LaTeX Warning: Citation `Bergou2006' on page 34 undefined on input line 1655.
+
+
+LaTeX Warning: Citation `Herzog2005' on page 34 undefined on input line 1657.
+
+
+LaTeX Warning: Citation `Bergou2006a' on page 34 undefined on input line 1657.
+
+<Fig3a.png, id=161, 387.69844pt x 252.19218pt>
+File: Fig3a.png Graphic file (type png)
+ <use Fig3a.png>
+Package pdftex.def Info: Fig3a.png used on input line 1663.
+(pdftex.def)             Requested size: 196.83621pt x 128.0374pt.
+
+<Fig3b.png, id=162, 78.3796pt x 50.4041pt>
+File: Fig3b.png Graphic file (type png)
+ <use Fig3b.png>
+Package pdftex.def Info: Fig3b.png used on input line 1665.
+(pdftex.def)             Requested size: 199.15366pt x 128.0374pt.
+ [34 <C:/Users/Vadim/Documents/work/dissertation/Fig3a.png> <C:/Users/Vadim/Doc
+uments/work/dissertation/Fig3b.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Overfull \hbox (152.16603pt too wide) in alignment at lines 1769--1775
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+
+LaTeX Warning: Reference `PE2' on page 37 undefined on input line 1777.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+<Fig4.png, id=178, 526.96875pt x 339.51843pt>
+File: Fig4.png Graphic file (type png)
+ <use Fig4.png>
+Package pdftex.def Info: Fig4.png used on input line 1817.
+(pdftex.def)             Requested size: 176.64217pt x 113.81102pt.
+
+<Fig5.png, id=179, 539.01375pt x 341.77687pt>
+File: Fig5.png Graphic file (type png)
+ <use Fig5.png>
+Package pdftex.def Info: Fig5.png used on input line 1830.
+(pdftex.def)             Requested size: 179.48712pt x 113.81102pt.
+ [38 <C:/Users/Vadim/Documents/work/dissertation/Fig4.png> <C:/Users/Vadim/Docu
+ments/work/dissertation/Fig5.png>] <Fig6.png, id=183, 361.35pt x 238.8925pt>
+File: Fig6.png Graphic file (type png)
+ <use Fig6.png>
+Package pdftex.def Info: Fig6.png used on input line 1893.
+(pdftex.def)             Requested size: 172.1503pt x 113.81102pt.
+
+Underfull \vbox (badness 2452) has occurred while \output is active []
+
+ [39]
+<Fig7.png, id=187, 361.35pt x 230.8625pt>
+File: Fig7.png Graphic file (type png)
+ <use Fig7.png>
+Package pdftex.def Info: Fig7.png used on input line 1920.
+(pdftex.def)             Requested size: 178.13823pt x 113.81102pt.
+ [40 <C:/Users/Vadim/Documents/work/dissertation/Fig6.png (PNG copy)> <C:/Users
+/Vadim/Documents/work/dissertation/Fig7.png (PNG copy)>]
+
+LaTeX Warning: Citation `Bagan2012' on page 41 undefined on input line 1941.
+
+[41]
+Chapter 4
+
+LaTeX Warning: Citation `Wootters1982' on page 42 undefined on input line 1970.
+
+
+
+LaTeX Warning: Citation `Dieks1982' on page 42 undefined on input line 1970.
+
+
+LaTeX Warning: Citation `Buzek1996' on page 42 undefined on input line 1977.
+
+
+LaTeX Warning: Citation `Hillery1997' on page 42 undefined on input line 1988.
+
+
+LaTeX Warning: Citation `Duan1998' on page 42 undefined on input line 1994.
+
+
+Overfull \hbox (1.94543pt too wide) in paragraph at lines 1968--2024
+[]\T1/cmr/m/n/12 One of the rea-sons we need to de-velop op-ti-mum state dis-cr
+im-i-na-tion mea-sure-ment schemes
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42
+
+
+]
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+
+LaTeX Warning: Citation `Chefles1999' on page 45 undefined on input line 2096.
+
+
+LaTeX Warning: Citation `Bruss1998' on page 45 undefined on input line 2109.
+
+[45]
+
+LaTeX Warning: Citation `Bruss1998' on page 46 undefined on input line 2138.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Overfull \hbox (36.5703pt too wide) in paragraph at lines 2269--2272
+\T1/cmr/m/n/12 Discriminate the in-com-ing states $[]$ with op-ti-mal ME then p
+re-pare states $[]$
+ []
+
+
+Underfull \vbox (badness 1448) has occurred while \output is active []
+
+ [50]
+[51]
+
+LaTeX Warning: Citation `Duan1998' on page 52 undefined on input line 2410.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+[53]
+
+LaTeX Warning: Citation `Duan1998' on page 54 undefined on input line 2496.
+
+
+LaTeX Warning: Citation `Duan1998' on page 54 undefined on input line 2503.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+pdfTeX warning: miktex-pdftex.exe (file C:/Users/Vadim/Documents/work/dissertat
+ion/Fig_1NC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
+1.5> allowed
+<Fig_1NC.pdf, id=238, 354.37895pt x 337.43666pt>
+File: Fig_1NC.pdf Graphic file (type pdf)
+ <use Fig_1NC.pdf>
+Package pdftex.def Info: Fig_1NC.pdf used on input line 2538.
+(pdftex.def)             Requested size: 241.8505pt x 241.8575pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[55]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <C:/Users/Vadim/Documents/work/dissertation/Fig_1NC.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+
+pdfTeX warning: miktex-pdftex.exe (file C:/Users/Vadim/Documents/work/dissertat
+ion/Fig_2NC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
+1.5> allowed
+<Fig_2NC.pdf, id=303, 725.70023pt x 367.08643pt>
+File: Fig_2NC.pdf Graphic file (type pdf)
+ <use Fig_2NC.pdf>
+Package pdftex.def Info: Fig_2NC.pdf used on input line 2637.
+(pdftex.def)             Requested size: 241.85149pt x 241.85208pt.
+ [58 <C:/Users/Vadim/Documents/work/dissertation/Fig_2NC.pdf>]
+
+pdfTeX warning: miktex-pdftex.exe (file C:/Users/Vadim/Documents/work/dissertat
+ion/Fig_3NC.pdf): PDF inclusion: found PDF version <1.6>, but at most version <
+1.5> allowed
+<Fig_3NC.pdf, id=344, 715.81729pt x 388.26353pt>
+File: Fig_3NC.pdf Graphic file (type pdf)
+ <use Fig_3NC.pdf>
+Package pdftex.def Info: Fig_3NC.pdf used on input line 2707.
+(pdftex.def)             Requested size: 227.61351pt x 170.71799pt.
+
+
+LaTeX Warning: Citation `Bergou2010' on page 59 undefined on input line 2714.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+[60 <C:/Users/Vadim/Documents/work/dissertation/Fig_3NC.pdf>]
+
+LaTeX Warning: Citation `Bergou2012' on page 61 undefined on input line 2772.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+Underfull \vbox (badness 5939) has occurred while \output is active []
+
+ [62]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+[65]
+Underfull \vbox (badness 4832) has occurred while \output is active []
+
+ [66]
+
+LaTeX Warning: Citation `Chefles1999' on page 67 undefined on input line 3030.
+
+
+LaTeX Warning: Citation `Chefles1999' on page 67 undefined on input line 3044.
+
+
+Underfull \vbox (badness 1337) has occurred while \output is active []
+
+ [67]
+
+LaTeX Warning: Citation `Duan1998' on page 68 undefined on input line 3064.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+Overfull \hbox (28.54149pt too wide) in alignment at lines 3152--3155
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+ [71]
+
+LaTeX Warning: Citation `Bagan2012' on page 72 undefined on input line 3226.
+
+[72]
+Chapter 5
+
+LaTeX Warning: Citation `Chefles1998a' on page 73 undefined on input line 3254.
+
+
+
+LaTeX Warning: Citation `yerokhin' on page 73 undefined on input line 3264.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73
+
+
+]
+<state_separation.pdf, id=434, 174.26093pt x 224.6794pt>
+File: state_separation.pdf Graphic file (type pdf)
+
+<use state_separation.pdf>
+Package pdftex.def Info: state_separation.pdf used on input line 3310.
+(pdftex.def)             Requested size: 241.86035pt x 241.85474pt.
+
+
+LaTeX Warning: Citation `Chefles1998a' on page 74 undefined on input line 3326.
+
+
+[74]
+Underfull \vbox (badness 7595) has occurred while \output is active []
+
+ [75 <C:/Users/Vadim/Documents/work/dissertation/state_separation.pdf>]
+
+LaTeX Warning: Citation `Duan1998' on page 76 undefined on input line 3372.
+
+
+Underfull \vbox (badness 1546) has occurred while \output is active []
+
+ [76]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+<Separation1.graph.pdf, id=467, 214.28125pt x 209.11827pt>
+File: Separation1.graph.pdf Graphic file (type pdf)
+
+<use Separation1.graph.pdf>
+Package pdftex.def Info: Separation1.graph.pdf used on input line 3508.
+(pdftex.def)             Requested size: 241.8636pt x 241.85622pt.
+ [79 <C:/Users/Vadim/Documents/work/dissertation/Separation1.graph.pdf>]
+Chapter 6
+
+LaTeX Warning: Citation `Cirac1995' on page 80 undefined on input line 3526.
+
+
+LaTeX Warning: Citation `Gershenfeld1997' on page 80 undefined on input line 35
+26.
+
+
+LaTeX Warning: Citation `Turchette1995' on page 80 undefined on input line 3526
+.
+
+
+LaTeX Warning: Citation `Domokos1995' on page 80 undefined on input line 3526.
+
+
+LaTeX Warning: Citation `Milburn1989' on page 80 undefined on input line 3527.
+
+
+LaTeX Warning: Citation `Chuang1996' on page 80 undefined on input line 3528.
+
+
+LaTeX Warning: Citation `Bergou2009' on page 80 undefined on input line 3534.
+
+
+LaTeX Warning: Citation `shehu' on page 80 undefined on input line 3536.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 80 undefined on input line 3540.
+
+
+LaTeX Warning: Citation `Reck1994' on page 80 undefined on input line 3545.
+
+
+LaTeX Warning: Citation `Bergou2009' on page 80 undefined on input line 3557.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80
+
+
+]
+
+LaTeX Warning: Citation `Bergou2009' on page 81 undefined on input line 3591.
+
+[81] [82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85]
+Overfull \hbox (5.83896pt too wide) detected at line 3806
+\OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 :
+ []
+
+[86] [87]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88]
+<BeamSplitters.png, id=533, 477.28313pt x 360.59718pt>
+File: BeamSplitters.png Graphic file (type png)
+ <use BeamSplitters.png>
+Package pdftex.def Info: BeamSplitters.png used on input line 3970.
+(pdftex.def)             Requested size: 241.84538pt x 241.84645pt.
+
+[89 <C:/Users/Vadim/Documents/work/dissertation/BeamSplitters.png>] [90]
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [91]
+[92]
+Appendix 1: Reck-Zeilinger Algorithm 
+
+LaTeX Warning: Citation `Reck1994' on page 93 undefined on input line 4101.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [93
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [94]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+<fig1-coherent.jpg, id=557, 247.92625pt x 140.525pt>
+File: fig1-coherent.jpg Graphic file (type jpg)
+ <use fig1-coherent.jpg>
+Package pdftex.def Info: fig1-coherent.jpg used on input line 4249.
+(pdftex.def)             Requested size: 241.85007pt x 241.86337pt.
+
+[96 <C:/Users/Vadim/Documents/work/dissertation/fig1-coherent.jpg>]
+Appendix 2: Lagrange Multipliers
+
+LaTeX Warning: Citation `Barnett2009' on page 97 undefined on input line 4266.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97
+
+
+]
+No file Dissertation7.15.bbl.
+[98] (C:\Users\Vadim\Documents\work\dissertation\Dissertation7.15.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3932 strings out of 493921
+ 49625 string characters out of 3144877
+ 117245 words of memory out of 3000000
+ 6960 multiletter control sequences out of 15000+200000
+ 25024 words of font info for 75 fonts, out of 3000000 for 9000
+ 1002 hyphenation exceptions out of 8191
+ 34i,15n,31p,859b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecrm1000.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm0800.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Vadim\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Vadim\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Vadim\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk> <C:\Us
+ers\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.
+pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecrm1200.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecbx1440.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cmextra/cmex8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
+i9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb>
+Output written on Dissertation7.15.pdf (107 pages, 1674037 bytes).
+PDF statistics:
+ 974 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+

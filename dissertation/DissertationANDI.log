@@ -1,0 +1,1859 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  10 AUG 2015 23:17
+entering extended mode
+**DissertationANDI.tex
+(C:\Users\Vadim\Documents\work\dissertation\DissertationANDI.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amscls\amsbook.cls"
+Document Class: amsbook 2009/07/02 v2.20.1
+\linespacing=\dimen102
+\normalparindent=\dimen103
+\normaltopskip=\skip41
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip42
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks14
+\ex@=\dimen104
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count79
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count80
+\leftroot@=\count81
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count82
+\DOTSCASE@=\count83
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count84
+\c@MaxMatrixCols=\count85
+\dotsspace@=\muskip10
+\c@parentequation=\count86
+\dspbrk@lvl=\count87
+\tag@help=\toks15
+\row@=\count88
+\column@=\count89
+\maxfields@=\count90
+\andhelp@=\toks16
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks17
+\multlinegap=\skip43
+\multlinetaggap=\skip44
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 367.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+\copyins=\insert233
+\abstractbox=\box28
+\listisep=\skip45
+\c@part=\count91
+\c@chapter=\count92
+\c@section=\count93
+\c@subsection=\count94
+\c@subsubsection=\count95
+\c@paragraph=\count96
+\c@subparagraph=\count97
+\c@figure=\count98
+\c@table=\count99
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\captionindent=\dimen113
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
+\dth@everypar=\toks24
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\latin9.def"
+File: latin9.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks27
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count100
+\Gm@cntv=\count101
+\c@Gm@tempcnt=\count102
+\Gm@bindingoffset=\dimen114
+\Gm@wd@mp=\dimen115
+\Gm@odd@mp=\dimen116
+\Gm@even@mp=\dimen117
+\Gm@layoutwidth=\dimen118
+\Gm@layoutheight=\dimen119
+\Gm@layouthoffset=\dimen120
+\Gm@layoutvoffset=\dimen121
+\Gm@dimlist=\toks28
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\stmaryrd.sty"
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count103
+))
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count104
+\U@D=\dimen124
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+No file DissertationANDI.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 33.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+stmry on input line 33.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+Package geometry Warning: The marginal notes overrun the paper.
+     Add 28.73001pt and more to the right margin.
+
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-22.0pt
+* \headheight=8.0pt
+* \headsep=14.0pt
+* \topskip=10.0pt
+* \footskip=18.0pt
+* \marginparwidth=90.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=7.0pt plus 11.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count105
+\scratchdimen=\dimen125
+\scratchbox=\box29
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen126
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks30
+) [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 93.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [2] [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Contents
+(C:\Users\Vadim\Documents\work\dissertation\DissertationANDI.toc [6
+
+
+])
+\tf@toc=\write3
+ [7]
+List of Figures
+(C:\Users\Vadim\Documents\work\dissertation\DissertationANDI.lof
+Overfull \hbox (6.14685pt too wide) detected at line 3
+\T1/cmr/m/n/12 1.1.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 4
+\T1/cmr/m/n/12 1.1.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 5
+\T1/cmr/m/n/12 1.1.3 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 6
+\T1/cmr/m/n/12 1.2.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 8
+\T1/cmr/m/n/12 2.2.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 9
+\T1/cmr/m/n/12 2.2.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 10
+\T1/cmr/m/n/12 2.3.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 11
+\T1/cmr/m/n/12 2.3.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 12
+\T1/cmr/m/n/12 2.4.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 13
+\T1/cmr/m/n/12 2.4.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 15
+\T1/cmr/m/n/12 3.4.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 16
+\T1/cmr/m/n/12 3.4.2 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 18
+\T1/cmr/m/n/12 4.5.1 
+ []
+
+
+Overfull \hbox (6.14685pt too wide) detected at line 20
+\T1/cmr/m/n/12 4.5.2 
+ []
+
+)
+\tf@lof=\write4
+ [8
+
+
+]
+Chapter 1
+
+LaTeX Warning: Citation `Bergou2013' on page 1 undefined on input line 265.
+
+
+LaTeX Warning: Citation `Nielsen2010' on page 1 undefined on input line 267.
+
+
+LaTeX Warning: Citation `Peres1995' on page 1 undefined on input line 268.
+
+
+LaTeX Warning: Citation `Helstrom1969' on page 1 undefined on input line 280.
+
+
+LaTeX Warning: Citation `Holevo2011' on page 1 undefined on input line 281.
+
+
+LaTeX Warning: Citation `Shor1994' on page 1 undefined on input line 283.
+
+
+LaTeX Warning: Citation `Bennett1992' on page 1 undefined on input line 284.
+
+
+LaTeX Warning: Citation `Ivanovic1987' on page 1 undefined on input line 289.
+
+
+LaTeX Warning: Citation `Chefles1998b' on page 1 undefined on input line 300.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+]
+
+LaTeX Warning: Citation `Bergou2010' on page 2 undefined on input line 312.
+
+
+LaTeX Warning: Citation `Neumann1955' on page 2 undefined on input line 322.
+
+[2]
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [3]
+[4]
+
+LaTeX Warning: Reference `eq:2POVM' on page 5 undefined on input line 428.
+
+
+LaTeX Warning: Reference `eq:2POVM' on page 5 undefined on input line 435.
+
+
+LaTeX Warning: Reference `eq:2POVM' on page 5 undefined on input line 446.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+
+LaTeX Warning: Reference `UD' on page 6 undefined on input line 473.
+
+<UD.pdf, id=59, 174.2609pt x 249.49852pt>
+File: UD.pdf Graphic file (type pdf)
+ <use UD.pdf>
+Package pdftex.def Info: UD.pdf used on input line 508.
+(pdftex.def)             Requested size: 241.8603pt x 241.86098pt.
+
+
+LaTeX Warning: Reference `eq:Pi1Pi2' on page 6 undefined on input line 528.
+
+
+LaTeX Warning: Reference `eq:3povms' on page 6 undefined on input line 529.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+
+LaTeX Warning: Reference `eq:qConstraint' on page 7 undefined on input line 544
+.
+
+
+LaTeX Warning: Reference `eq:Q' on page 7 undefined on input line 545.
+
+
+LaTeX Warning: Reference `eq:Q' on page 7 undefined on input line 547.
+
+
+LaTeX Warning: Reference `eq:Q' on page 7 undefined on input line 557.
+
+
+Underfull \vbox (badness 2205) has occurred while \output is active []
+
+ [7 <C:/Users/Vadim/Documents/work/dissertation/UD.pdf>]
+<Q_1.jpg, id=91, 586.19pt x 758.835pt>
+File: Q_1.jpg Graphic file (type jpg)
+ <use Q_1.jpg>
+Package pdftex.def Info: Q_1.jpg used on input line 598.
+(pdftex.def)             Requested size: 284.52542pt x 284.5277pt.
+
+<Q_2.jpg, id=92, 586.19pt x 758.835pt>
+File: Q_2.jpg Graphic file (type jpg)
+ <use Q_2.jpg>
+Package pdftex.def Info: Q_2.jpg used on input line 624.
+(pdftex.def)             Requested size: 284.52542pt x 284.5277pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+
+LaTeX Warning: Citation `cite-keyneumark' on page 9 undefined on input line 663
+.
+
+[9 <C:/Users/Vadim/Documents/work/dissertation/Q_1.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <C:/Users/Vadim/Documents/work/dissertation/Q_2.jpg>]
+
+LaTeX Warning: Reference `eq:neumark' on page 11 undefined on input line 698.
+
+
+LaTeX Warning: Reference `eq:Q' on page 11 undefined on input line 706.
+
+
+LaTeX Warning: Citation `Helstrom1969' on page 11 undefined on input line 728.
+
+
+LaTeX Warning: Citation `Herzog2004' on page 11 undefined on input line 729.
+
+
+LaTeX Warning: Citation `Fuchs1996' on page 11 undefined on input line 730.
+
+[11]
+
+LaTeX Warning: Reference `eq:P_E' on page 12 undefined on input line 741.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+<ME.png, id=110, 405.01312pt x 372.64218pt>
+File: ME.png Graphic file (type png)
+ <use ME.png>
+Package pdftex.def Info: ME.png used on input line 811.
+(pdftex.def)             Requested size: 241.85408pt x 241.84494pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+
+LaTeX Warning: Reference `eq:ME neumark' on page 14 undefined on input line 844
+.
+
+
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [14 <C:/Users/Vadim/Documents/work/dissertation/ME.png>]
+
+LaTeX Warning: Reference `eq:ME constraint' on page 15 undefined on input line 
+855.
+
+
+LaTeX Warning: Reference `eq:ME' on page 15 undefined on input line 856.
+
+
+LaTeX Warning: Reference `eq:r12' on page 15 undefined on input line 891.
+
+
+LaTeX Warning: Reference `eq:r1r2' on page 15 undefined on input line 891.
+
+
+LaTeX Warning: Reference `eq:ME constraint' on page 15 undefined on input line 
+893.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+
+LaTeX Warning: Reference `eq:r_i-1' on page 16 undefined on input line 902.
+
+
+LaTeX Warning: Reference `eq:ME constraint' on page 16 undefined on input line 
+904.
+
+
+LaTeX Warning: Reference `eq:delta' on page 16 undefined on input line 923.
+
+
+LaTeX Warning: Reference `eq:r_i-1' on page 16 undefined on input line 924.
+
+
+LaTeX Warning: Reference `eq:P_E' on page 16 undefined on input line 932.
+
+
+LaTeX Warning: Citation `Helstrom1969' on page 16 undefined on input line 933.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
+[17]
+Chapter 2
+
+LaTeX Warning: Citation `Bagan2012' on page 18 undefined on input line 970.
+
+[18
+
+
+]
+
+LaTeX Warning: Citation `Chefles1998' on page 19 undefined on input line 1003.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 19 undefined on input line 1011.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+
+LaTeX Warning: Reference `POVM' on page 20 undefined on input line 1041.
+
+
+LaTeX Warning: Reference `tildePe' on page 20 undefined on input line 1074.
+
+
+LaTeX Warning: Reference `tildestates' on page 20 undefined on input line 1076.
+
+
+
+LaTeX Warning: Reference `PE' on page 20 undefined on input line 1078.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+
+LaTeX Warning: Reference `tildestates' on page 21 undefined on input line 1090.
+
+
+
+LaTeX Warning: Reference `Q' on page 21 undefined on input line 1105.
+
+
+LaTeX Warning: Reference `tildePe3' on page 21 undefined on input line 1110.
+
+
+LaTeX Warning: Reference `xi' on page 21 undefined on input line 1113.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+
+LaTeX Warning: Reference `PeSol1' on page 22 undefined on input line 1129.
+
+
+LaTeX Warning: Reference `xi' on page 22 undefined on input line 1130.
+
+
+LaTeX Warning: Reference `xi' on page 22 undefined on input line 1132.
+
+
+LaTeX Warning: Reference `Fig1' on page 22 undefined on input line 1140.
+
+
+LaTeX Warning: Reference `Qmax' on page 22 undefined on input line 1143.
+
+
+LaTeX Warning: Reference `PeSol1' on page 22 undefined on input line 1145.
+
+
+LaTeX Warning: Reference `PeSol1' on page 22 undefined on input line 1147.
+
+
+Overfull \hbox (14.46721pt too wide) detected at line 1174
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 [][] ;
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+
+LaTeX Warning: Reference `Qmax' on page 23 undefined on input line 1177.
+
+
+LaTeX Warning: Reference `PeSol1' on page 23 undefined on input line 1178.
+
+
+LaTeX Warning: Reference `rho1and2' on page 23 undefined on input line 1213.
+
+[23]
+Overfull \hbox (1.26317pt too wide) in paragraph at lines 1228--1234
+\T1/cmr/m/n/12 In this case the first sub-space is spanned by $\OMS/cmsy/m/n/12
+ fj\OML/cmm/m/it/12 r[]\OMS/cmsy/m/n/12 i\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\
+OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 ig$ \T1/cmr/m/n/12 and the sec-ond sub-spac
+e by $\OMS/cmsy/m/n/12 fj\OML/cmm/m/it/12 r[]\OMS/cmsy/m/n/12 i\OML/cmm/m/it/12
+ ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 s[]\OMS/cmsy/m/n/12 ig$\T1/cmr/m/n/12 .
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+
+LaTeX Warning: Reference `PeSol1' on page 25 undefined on input line 1259.
+
+
+LaTeX Warning: Reference `PeSol2' on page 25 undefined on input line 1261.
+
+
+LaTeX Warning: Reference `PeSol1' on page 25 undefined on input line 1265.
+
+
+LaTeX Warning: Reference `Qmax' on page 25 undefined on input line 1274.
+
+
+LaTeX Warning: Reference `Qmax' on page 25 undefined on input line 1278.
+
+
+LaTeX Warning: Reference `eq:SubspaceErr' on page 25 undefined on input line 12
+92.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+
+LaTeX Warning: Reference `eq:PeTotal' on page 26 undefined on input line 1314.
+
+
+Overfull \hbox (54.30952pt too wide) in alignment at lines 1327--1332
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Underfull \vbox (badness 1616) has occurred while \output is active []
+
+ [27]
+
+LaTeX Warning: Reference `Fig2' on page 28 undefined on input line 1378.
+
+<Fig2a.png, id=161, 386.94562pt x 245.41687pt>
+File: Fig2a.png Graphic file (type png)
+ <use Fig2a.png>
+Package pdftex.def Info: Fig2a.png used on input line 1382.
+(pdftex.def)             Requested size: 201.88007pt x 128.0374pt.
+
+<Fig2b.png, id=162, 477.28313pt x 301.8778pt>
+File: Fig2b.png Graphic file (type png)
+ <use Fig2b.png>
+Package pdftex.def Info: Fig2b.png used on input line 1384.
+(pdftex.def)             Requested size: 202.43117pt x 128.0374pt.
+
+
+LaTeX Warning: Reference `eq:Q1opt' on page 28 undefined on input line 1401.
+
+
+LaTeX Warning: Reference `Q2opt' on page 28 undefined on input line 1401.
+
+
+LaTeX Warning: Reference `eq:PeTotal' on page 28 undefined on input line 1401.
+
+
+Overfull \hbox (36.57706pt too wide) detected at line 1408
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = []
+ []
+
+
+LaTeX Warning: Citation `Bergou2006' on page 28 undefined on input line 1413.
+
+
+LaTeX Warning: Citation `Herzog2005' on page 28 undefined on input line 1415.
+
+
+LaTeX Warning: Citation `Bergou2006a' on page 28 undefined on input line 1415.
+
+
+LaTeX Warning: Reference `Fig3' on page 28 undefined on input line 1416.
+
+[28 <C:/Users/Vadim/Documents/work/dissertation/Fig2a.png> <C:/Users/Vadim/Docu
+ments/work/dissertation/Fig2b.png>]
+<Fig3a.png, id=166, 387.69844pt x 252.19218pt>
+File: Fig3a.png Graphic file (type png)
+ <use Fig3a.png>
+Package pdftex.def Info: Fig3a.png used on input line 1421.
+(pdftex.def)             Requested size: 196.83621pt x 128.0374pt.
+
+<Fig3b.png, id=167, 78.3796pt x 50.4041pt>
+File: Fig3b.png Graphic file (type png)
+ <use Fig3b.png>
+Package pdftex.def Info: Fig3b.png used on input line 1423.
+(pdftex.def)             Requested size: 199.15366pt x 128.0374pt.
+
+
+LaTeX Warning: Reference `Fig2' on page 29 undefined on input line 1432.
+
+
+LaTeX Warning: Reference `rho1and2' on page 29 undefined on input line 1446.
+
+
+LaTeX Warning: Reference `eq:jordan' on page 29 undefined on input line 1446.
+
+
+LaTeX Warning: Reference `eq:jordan' on page 29 undefined on input line 1450.
+
+
+LaTeX Warning: Reference `omegai' on page 29 undefined on input line 1450.
+
+
+LaTeX Warning: Reference `weights' on page 29 undefined on input line 1451.
+
+
+LaTeX Warning: Reference `omegai' on page 29 undefined on input line 1453.
+
+[29 <C:/Users/Vadim/Documents/work/dissertation/Fig3a.png> <C:/Users/Vadim/Docu
+ments/work/dissertation/Fig3b.png>]
+
+LaTeX Warning: Reference `NQtot' on page 30 undefined on input line 1480.
+
+
+LaTeX Warning: Reference `NPe' on page 30 undefined on input line 1487.
+
+
+LaTeX Warning: Reference `Pei2' on page 30 undefined on input line 1491.
+
+
+LaTeX Warning: Reference `NQtot' on page 30 undefined on input line 1494.
+
+
+LaTeX Warning: Reference `NPe' on page 30 undefined on input line 1495.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+
+LaTeX Warning: Reference `NQ0' on page 31 undefined on input line 1518.
+
+
+LaTeX Warning: Reference `Qth12' on page 31 undefined on input line 1520.
+
+
+LaTeX Warning: Reference `Q2opt' on page 31 undefined on input line 1520.
+
+
+LaTeX Warning: Reference `Pei2' on page 31 undefined on input line 1523.
+
+
+LaTeX Warning: Reference `NPe' on page 31 undefined on input line 1525.
+
+
+Overfull \hbox (152.16603pt too wide) in alignment at lines 1526--1532
+ [][][] []
+ []
+
+
+LaTeX Warning: Reference `eq:PEN' on page 31 undefined on input line 1533.
+
+
+LaTeX Warning: Reference `PE2' on page 31 undefined on input line 1534.
+
+
+LaTeX Warning: Reference `eq:PEN' on page 31 undefined on input line 1535.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
+
+LaTeX Warning: Reference `hierarchy' on page 32 undefined on input line 1545.
+
+
+LaTeX Warning: Reference `Fig2' on page 32 undefined on input line 1565.
+
+
+LaTeX Warning: Reference `Fig4' on page 32 undefined on input line 1567.
+
+
+LaTeX Warning: Reference `Fig5' on page 32 undefined on input line 1569.
+
+<Fig4.png, id=180, 526.96875pt x 339.51843pt>
+File: Fig4.png Graphic file (type png)
+ <use Fig4.png>
+Package pdftex.def Info: Fig4.png used on input line 1574.
+(pdftex.def)             Requested size: 176.64217pt x 113.81102pt.
+
+
+LaTeX Warning: Reference `Qiopt' on page 32 undefined on input line 1580.
+
+<Fig5.png, id=181, 539.01375pt x 341.77687pt>
+File: Fig5.png Graphic file (type png)
+ <use Fig5.png>
+Package pdftex.def Info: Fig5.png used on input line 1587.
+(pdftex.def)             Requested size: 179.48712pt x 113.81102pt.
+
+
+LaTeX Warning: Reference `Pei2' on page 32 undefined on input line 1591.
+
+
+LaTeX Warning: Reference `Qiopt' on page 32 undefined on input line 1591.
+
+
+LaTeX Warning: Reference `Fig4' on page 32 undefined on input line 1591.
+
+
+LaTeX Warning: Reference `Pei2' on page 32 undefined on input line 1603.
+
+
+LaTeX Warning: Reference `PeSol2Exp' on page 32 undefined on input line 1603.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+
+LaTeX Warning: Reference `Qb' on page 33 undefined on input line 1611.
+
+
+LaTeX Warning: Reference `Qmax' on page 33 undefined on input line 1622.
+
+
+LaTeX Warning: Reference `PeSol1' on page 33 undefined on input line 1624.
+
+
+LaTeX Warning: Reference `PeSol1' on page 33 undefined on input line 1626.
+
+[33 <C:/Users/Vadim/Documents/work/dissertation/Fig4.png> <C:/Users/Vadim/Docum
+ents/work/dissertation/Fig5.png>]
+
+LaTeX Warning: Reference `Fig1' on page 34 undefined on input line 1629.
+
+
+LaTeX Warning: Reference `PeSol2Exp' on page 34 undefined on input line 1642.
+
+
+LaTeX Warning: Reference `Fig6' on page 34 undefined on input line 1644.
+
+<Fig6.png, id=188, 361.35pt x 238.8925pt>
+File: Fig6.png Graphic file (type png)
+ <use Fig6.png>
+Package pdftex.def Info: Fig6.png used on input line 1648.
+(pdftex.def)             Requested size: 172.1503pt x 113.81102pt.
+
+
+LaTeX Warning: Reference `Qiopt' on page 34 undefined on input line 1655.
+
+[34 <C:/Users/Vadim/Documents/work/dissertation/Fig6.png (PNG copy)>]
+
+LaTeX Warning: Reference `Fig6' on page 35 undefined on input line 1668.
+
+
+LaTeX Warning: Reference `PeSol2Exp' on page 35 undefined on input line 1668.
+
+
+LaTeX Warning: Reference `Pei2' on page 35 undefined on input line 1669.
+
+
+LaTeX Warning: Reference `Fig7' on page 35 undefined on input line 1671.
+
+<Fig7.png, id=192, 361.35pt x 230.8625pt>
+File: Fig7.png Graphic file (type png)
+ <use Fig7.png>
+Package pdftex.def Info: Fig7.png used on input line 1675.
+(pdftex.def)             Requested size: 178.13823pt x 113.81102pt.
+
+
+LaTeX Warning: Reference `Qiopt' on page 35 undefined on input line 1679.
+
+
+LaTeX Warning: Reference `Fig6' on page 35 undefined on input line 1679.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 35 undefined on input line 1695.
+
+
+LaTeX Warning: Reference `eq:PEN' on page 35 undefined on input line 1710.
+
+[35 <C:/Users/Vadim/Documents/work/dissertation/Fig7.png (PNG copy)>] [36]
+Chapter 3
+
+LaTeX Warning: Citation `Wootters1982' on page 37 undefined on input line 1721.
+
+
+
+LaTeX Warning: Citation `Dieks1982' on page 37 undefined on input line 1721.
+
+
+LaTeX Warning: Citation `Buzek1996' on page 37 undefined on input line 1728.
+
+
+LaTeX Warning: Citation `Hillery1997' on page 37 undefined on input line 1739.
+
+
+LaTeX Warning: Citation `Duan1998' on page 37 undefined on input line 1745.
+
+
+Overfull \hbox (1.94543pt too wide) in paragraph at lines 1719--1775
+[]\T1/cmr/m/n/12 One of the rea-sons we need to de-velop op-ti-mum state dis-cr
+im-i-na-tion mea-sure-ment schemes
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37
+
+
+]
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40]
+
+LaTeX Warning: Reference `eq:clone1' on page 41 undefined on input line 1876.
+
+
+LaTeX Warning: Reference `eq:clone2' on page 41 undefined on input line 1877.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+
+LaTeX Warning: Citation `Duan1998' on page 42 undefined on input line 1932.
+
+
+LaTeX Warning: Reference `eq:clone overlap' on page 42 undefined on input line 
+1934.
+
+[42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+
+LaTeX Warning: Citation `Duan1998' on page 44 undefined on input line 2017.
+
+
+LaTeX Warning: Citation `Duan1998' on page 44 undefined on input line 2024.
+
+
+LaTeX Warning: Reference `Ui' on page 44 undefined on input line 2043.
+
+
+LaTeX Warning: Reference `Ui' on page 44 undefined on input line 2046.
+
+
+LaTeX Warning: Reference `unit cond' on page 44 undefined on input line 2055.
+
+
+LaTeX Warning: Reference `unit cond' on page 44 undefined on input line 2061.
+
+
+LaTeX Warning: Reference `fig:1' on page 44 undefined on input line 2063.
+
+
+LaTeX Warning: Reference `fig:1' on page 44 undefined on input line 2069.
+
+
+LaTeX Warning: Reference `fig:1' on page 44 undefined on input line 2072.
+
+[44]
+
+LaTeX Warning: Reference `fig:1' on page 45 undefined on input line 2081.
+
+
+LaTeX Warning: Reference `obj fun' on page 45 undefined on input line 2081.
+
+
+LaTeX Warning: Reference `unit cond' on page 45 undefined on input line 2086.
+
+
+LaTeX Warning: Reference `obj fun' on page 45 undefined on input line 2088.
+
+
+LaTeX Warning: Reference `unit cond' on page 45 undefined on input line 2103.
+
+
+LaTeX Warning: Reference `unit cond' on page 45 undefined on input line 2106.
+
+
+LaTeX Warning: Reference `unit cond' on page 45 undefined on input line 2111.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+
+LaTeX Warning: Reference `unit cond' on page 46 undefined on input line 2120.
+
+
+LaTeX Warning: Reference `x =000026 y' on page 46 undefined on input line 2121.
+
+
+
+LaTeX Warning: Reference `x =000026 y' on page 46 undefined on input line 2125.
+
+
+
+LaTeX Warning: Reference `unit cond' on page 46 undefined on input line 2132.
+
+
+LaTeX Warning: Reference `fig:2' on page 46 undefined on input line 2137.
+
+
+LaTeX Warning: Reference `unit cond' on page 46 undefined on input line 2137.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+
+LaTeX Warning: Reference `obj fun' on page 47 undefined on input line 2156.
+
+
+LaTeX Warning: Reference `unit cond' on page 47 undefined on input line 2158.
+
+
+LaTeX Warning: Reference `fig:2' on page 47 undefined on input line 2158.
+
+
+LaTeX Warning: Reference `par sqrt' on page 47 undefined on input line 2162.
+
+
+LaTeX Warning: Reference `range t' on page 47 undefined on input line 2168.
+
+
+LaTeX Warning: Reference `obj fun' on page 47 undefined on input line 2181.
+
+
+LaTeX Warning: Reference `par sqrt' on page 47 undefined on input line 2181.
+
+
+LaTeX Warning: Reference `t's' on page 47 undefined on input line 2187.
+
+
+LaTeX Warning: Reference `par sqrt' on page 47 undefined on input line 2188.
+
+
+LaTeX Warning: Reference `fig:3' on page 47 undefined on input line 2193.
+
+
+LaTeX Warning: Reference `t's' on page 47 undefined on input line 2198.
+
+
+LaTeX Warning: Reference `par sqrt' on page 47 undefined on input line 2198.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+
+LaTeX Warning: Reference `fig:3' on page 48 undefined on input line 2206.
+
+
+LaTeX Warning: Citation `Bergou2010' on page 48 undefined on input line 2207.
+
+
+LaTeX Warning: Reference `fig:3' on page 48 undefined on input line 2217.
+
+
+LaTeX Warning: Reference `UD-1' on page 48 undefined on input line 2223.
+
+
+LaTeX Warning: Reference `unit cond' on page 48 undefined on input line 2225.
+
+
+LaTeX Warning: Reference `fig:1' on page 48 undefined on input line 2226.
+
+
+LaTeX Warning: Reference `fig:2' on page 48 undefined on input line 2226.
+
+
+LaTeX Warning: Reference `obj fun' on page 48 undefined on input line 2230.
+
+
+LaTeX Warning: Reference `UD-1' on page 48 undefined on input line 2234.
+
+
+LaTeX Warning: Reference `obj fun' on page 48 undefined on input line 2236.
+
+
+LaTeX Warning: Reference `UD-1' on page 48 undefined on input line 2238.
+
+
+LaTeX Warning: Reference `obj fun' on page 48 undefined on input line 2238.
+
+
+LaTeX Warning: Reference `UD-1' on page 48 undefined on input line 2241.
+
+
+LaTeX Warning: Reference `Ui' on page 48 undefined on input line 2242.
+
+
+LaTeX Warning: Reference `UD-1' on page 48 undefined on input line 2246.
+
+
+LaTeX Warning: Reference `Ui' on page 48 undefined on input line 2249.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2251.
+
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2254.
+
+
+LaTeX Warning: Reference `unit cond' on page 49 undefined on input line 2255.
+
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2264.
+
+
+LaTeX Warning: Citation `Bergou2012' on page 49 undefined on input line 2265.
+
+
+LaTeX Warning: Reference `Q's' on page 49 undefined on input line 2275.
+
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2278.
+
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2280.
+
+
+LaTeX Warning: Reference `UD-1' on page 49 undefined on input line 2283.
+
+
+LaTeX Warning: Reference `main' on page 49 undefined on input line 2286.
+
+
+LaTeX Warning: Reference `par sqrt' on page 49 undefined on input line 2286.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+
+LaTeX Warning: Reference `eq:clone overlap' on page 50 undefined on input line 
+2298.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+
+LaTeX Warning: Reference `eq:QuadratinA1' on page 51 undefined on input line 23
+33.
+
+
+LaTeX Warning: Reference `eq:lagr1' on page 51 undefined on input line 2337.
+
+
+LaTeX Warning: Reference `eq:lagr2' on page 51 undefined on input line 2338.
+
+
+LaTeX Warning: Reference `eq:q12' on page 51 undefined on input line 2345.
+
+
+LaTeX Warning: Reference `eq:1 to 2 cloning constraint' on page 51 undefined on
+ input line 2364.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+
+LaTeX Warning: Reference `eq:1 to 2 cloning constraint' on page 52 undefined on
+ input line 2381.
+
+
+LaTeX Warning: Reference `eq:QuadratinA1' on page 52 undefined on input line 23
+96.
+
+
+LaTeX Warning: Reference `eq: 2nd quadratic in A' on page 52 undefined on input
+ line 2396.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+[53]
+
+LaTeX Warning: Reference `eq:sep' on page 54 undefined on input line 2482.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+
+LaTeX Warning: Citation `Chefles1998a' on page 55 undefined on input line 2509.
+
+
+
+LaTeX Warning: Citation `yerokhin' on page 55 undefined on input line 2519.
+
+
+LaTeX Warning: Reference `fig:state_separation' on page 55 undefined on input l
+ine 2546.
+
+[55]
+
+LaTeX Warning: Reference `eq:separation' on page 56 undefined on input line 254
+8.
+
+<state_separation.pdf, id=268, 174.26093pt x 224.6794pt>
+File: state_separation.pdf Graphic file (type pdf)
+
+<use state_separation.pdf>
+Package pdftex.def Info: state_separation.pdf used on input line 2565.
+(pdftex.def)             Requested size: 241.86035pt x 241.85474pt.
+
+
+LaTeX Warning: Citation `Chefles1998a' on page 56 undefined on input line 2580.
+
+
+
+LaTeX Warning: Reference `eq:separation' on page 56 undefined on input line 258
+3.
+
+
+LaTeX Warning: Reference `eq:separation constraint' on page 56 undefined on inp
+ut line 2585.
+
+[56 <C:/Users/Vadim/Documents/work/dissertation/state_separation.pdf>]
+
+LaTeX Warning: Reference `eq:separation' on page 57 undefined on input line 260
+4.
+
+
+LaTeX Warning: Reference `eq:cloning-1' on page 57 undefined on input line 2623
+.
+
+
+LaTeX Warning: Reference `eq:separation-1' on page 57 undefined on input line 2
+624.
+
+
+LaTeX Warning: Citation `Duan1998' on page 57 undefined on input line 2626.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+
+LaTeX Warning: Reference `eq:separation-1' on page 58 undefined on input line 2
+632.
+
+
+LaTeX Warning: Reference `eq:separation' on page 58 undefined on input line 265
+1.
+
+
+LaTeX Warning: Reference `eq:separation constraint' on page 58 undefined on inp
+ut line 2652.
+
+
+LaTeX Warning: Reference `eq:separation constraint' on page 58 undefined on inp
+ut line 2658.
+
+
+LaTeX Warning: Reference `eb cha qs -> z =000026 t' on page 58 undefined on inp
+ut line 2668.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+
+LaTeX Warning: Reference `eb cha qs -> z =000026 t' on page 59 undefined on inp
+ut line 2674.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+<Separation1.graph.pdf, id=301, 214.28125pt x 209.11827pt>
+File: Separation1.graph.pdf Graphic file (type pdf)
+
+<use Separation1.graph.pdf>
+Package pdftex.def Info: Separation1.graph.pdf used on input line 2761.
+(pdftex.def)             Requested size: 241.8636pt x 241.85622pt.
+
+
+LaTeX Warning: Citation `Chefles1999' on page 61 undefined on input line 2775.
+
+[61 <C:/Users/Vadim/Documents/work/dissertation/Separation1.graph.pdf>]
+
+LaTeX Warning: Citation `Bruss1998' on page 62 undefined on input line 2788.
+
+
+LaTeX Warning: Citation `Bruss1998' on page 62 undefined on input line 2817.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+
+LaTeX Warning: Reference `eq:3.4.6' on page 63 undefined on input line 2859.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+
+LaTeX Warning: Reference `eq:tan2x' on page 65 undefined on input line 2902.
+
+
+LaTeX Warning: Reference `eq:fid' on page 65 undefined on input line 2929.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+Overfull \hbox (36.5703pt too wide) in paragraph at lines 2948--2951
+\T1/cmr/m/n/12 Discriminate the in-com-ing states $[]$ with op-ti-mal ME then p
+re-pare states $[]$
+ []
+
+[66]
+
+LaTeX Warning: Citation `Chefles1999' on page 67 undefined on input line 3007.
+
+
+LaTeX Warning: Citation `Chefles1999' on page 67 undefined on input line 3020.
+
+[67]
+
+LaTeX Warning: Reference `eq:fid' on page 68 undefined on input line 3030.
+
+
+LaTeX Warning: Citation `Duan1998' on page 68 undefined on input line 3040.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+
+LaTeX Warning: Reference `eq:NeumarkClone1' on page 69 undefined on input line 
+3070.
+
+
+LaTeX Warning: Reference `eq:NeumarkClone2' on page 69 undefined on input line 
+3071.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+
+LaTeX Warning: Reference `eq:seperation' on page 70 undefined on input line 310
+5.
+
+
+Overfull \hbox (28.54149pt too wide) in alignment at lines 3128--3131
+ [][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+ [71]
+
+LaTeX Warning: Reference `eq:fid' on page 72 undefined on input line 3191.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 72 undefined on input line 3201.
+
+
+LaTeX Warning: Reference `eq:separation constraint' on page 72 undefined on inp
+ut line 3215.
+
+[72]
+Chapter 4
+
+LaTeX Warning: Citation `Cirac1995' on page 73 undefined on input line 3225.
+
+
+LaTeX Warning: Citation `Gershenfeld1997' on page 73 undefined on input line 32
+25.
+
+
+LaTeX Warning: Citation `Turchette1995' on page 73 undefined on input line 3225
+.
+
+
+LaTeX Warning: Citation `Domokos1995' on page 73 undefined on input line 3225.
+
+
+LaTeX Warning: Citation `Milburn1989' on page 73 undefined on input line 3226.
+
+
+LaTeX Warning: Citation `Chuang1996' on page 73 undefined on input line 3227.
+
+
+LaTeX Warning: Citation `Bergou2009' on page 73 undefined on input line 3233.
+
+
+LaTeX Warning: Citation `shehu' on page 73 undefined on input line 3235.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 73 undefined on input line 3239.
+
+
+LaTeX Warning: Citation `Reck1994' on page 73 undefined on input line 3244.
+
+
+LaTeX Warning: Citation `Bergou2009' on page 73 undefined on input line 3256.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73
+
+
+]
+[74]
+
+LaTeX Warning: Reference `eq:frio constraint' on page 75 undefined on input lin
+e 3297.
+
+
+LaTeX Warning: Citation `Chefles1998' on page 75 undefined on input line 3308.
+
+
+LaTeX Warning: Reference `eq:general constraint' on page 75 undefined on input 
+line 3321.
+
+
+Underfull \vbox (badness 7796) has occurred while \output is active []
+
+ [75]
+
+LaTeX Warning: Reference `eq:quadratic IM' on page 76 undefined on input line 3
+343.
+
+
+LaTeX Warning: Citation `Helstrom1969' on page 76 undefined on input line 3346.
+
+
+
+LaTeX Warning: Citation `Ivanovic1987' on page 76 undefined on input line 3355.
+
+
+
+LaTeX Warning: Citation `Dieks1988' on page 76 undefined on input line 3355.
+
+
+LaTeX Warning: Citation `Peres1988' on page 76 undefined on input line 3355.
+
+
+LaTeX Warning: Citation `Bagan2012' on page 76 undefined on input line 3372.
+
+
+Underfull \vbox (badness 1997) has occurred while \output is active []
+
+ [76]
+
+LaTeX Warning: Reference `eq:general constraint' on page 77 undefined on input 
+line 3389.
+
+
+Underfull \vbox (badness 4353) has occurred while \output is active []
+
+ [77]
+
+LaTeX Warning: Reference `eq:optimize P_e' on page 78 undefined on input line 3
+433.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+
+LaTeX Warning: Reference `eq:general constraint' on page 79 undefined on input 
+line 3476.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+
+LaTeX Warning: Reference `eq:r1(lambda)' on page 80 undefined on input line 354
+0.
+
+
+LaTeX Warning: Reference `eq:r2(lambda)' on page 80 undefined on input line 354
+1.
+
+
+LaTeX Warning: Reference `eq:general constraint' on page 80 undefined on input 
+line 3541.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+
+LaTeX Warning: Reference `eq:C' on page 81 undefined on input line 3550.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
+
+LaTeX Warning: Reference `eq:r1(lambda)' on page 82 undefined on input line 358
+0.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
+
+LaTeX Warning: Reference `eq:P_E(q1,q2)' on page 83 undefined on input line 361
+1.
+
+
+LaTeX Warning: Reference `eq:P_E(q1,q2)' on page 83 undefined on input line 361
+3.
+
+[83]
+
+LaTeX Warning: Citation `Bergou2009' on page 84 undefined on input line 3655.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+
+LaTeX Warning: Reference `eq:eq1' on page 85 undefined on input line 3708.
+
+
+LaTeX Warning: Reference `eq:eq2' on page 85 undefined on input line 3709.
+
+
+LaTeX Warning: Reference `eq:eq1' on page 85 undefined on input line 3712.
+
+
+LaTeX Warning: Reference `eq:eq2' on page 85 undefined on input line 3728.
+
+[85]
+
+LaTeX Warning: Reference `eq:r' on page 86 undefined on input line 3764.
+
+
+LaTeX Warning: Reference `eq:p' on page 86 undefined on input line 3764.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+
+LaTeX Warning: Reference `eq:U(equal prior)' on page 87 undefined on input line
+ 3785.
+
+
+LaTeX Warning: Reference `eq:U(equal prior)' on page 87 undefined on input line
+ 3808.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87]
+Overfull \hbox (5.83896pt too wide) detected at line 3869
+\OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 :
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88]
+[89]
+
+LaTeX Warning: Reference `eq:U1' on page 90 undefined on input line 3943.
+
+
+LaTeX Warning: Reference `eq:U2' on page 90 undefined on input line 3943.
+
+
+LaTeX Warning: Reference `eq:U1' on page 90 undefined on input line 3945.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90]
+
+LaTeX Warning: Reference `eq:r_i' on page 91 undefined on input line 4003.
+
+
+LaTeX Warning: Reference `eq:p_i' on page 91 undefined on input line 4004.
+
+
+LaTeX Warning: Reference `sixport' on page 91 undefined on input line 4009.
+
+<BeamSplitters.png, id=430, 477.28313pt x 360.59718pt>
+File: BeamSplitters.png Graphic file (type png)
+ <use BeamSplitters.png>
+Package pdftex.def Info: BeamSplitters.png used on input line 4032.
+(pdftex.def)             Requested size: 241.84538pt x 241.84645pt.
+
+[91] [92 <C:/Users/Vadim/Documents/work/dissertation/BeamSplitters.png>]
+
+LaTeX Warning: Reference `eq:U(equal prior)' on page 93 undefined on input line
+ 4131.
+
+[93] [94]
+Appendix 1: Reck-Zeilinger Algorithm 
+
+LaTeX Warning: Citation `Reck1994' on page 95 undefined on input line 4160.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [96]
+
+LaTeX Warning: Reference `eq:reck-seilinger algorithm' on page 97 undefined on 
+input line 4258.
+
+
+LaTeX Warning: Reference `coherent' on page 97 undefined on input line 4268.
+
+
+LaTeX Warning: Reference `eq:reck-seilinger algorithm' on page 97 undefined on 
+input line 4273.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97]
+<fig1-coherent.jpg, id=454, 247.92625pt x 140.525pt>
+File: fig1-coherent.jpg Graphic file (type jpg)
+ <use fig1-coherent.jpg>
+Package pdftex.def Info: fig1-coherent.jpg used on input line 4308.
+(pdftex.def)             Requested size: 241.85007pt x 241.86337pt.
+
+[98 <C:/Users/Vadim/Documents/work/dissertation/fig1-coherent.jpg>]
+Appendix 2: Lagrange Multipliers
+
+LaTeX Warning: Citation `Barnett2009' on page 99 undefined on input line 4322.
+
+
+LaTeX Warning: Reference `eq:lagrange 2' on page 99 undefined on input line 435
+7.
+
+
+LaTeX Warning: Reference `eq:lagrange 1' on page 99 undefined on input line 435
+8.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99
+
+
+]
+
+LaTeX Warning: Reference `eq:lagrange x' on page 100 undefined on input line 43
+82.
+
+
+LaTeX Warning: Reference `eq:lagrange y' on page 100 undefined on input line 43
+82.
+
+
+LaTeX Warning: Reference `eq:lagrange full' on page 100 undefined on input line
+ 4398.
+
+
+LaTeX Warning: Reference `eq:lagrange x' on page 100 undefined on input line 43
+99.
+
+
+LaTeX Warning: Reference `eq:lagrange y' on page 100 undefined on input line 43
+99.
+
+No file DissertationANDI.bbl.
+[100] (C:\Users\Vadim\Documents\work\dissertation\DissertationANDI.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3913 strings out of 493921
+ 49400 string characters out of 3144877
+ 114404 words of memory out of 3000000
+ 6943 multiletter control sequences out of 15000+200000
+ 25800 words of font info for 76 fonts, out of 3000000 for 9000
+ 1002 hyphenation exceptions out of 8191
+ 34i,15n,31p,859b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecbx1000.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm1000.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
+\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts
+\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Vadim\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Vadim\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Vadim\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Us
+ers\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.
+pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecrm0900.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm1200.pk> <C:\Users\Vadim\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cmextra/cmex8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+r6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb>
+Output written on DissertationANDI.pdf (108 pages, 1424103 bytes).
+PDF statistics:
+ 868 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

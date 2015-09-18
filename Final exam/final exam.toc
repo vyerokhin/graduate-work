@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{6}{0}{1}
+\beamer@subsectionintoc {1}{1}{Information Theory}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Pure State Discrimination Strategies}{15}{0}{1}
+\beamer@sectionintoc {2}{State Separation}{32}{0}{2}
+\beamer@sectionintoc {3}{Cloning Pure States}{35}{0}{3}
+\beamer@subsectionintoc {3}{1}{Deterministic Approximate Cloning}{36}{0}{3}
+\beamer@subsectionintoc {3}{2}{Probabilistic Exact Cloning}{38}{0}{3}
+\beamer@subsectionintoc {3}{3}{Intermediate Cloning}{46}{0}{3}
+\beamer@sectionintoc {4}{Linear Optical Implementations}{51}{0}{4}

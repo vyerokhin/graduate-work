@@ -1,0 +1,394 @@
+
+%\documentclass[aps,prl,twocolumn,eqsecnum,showpacs]{revtex4}
+\documentclass[aps,prl,twocolumn,showpacs]{revtex4}
+\usepackage{amssymb,amsmath}
+\usepackage{bm, graphicx, amsmath}
+\usepackage{bbm}
+\usepackage[section]{placeins}
+
+
+\usepackage[mathscr]{eucal}
+\usepackage{graphicx}
+\usepackage{color}
+
+\newcommand{\id}{{\mathbb I}}
+\newcommand{\tr}{{\rm tr}\,}
+\parskip=1em
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \newcommand{\abs}[1]{\left|{#1}\right|}
+ \newcommand{\av}[1]{\left\langle #1 \right\rangle}
+ 
+  \newcommand{\br}[1]{\langle #1|}
+  \newcommand{\ke}[1]{|#1\rangle}
+  \newcommand{\bk}[2]{\langle #1|#2\rangle}
+  \newcommand{\kb}[2]{\ke{#1}\br{#2}}
+  \newcommand{\var}[2]{\langle #1,#2\rangle} 
+  
+  \newcommand{\al}[1]{^{(#1)}}
+  \newcommand{\da}{^\dagger} 
+  
+  \newcommand{\pt}[1]{\left( #1 \right)}
+  \newcommand{\pq}[1]{\left[ #1 \right]}
+  \newcommand{\pg}[1]{\left\{ #1 \right\}} 
+  
+  \newcommand{\lpt}[1]{\left( #1 \right.}
+  \newcommand{\lpq}[1]{\left[ #1 \right.]}
+  \newcommand{\lpg}[1]{\left\{ #1 \right.}
+  \newcommand{\rpt}[1]{\left. #1 \right)}
+  \newcommand{\rpq}[1]{\left. #1 \right]}
+  \newcommand{\rpg}[1]{\left. #1 \right\}} 
+  
+  \newcommand{\pp}[2]{ {\mbox{\scriptsize$
+  \begin{array}{c}
+  #1\\
+  #2
+  \end{array}$} } }  
+    \begin{document}
+
+  \title{Probabilistically Perfect Cloning of Two Pure States: A Geometric Approach}
+\author{V. Yerokhin$^{1}$, A. Shehu$^{1}$, E. Feldman$^{2}$, E. Bagan$^{1,3}$ and J. A. Bergou$^{1}$}
+\affiliation{$^{1}$Department of Physics and Astronomy, Hunter College of the City University of New York, 695 Park Avenue, New York, NY 10065, USA\\
+$^{2}$Department of Mathematics, Graduate Center of the City University of New York, 365 Fifth Avenue, New York, New York 10016, USA \\
+$^{3}$F\'{i}sica Te\`{o}rica: Informaci\'{o} i Fen\`{o}mens Qu\`antics, Universitat Aut\`{o}noma de Barcelona, 08193 Bellaterra (Barcelona), Spain
+}
+
+\begin{abstract} 
+We solve the long-standing problem of making $n$ perfect clones from $m$ copies of one of two known pure states with minimum failure probability in the general case where the known states have arbitrary a-priori probabilities.  
+The solution emerges from a geometric formulation of the problem. This formulation also reveals a deeper connection between cloning and state discrimination. The convergence of cloning to state discrimination as the number of clones goes to infinity exhibits a phenomenon analogous to a second order phase transition.
+\end{abstract}
+\pacs{03.67.-a, 03.65.Ta,42.50.-p }
+\maketitle 
+
+It is impossible to always clone quantum states perfectly \cite{Herbert, Wooters, Dieks}.  This leads to advantages for quantum systems over classical ones in some communications protocols of practical relevance.  A common example is stronger security in cryptographic key distribution, with recent works showing more applications~\cite{Pomarico, Bart}.  Developments in cloning, including probabilistically perfect \cite {DuanGuo} and approximate cloning~\cite{Gisin1,Buzek,Brub,Chefles1,Fiurasek}  provide anchors for better understanding quantum theory as a whole, such as the relationship between the no-cloning and no-signaling theorems~\cite{Barnum}, and  fundamental limits on quantum measurements~\cite{Chiribella,Bae,Chiribella2006,Gendra}. In particular, cloning's relationship with the fundamental limits of  state discrimination will be central to this Letter. For reviews citing recent developments, applications and experiments see~\cite{review1,Fan}.
+
+When knowledge of the states' preparation is available, perfect cloning is probabilistically possible. With the first result in probabilistic cloning, Duan and Guo \cite{DuanGuo} considered the problem of producing perfect clones of linearly-independent pure states and focused on the two state case.  They found the maximum average success rate when both states are equally likely, and set this success probability as an upper bound for arbitrary prior probabilities.  While other work has been done on this problem, there has until now been no general solution. In this~Letter we obtain the general analytic solution and use this to examine cloning's relationship with state discrimination.
+ 
+There are a number of reasons why one might want to solve the general problem with arbitrary a-priori probabilities.  (i)~The solution to the equal prior problem is obtained using only symmetry arguments, with no need for optimization. (ii)~A general solution would check the robustness of the equal priors case against variations of the prior probabilities around $1/2$.  This gives control over errors that are unavoidable for any physical realization. (iii)~One could consider a discrimination protocol consisting of optimal cloning followed by optimal Unambiguous Discrimination (UD) of the produced clones, which we will call ``discrimination by cloning." Surprisingly this is optimal for equal a-priori probabilities and for any number of clones (see below).  This suggests that the equal-priors case is very special and can provide a deceptive view of cloning.  (iv)~In the limit of infinitely many clones, the optimal strategy prepares the clones according to the outcomes of UD of the input states. This is a particular case of a ``measure and prepare" protocol, which we will call ``cloning by discrimination." Since the UD measurement varies over the range of prior probabilities (a 3-outcome generalized measurement vs a 2-outcome projective measurement), this hints at a similar situation for optimal cloning that can only be revealed by solving the general problem. 
+
+Our solution shows that discrimination by cloning as outlined in (iii) is sub-optimal for unequal prior probabilities (unless one state is never sent). This indicates that the equal prior case is not representative of state dependent cloning.  Additionally, contrary to the suggestions in~(iv) above, our solution leads to a failure probability that is a smooth function of the priors. However,  the strategy converges to cloning by discrimination as~$n\to\infty$, implying a discontinuous second derivative and revealing a phenomenon similar to a second order phase transition.
+
+
+We can imagine a state dependent probabilistic cloner as a machine with an input port, an output port and two flags that herald the success or failure of cloning.  The input $|\psi_i^m\rangle=|\psi_i\rangle^{\otimes m}$, $i=1,2$ ($m$ identical copies of either $|\psi_1\rangle$ or $|\psi_2\rangle$) is fed through the input port for processing. In case of success $n$ perfect clones~$|\psi_i^n\rangle=|\psi_i\rangle^{\otimes n}$  are delivered through the output port with conditioned probability $p_i$. Otherwise, the output is in a refuse state. Conditioned to the input state being $|\psi^m_i\rangle$, the failure probability is~$q_i=1-p_i$.
+
+For cloning, optimality is usually addressed from a Bayesian viewpoint that assumes the states to be cloned are given with some a-priori  probabilities $\eta_1$ and $\eta_2$, $\eta_1+\eta_2=1$. Then a natural cost function for our probabilistic machines is given by the averaged failure probability 
+%
+\begin{equation}
+Q=\eta_1 q_1+\eta_2 q_2.
+\label{obj fun}
+\end{equation}
+%
+Accordingly, the optimal cloner minimizes the cost function 
+%Accordingly, the optimal cloner is one that minimizes the cost function 
+$Q$. Our aim is to find that optimal cloner and the minimum average failure probability $Q_{\rm min}$ for arbitrary priors $\eta_1$ and $\eta_2$.
+
+%
+%
+%The cloning process can be thought of as a generalized measurement and can be described by two operators~\mbox{$A_{\rm succ}$, $A_{\rm fail}$}, so that~$A^\dagger{}_{\kern-.3em\rm succ}A_{\rm succ}+A^\dagger{}_{\kern-.2em\rm fail}A_{\rm fail}=\openone$. 
+%However, Neumark's theorem~\cite{Bergou} provides an alternative approach  that turns out to be more convenient for our analysis. 
+
+In our formulation, similar to that in~\cite{DuanGuo}, the Hilbert space ${\mathscr H}^{\otimes m}$ of the original $m$ copies is supplemented by an ancillary space~${\mathscr H}^{\otimes(n-m)}\otimes {\mathscr H}_F$ that accommodates both the additional $n-m$ clones as well as the success/failure flags. Then, a unitary transformation~$U$ (time evolution) from ${\mathscr H}^{\otimes m}\otimes {\mathscr H}^{\otimes(n-m)}\otimes {\mathscr H}_{F}$ onto ${\mathscr H}^{\otimes n}\otimes{\mathscr H}_F$ is defined through~\cite{DuanGuo}
+%
+\begin{equation}
+U|\psi^m_i\rangle|0\rangle= \sqrt{p_i}|\psi^n_i\rangle|\alpha_i\rangle +\sqrt q_i |\Phi\rangle,\quad i=1,2. \label{Ui}
+\end{equation}
+%
+Here the ancillas are initialized in a reference state~$\ke 0$. The states of the flag associated with successful cloning~$\ke {\alpha_i}$ are constrained to be orthogonal to the refuse state~$\ke {\Phi}$ for certainty in the outcomes of the projective measurement on the flag space ${\mathscr H}_F$.  Although for optimal cloning $|\alpha_1\rangle=|\alpha_2\rangle$, we need to consider a more general setup where these two states are different  
+to include  the cloning-by-discrimination
+protocol whereby UD is used to identify the input state and then the clones are prepared accordingly~\footnote{%
+%
+Likewise, we could consider a more general setup with two refuse states $|\Phi_1\rangle$ and $|\Phi_2\rangle$ in Eqs.~(\ref{Ui}). This is necessarily sub-optimal since we could probabilistically determine whether we received $\ke{\psi_1}$ or $\ke{\psi_2}$ by applying UD to the refuse states $\ke {\Phi_i}$.  Sometimes we would be  certain of the input state, when we can always prepare $n$ copies of the state,  thereby increasing the overall success rate of the cloning strategy.
+%
+}%
+.
+For UD the success flag states must be distinguishable, so $\langle\alpha_1|\alpha_2\rangle=0$.
+Taking the inner product of each equation with itself shows that our probabilities are normalized: $p_i+q_i=1$.
+Similarly, by taking the product of the two equations in~(\ref{Ui}), we find the unitarity constraint 
+%
+\begin{equation}
+s^m=\sqrt{p_1 p_2}\, s^n \alpha+\sqrt{q_1 q_2},
+\label{unit cond}
+\end{equation}
+%
+where the overlaps
+$s = \bk {\psi_1}{\psi_2}$ and $\alpha=\langle\alpha_1|\alpha_2\rangle$ can be chosen to be real valued without any loss of generality. Furthermore, we can choose $0\le s\le 1$.  We note that for optimal cloning one has~$\alpha=1$, whereas~$\alpha=0$ for cloning by discrimination. If Eq.~(\ref{unit cond}) is satisfied, it is not hard to prove that~$U$ has a unitary extension on the whole space. % ${\mathscr H}^{\otimes n}\otimes{\mathscr H}_F$. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14em]{Fig_1NC.pdf}
+%
+\caption{Unitarity curves in Eq.~(\ref{unit cond}) and the associated sets~$S_\alpha$ in Eq.~(\ref{S_alpha}) for values of $\alpha$ positive (solid/light~gray), zero (dashed/medium gray), and negative (dotted/dark gray). The figure also shows the optimal straight segment \mbox{$Q=\eta_1 q_1+\eta_2 q_2$} and its normal vector~$(\eta_1,\eta_2)$. Plotted for  $s = 0.5$, $m = 1$, $n =2$, $\alpha = 0.8,0,-0.8$.}
+\label{fig:1}
+\end{figure}
+
+Before attempting to minimize $Q$, we need to gain geometric insight into the meaning of the unitary constraint.
+The following points turn out to be important:
+(a)~For fixed $s$, $n$ and $m$ Eq.~(\ref{unit cond}) defines a class of smooth curves on the unit square $0\le q_i\le 1$ (e.g., solid, dashed or dotted curves in Fig.~\ref{fig:1}). (b)~All these curves meet at their endpoints, $(1,s^{2m})$ and $(s^{2m},1)$. (c)~At the endpoints  the curves become tangent to the vertical and horizontal lines~$q_1=1$ and~$q_2=1$ respectively, provided~$\alpha\not=0$. %This is due to the square root $\sqrt{p_1p_2}$ in Eq.~(\ref{unit cond}).
+%A more detailed analysis shows that f
+(d)~For~$\alpha=0$ the curve %defined by Eq.~(\ref{unit cond}) 
+is an arc of the hyperbola $q_1 q_2=s^{2m}$ (dashed line in Fig.~\ref{fig:1}). 
+%
+(e)~Each of these curves and the segments joining their end points with the vertex~$(1,1)$ are the boundary of the sets (any of the gray regions in Fig.~\ref{fig:1})
+%
+\begin{equation}
+S_\alpha=\{ (q_1,q_2): \sqrt{p_1 p_2}\,s^n\alpha+\sqrt{q_1 q_2}-s^m\ge 0\}.
+\label{S_alpha}
+\end{equation}
+%
+They satisfy $S_{\alpha}\subset S_{\alpha'}$ if $\alpha<\alpha'$.
+(f)~Moreover, the sets~$S_\alpha$ are convex if $\alpha\ge0$. In particular $S_1$ is convex.
+%For $\alpha\ge0$ the set $S_\alpha$ is convex, as follows from the observation that~$(xy)^{1/2}$ is a concave function of its two (non-negative) arguments~$x$ and~$y$. 
+
+At this point a geometrical picture of the optimization problem emerges (See Fig.~\ref{fig:1}). 
+Eq.~(\ref{obj fun}) defines a straight segment  on the square $0\le q_i\le 1$ with a normal vector in the first quadrant parallel to $(\eta_1,\eta_2)$. For fixed a-priori probabilities, the average failure probability~$Q$ is proportional to the distance from this segment to the origin~$(0,0)$. 
+Since $S_1$ is convex and the stretch of its boundary given by Eq.~(\ref{unit cond}) with $\alpha=1$ is smooth, a unique point $(q_1,q_2)$ of tangency with the segment~(\ref{obj fun}) exists for any value of the priors and finite $n$.
+It gives $Q_{\rm min}$ and defines the optimal cloning strategy. %(See Fig.~\ref{fig:1}). 
+
+We note in passing that the inclusion hierarchy of the sets $S_\alpha$ provides a simple geometrical proof that $\alpha=1$, i.e., $|\alpha_1\rangle=|\alpha_2\rangle$, is indeed the optimal choice.
+%
+On the other hand, we recall that for cloning by discrimination we have $\langle\alpha_1|\alpha_2\rangle=\alpha=0$ (or~$p_i=0$). From points~(b) and~(c) above, it follows that for any finite $n$ and arbitrary priors $\eta_1$ and $\eta_2$ this protocol is strictly suboptimal, i.e., $Q_{\rm min}<Q_{\rm UD}$, where the subscript ``UD" is a reminder that the failure rate of cloning by discrimination is that of UD. One could say that optimal cloning is incompatible with discerning the identity of the input states for any finite number of clones. However, optimal cloning and UD become one and the same in the limit $n\to \infty$, where $s^n\to 0$ and the curve~(\ref{unit cond}) collapses to the hyperbola $q_1 q_2=s^{2m}$, as it does for $\alpha=0$. We will come back to this point below.
+%
+
+A more quantitative analysis requires finding a convenient parametrization of the curve~(\ref{unit cond}). To this end, simpler and more manageable expressions are derived if the symmetry under $q_1\leftrightarrow q_2$ is preserved. We write $\sqrt{q_i} = \sin \theta_i$ for $0\leq \theta_i \leq \pi/2$. By further introducing the variables $x =\cos(\theta_1+\theta_2)$ and $y = \cos (\theta_1 - \theta_2)$ we manage to linearize the constraint~(\ref{unit cond}),
+which now reads as $2s^m=(1+s^n)y-(1-s^n)x$. A natural parametrization for this straight line is given by 
+%
+\begin{equation}
+x={1-(1+s^n)t\over s^{n-m}},\qquad y={1-(1-s^n)t \over s^{n-m}},
+\label{x & y}
+\end{equation}
+%
+where again we have taken the most symmetrical choice.
+%
+%\begin{equation}
+%s^m=-{1-s^n\over 2}x+{1+s^n\over2}y;\quad -1\le x, y\le 1.
+%\end{equation}
+%
+Because of the symmetry of this procedure, the parameters $x$ and $y$ are invariant under $q_1\leftrightarrow q_2$ (equivalently, under $\theta_1\leftrightarrow \theta_2$). Thus, the two mirror halves of the curve~(\ref{unit cond}) under this transformation are mapped into the same straight line~(\ref{x & y}). By expressing $q_i$ as a function of~$t$ only half of the original curve is recovered. The other half is trivially obtained by applying~$q_1\leftrightarrow q_2$.
+
+The allowed domain of $t$   in Eq.~(\ref{x & y}) follows from that of~$x$ and~$y$, readily seen from their definition to be the region $|x|\le y\le 1$. Hence, we have
+%
+\begin{equation}
+{1-s^{n-m}\over 1-s^n}\le t\le  1.
+\label{range t}
+\end{equation}
+%
+After putting the various pieces together 
+%
+%\begin{equation}
+%q_i=\sin^2\!\left\{{\arccos{x}-(-1)^i\arccos{y}\over2}\right\},\quad i=1,2.
+%\label{par trig}
+%\end{equation}
+%
+one  can easily get rid of the trigonometric functions and express Eq.~(\ref{unit cond}) in parametric form as 
+%
+\begin{equation}
+q_i={1-xy-(-1)^i\sqrt{1-x^2}\sqrt{1-y^2}\over2} ,\quad i=1,2.
+\label{par sqrt}
+\end{equation}
+%
+%where we recall that $x$ and $y$ are defined in Eq.~(\ref{x & y}) with the range of $t$ given in Eq.~(\ref{range t}). 
+Fig.~\ref{fig:2} shows examples of the unitary curve~(\ref{unit cond}) for (a)~$n=2$ and (b)~$n=5$. In both cases $m=1$. 
+For larger $n$ the curves closely approximate the hyperbolae $q_1 q_2=s^{2m}$ (dashed lines) for small and moderate values of $s$, 
+%
+while for $s$ close to one the hyperbolas remain closer to the vertex~$(1,1)$, but still retain the same end points. As mentioned previously, in the limit $n\to\infty$ all curves become hyperbolic.
+\begin{figure}[hh]
+\centering
+$%
+\begin{array}{c}
+\includegraphics[width=26.8em]{Fig_2NC.pdf}\\
+\end{array}%
+$%
+\caption{Unitarity curves for different values of~$s$ and for (a) $m=1$, $n=2$ and (b) $m=1$, $n=5$. The curves are symmetric under mirror reflexion along the  (dotted) straight line $q_1=q_2$, i.e., under the transformation~$q_1\leftrightarrow q_2$. The dashed lines in~(b) are the hyperbolae~$q_1 q_2=s^{2m}$.}
+\label{fig:2}
+\end{figure}
+%
+
+Now we can return to the minimization of the average failure probability $Q$. Despite the apparent simplicity of the problem, finding the minimum $Q$ as an explicit function of $\eta_1$ or $\eta_2$ involves solving a quartic equation without a simple form~\footnote{%
+%
+%
+%
+Using the alternative change of variables $u = \sqrt{q_1 q_2}$ and~$v = (q_1 + q_2)/2$, the unitary constraint, Eq~(\ref{unit cond}), defines a parabola on the $u$-$v$ plane.
+Likewise, the failure rate, Eq~(\ref{obj fun}), defines an ellipse with center on the $v$ axis whose eccentricity only depends on $\eta_1$ and $\eta_2$. The size of the ellipse and the $v$ coordinate of its center both increase with $Q$.
+%
+It follows that $Q_{\rm min}$ emerges when the ellipse is tangent to the parabola. The intersection of these two conics can be written as a quartic equation.
+%
+%Another geometrical interpretation of optimality emerges:  for a fixed value of the overlap and number of clones, the parabola remains constant.  For an increased a priori probability $\eta_1$ the ellipse inflates, and its height increases proportionally to the total failure rate Q.  The optimal value of Q emerges when the ellipse just touches the parabola, implying a double root.  The intersection of these two conics can be written as a fourth degree equation.
+%
+%
+%
+}.
+%
+ Instead, we will derive the parametric equation of the curve $(\eta_1,Q_{\rm min})$. This, along with our complete description of the unitary curve~(\ref{unit cond}), provides a full account of the solution.
+
+Without any loss of generality we may assume that~$\eta_1\le\eta_2$, or equivalently,  that~$0\le\eta_1\le 1/2$. Then the slope of the vector normal  to the straight line~(\ref{obj fun}) is less or equal to one and thus it can only become tangent to the lower half of the unitary curve~(\ref{unit cond}) (see Fig.~\ref{fig:2}). %It is apparent from Fig.~\ref{fig:2} that 
+The slope of this lower half increases monotonically as we move away from the line~$q_1=q_2$, where it has the value~$-1$, and vanishes before we reach the line~$q_1=1$. This follows from the properties (a)--(f) above and can be checked using  Eq.~(\ref{par sqrt}). The values of $t$ at which the slope is $-1$ and $0$ are respectively
+%
+\begin{equation}
+t_{-1}={1-s^{n-m}\over 1-s^n},\quad
+t_0={1-s^{2(n-m)}\over 1-s^{2n}},
+\label{t's}
+\end{equation}
+%
+where we note that $t_{-1}$ is the lower value of the range of~$t$ in Eq.~(\ref{range t}). For any point $(q_1(t),q_2(t))$ with $t\in[t_{-1},t_0]$ there is a line $Q=\eta_1 q_1+\eta_2 q_2$ that is tangent to it, starting with $\eta_1=\eta_2=1/2$ for $t=t_{-1}$ up to $\eta_1=0$, $\eta_2=1$ for $t=t_0$. 
+
+This observation enables us to derive the desired parametric expression for the optimality curve~$(\eta_1,Q_{\rm min})$ as follows: for a given $t$ in the range above, a necessary condition for tangency is \mbox{$\eta_1 q'_1+\eta_2 q'_2=0$}, where $q'_i=d q_i/d t$. In this equation we can solve for $\eta_1$ (or $\eta_2$) using that~$\eta_1+\eta_2=1$. By substituting $q_1$ and~$q_2$ in Eq.~(\ref{obj fun}) with~(\ref{par sqrt}) we enforce contact with the unitarity curve and obtain the expression of $Q_{\rm min}$. The final result can be cast as:
+%
+\begin{equation}
+\eta_1={q'_2\over q'_2-q'_1},\;\; Q_{\rm min}={q'_2 q_1-q'_1 q_2\over q'_2-q'_1},\;\; t_{-1}\le t\le t_0,
+\label{main}
+\end{equation}
+%
+where $t_{-1}$, $t_0$ and $q_i$ are given in Eqs.~(\ref{t's}) and~(\ref{par sqrt}). The expressions for the derivatives $q'_i$ are %most easily derived from the trigonometric form~(\ref{par trig}) to be
+%
+\begin{equation}
+q'_i={\sqrt{q_i(1-q_i)}\over s^{n-m}}\left\{{1+s^n\over\sqrt{1-x^2}}-(-1)^i{1-s^n\over\sqrt{1-y^2}}\right\}.
+\end{equation}
+%
+
+Fig.~\ref{fig:3} shows plots of the curves $(\eta_1,Q_{\rm min})$ for $m=1$ input copies and  (a) $n=2$ or (b) $n=5$ clones, as in the previous figure. We see that $Q_{\rm min}$ is an increasing function of $\eta_1$ in the given range $[0,1/2]$. The values of~$Q_{\rm min}$ at the end points of this range follow by substituting $t_{0}$ and $t_{-1}$, Eq.~(\ref{t's}), into Eq.~(\ref{par sqrt}). They are given by
+%
+\begin{equation}
+Q_{0}=q_2(t_0)={s^{2m}-s^{2n}\over 1-s^{2n}},\quad
+Q_{-1}={s^m-s^n\over 1-s^n},
+\label{Q's}
+\end{equation}
+%
+where $Q_{\rm min}=Q_{-1}$ holds for equal priors and $Q_{\rm min}=Q_0$ for $\eta_1\to 0$ (i.e., $\eta_2\to 1$).
+\begin{figure}[h]
+\centering
+$%
+\begin{array}{c}
+\includegraphics[width=26.7em]{Fig_3NC.pdf}\\
+\end{array}%
+$%
+\caption{Minimum cloning failure probability $Q_{\rm min}$ vs. $\eta_1$ (solid lines) and~UD failure probability $Q_{\rm UD}$ vs. $\eta_1$ (dashed lines) for the same values of $m$, $n$ and $s$ used in the previous figure.}
+\label{fig:3}
+\end{figure}
+The dashed lines in Fig.~\ref{fig:3}~(b) are the well known  piecewise unambiguous discrimination solution~\cite{Bergou}:
+%
+\begin{equation}
+Q_{\rm UD}=\left\{
+\begin{array}{ll}
+\eta_1+s^{2m} \eta_2, \quad &\displaystyle 0\le \eta_1\le {s^{2m}\over 1+s^{2m}};\\[.5em]
+2\sqrt{\eta_1\eta_2}\, s^m,&\displaystyle {s^{2m}\over 1+s^{2m}}\le\eta_1\le {1\over2}.
+\end{array}
+\right.
+\label{UD}
+\end{equation}
+%
+
+It is apparent from these plots that the optimal cloning protocol performs strictly better than cloning by discrimination, as was proved above. However, as the number of produced clones becomes larger the difference in performance reduces. In Fig.~\ref{fig:3}~(b), for only $n=5$, a difference is hardly noticeable for $s\le 0.5$. For larger overlaps it takes larger values of $n$ to get the same level of agreement. As discussed above, in the limit $n\to\infty$ there is perfect agreement for any $s<1$.
+
+The complete UD solution in Eq.~(\ref{UD}) emerges naturally from our geometrical approach in a straightforward manner:
+First, we recall that in this case the right hand side of Eq.~(\ref{unit cond}) becomes $q_1 q_2=s^{2m}$ (dashed lines in Figs.~\ref{fig:1} and~\ref{fig:2}). The maximum slopes of these curves are at their end points and all have the value~$-s^{2m}$. This implies that the boundary of $S_0$ has a cusp at $(1,s^{2m})$. It follows that a unique point of tangency with the line~(\ref{obj fun}) exists for $s^{2m}<\eta_1/\eta_2\le1$ (recall that we are assuming~$\eta_1\le1/2$). This condition gives the $\eta_1$ interval for that solution.  The tangency condition, $(q_2,q_1)\propto (\eta_1,\eta_2)$, quickly leads us to the optimal failure rate in  the second line of Eq.~(\ref{UD}). For $s^{2m}>\eta_1/\eta_2\ge0$ tangency is not possible, and the optimal line~(\ref{obj fun}) merely touches the cusp on the boundary of~$S_0$, so the expression of $Q$ becomes the first line of Eq.~(\ref{UD}). In geometrical terms, the straight line~(\ref{obj fun}) pivots on the end point as $\eta_1$ varies between $0$ and $s^{2m}/(1+s^{2m})$.
+
+
+For the second case in Eq.~(\ref{UD}), one has $q_1,p_1\in(0,1)$ and there are three orthogonal flag states in Eqs.~(\ref{Ui}), namely, the two success states $|\alpha_1\rangle$, $|\alpha_2\rangle$, and the failure state~$|\Phi\rangle$. This $3$-outcome measurement can be represented by a $3$-element positive operator valued measure (POVM) on ${\mathscr H}^{\otimes m}$. For the first line in Eq.~(\ref{UD}), $p_1=1-q_1=0$, which leads to a $2$-outcome projective measurement, as only one success flag state ($|\alpha_2\rangle$) is needed in Eqs.~(\ref{Ui}). 
+
+This two-paragraph derivation of Eq.~(\ref{UD}) proves that the convergence of the optimal cloning failure probability~$Q_{\rm min}$ to that of cloning by discrimination, with rate $Q_{\rm UD}$ in Eq.~(\ref{UD}), follows from the convergence of the general unitarity curve in Eq.~(\ref{unit cond}) to the hyperbola $q_1q_2=s^{2m}$, i.e., from $\lim_{\alpha\to0} S_\alpha=S_0$. Interestingly enough, such convergence entails a phenomenon analogous to a second order phase transition. Our geometrical approach shows that the average failure probability $Q_{\rm min}(\eta_1)$ is an infinitely differentiable function of~$\eta_1$ for finite $n$. However, as $n$ goes to infinity (or at $\alpha=0$, for the sake of this discussion) the limiting function $Q_{\rm UD}(\eta_1)$ has a discontinuous second derivative. Moreover, the symmetry $q_1\leftrightarrow q_2$ breaks  in the ``phase" corresponding to the first line in Eq.~(\ref{UD}). A~similar phenomenon arises in UD of more than two pure states~\cite{Bergou1}.
+
+%It has been argued above that cloning by discrimination is strictly suboptimal (unless $n\to \infty$). 
+%One could likewise wonder if discrimination by cloning can be optimal. On heuristic grounds, one should not expect this to be so, as cloning involves a measurement and some information can be drawn from the observed outcome. However, the equal-prior and the $\eta_1\to 0$ cases provide remarkable exceptions: for $\eta_1 = \eta_2= 1/2$, cloning succeeds with probability $P=1-Q_{-1}$, in which case the produced $n$-clone states are equally likely. The UD of these estates fails with probability $s^{n}$, as follows from Eq.~(\ref{UD}) applied to $n$ copies. The total failure probability is then $Q_{-1}+P s^n=s^m$, which is the optimal UD failure rate of the original input states, Eq.~(\ref{UD}). 
+%If  $\eta_1\to 0$ then $P=1-Q_{0}$, and only $|\psi^n_2\rangle$ is produced with non-vanishing probability. Failure in the second step (UD) is given by Eq.~(\ref{UD}) applied to $n$ copies. The total failure rate is $Q_{0}+P s^{2n}=s^{2m}$, also achieving optimality. 
+
+It has been argued above that cloning by discrimination is strictly suboptimal (unless $n\to \infty$).
+One could likewise wonder if discrimination by cloning can be optimal. On heuristic grounds, one should not expect this to be so, as cloning involves a measurement and some information can be drawn from the observed outcome. However, the equal-prior and the $\eta_1\to 0$ cases provide remarkable exceptions. For both we may write the total failure rate as $Q_{\rm C} + (1-Q_{\rm C})Q_{\rm UD}$, where C stands for cloning. For $\eta_1 = \eta_2= 1/2$, Eq.~(\ref{Q's}) implies $Q_{\rm C}=Q_{-1}$, in which case the produced $n$-clone states are equally likely. The UD of these states fails with probability $s^{n}$, as follows from Eq.~(\ref{UD}) applied to $n$ copies. The total failure rate is then $s^m$, which is the optimal UD failure rate of the original input states, Eq.~(\ref{UD}). If $\eta_1\to 0$ then only $|\psi^n_2\rangle$ is produced with non-vanishing probability and  $Q_{\rm C}=Q_{0}$. Failure in the second step (UD) is given by the top line in Eq.~(\ref{UD}) applied to $n$ copies. The total failure rate is $s^{2m}$, also achieving optimality. 
+
+Using our main result in Eqs.~(\ref{main}), and~(\ref{par sqrt}) one can check that these are the only cases where discrimination by cloning is optimal. These are also the only cases where no information gain can be drawn from the cloning measurement.  This hints at how special these cases are and justifies the need of the derived solution for arbitrary priors to have a full account of two-state cloning. 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%%    MAYBE QUOTE THESE REFERENCES SOMEWHERE ELSE....
+%%%%
+%%%%
+
+%Going beyond pure states in perfect probabilistic cloning schemes is significantly more difficult, and there exist general results for other types of states  \cite{Fiurasek1,}. Experiments have been suggested \cite{ Fiurasek1} and implemented \cite{Muller} for cloning quantum states.
+%
+%As mentioned earlier, there is a deep relationship between cloning and state discrimination, where the asymptotic behavior of cloning strategies has been shown to reproduce known measurement results \cite{ Chefles1,Bae}. More information may be found in a review \cite{review1}
+%  
+%Moreover, the probabilistic nature of states offers fertile ground for research on physics' connections to classical probability and statistics such as quantum statistical inference \cite{Mallery,Nielsen}. 
+
+\begin{acknowledgments}
+\emph{Acknowledgments}. This research was supported by ...
+the Spanish MICINN, through contract FIS2013-40627-P, and from the Generalitat de
+Catalunya CIRIT, contract  2014SGR-966. We also acknowledge financial support from ERDF: European Regional Development Fund.
+\end{acknowledgments}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%%    MAYBE QUOTE THESE REFERENCES SOMEWHERE ELSE....
+%%%%
+%%%%
+
+%Going beyond pure states in perfect probabilistic cloning schemes is significantly more difficult, and there exist general results for other types of states  \cite{Fiurasek1,}. Experiments have been suggested \cite{ Fiurasek1} and implemented \cite{Muller} for cloning quantum states.
+%
+%As mentioned earlier, there is a deep relationship between cloning and state discrimination, where the asymptotic behavior of cloning strategies has been shown to reproduce known measurement results \cite{ Chefles1,Bae}. More information may be found in a review \cite{review1}
+%  
+%Moreover, the probabilistic nature of states offers fertile ground for research on physics' connections to classical probability and statistics such as quantum statistical inference \cite{Mallery,Nielsen}. 
+
+\begin{thebibliography}{99}
+
+% This one 'inspired' the following two by suggesting a faster than light speed communications protocol using entanglement.
+\bibitem{Herbert} N. Herbert, Foundations of Physics 12 (12): 1171–1179,  (1982)
+% A superluminal communicator based upon a new kind of quantum measurement
+
+\bibitem{Wooters} W. K. Wooters and W. H. Zurek, Nature 299, 802 - 803 (1982)
+%No cloning th.
+\bibitem{Dieks} D. Dieks, Physics Letters A 92, 271–272  (1982)
+%No cloning th.
+\bibitem{Pomarico} E. Pomarico,B. Sanguinetti, P. Sekatski, H. Zbinden, N. Gisin, Optics and Spectroscopy \textbf{111}, Issue 4, 510-519 (2011)
+%Applications of quantum cloning
+\bibitem{Bart} K.Bartkiewicz, A. {\v C}Černoch, K. Lemr, J. Soubusta, and M. Stobi{\' n}ńska, Phys. Rev. A 89, 062322 (2014)
+%Efficient amplification of photonic qubits by optimal quantum cloning
+\bibitem{DuanGuo} L.M. Duan and G.C. Guo, Phys. Rev. Lett. \textbf{80}, 4999  (1998)
+%Probabilistic Cloning and Identification of Linearly Independent Quantum States
+\bibitem{Buzek} V. Bu{\v z}žek and M. Hillery, Phys. Rev. Lett. \textbf{81}, 5003 (1998)
+%Universal Optimal Cloning of Arbitrary Quantum States: From Qubits to Quantum Registers
+\bibitem{Brub} D. Bru{\ss}, Phys. Rev. A 57, 2368  { 1998}
+%Optimal universal and state-dependent quantum cloning
+\bibitem{Chefles1} A. Chefles and S. M. Barnett, Phys. Rev. A \textbf{60}, 136  (1999)
+%Strategies and networks for state-dependent quantum cloning
+\bibitem{Fiurasek} J. Fiur{\' a}á{\v s}šek, S. Iblisdir, S. Massar, and N. J. Cerf, Phys. Rev. A \textbf{65}, 040302(R) (2002)
+%Quantum cloning of orthogonal qubits
+\bibitem{Gisin1}N. Gisin and S. Massar, Phys. Rev. Lett. \textbf{79}, 2153 (1997)
+%Optimal Quantum Cloning Machines
+%Optimal fidelity, 'More generally, quantum cloning machines are universal devices to translate quantum information into classical information.'
+
+\bibitem{Barnum} H. Barnum, J. Barrett, M. Leifer, and A. Wilce, Phys. Rev. Lett. 99, 240501 (2007)
+%Generalized No-Broadcasting Theorem
+%Definitely inspired by cloning results so I think it's ok to include it
+\bibitem{Muller} C. R. M{\" u}üller, C. Wittmann, P. Marek, R. Filip, C. Marquardt, G. Leuchs, and U. L. Andersen, Phys. Rev. A \textbf{86}, 010305(R) (2012)
+%Probabilistic cloning of coherent states without a phase reference
+\bibitem{Bae} J. Bae and A. Ac\'{\i}n, Phys. Rev. Lett. \textbf{97}, 030402 (2006)
+%Asymptotic Quantum Cloning Is State Estimation
+\bibitem{Chiribella} G. Chiribella, Y. Yang, A. Yao, Nature Communications \textbf{4},  2915 (2013)
+%Quantum replication at the Heisenberg limit
+\bibitem{Gendra}  B. Gendra, J. Calsamiglia, R. Mu{\~ n}ñoz-Tapia, E. Bagan, and G. Chiribella, Phys. Rev. Lett. 113, 260402 (2014)
+%Probabilistic Metrology Attains Macroscopic Cloning of Quantum Clocks
+\bibitem{Chiribella2006} G. Chiribella, G. M. D�Ariano, Phys. Rev. Lett. \textbf{97}, 250503 (2006)
+%Quantum Information Becomes Classical When Distributed to Many Users 
+%(Using cloning)
+
+\bibitem{review1} V. Scarani, S. Iblisdir, N. Gisin, and A. Ac\'{\i}n Reviews of Modern Physics \textbf{77}, 1225-1256 (2005)
+
+\bibitem{Fan} H. Fan, Y.N. Wang, L. Jing, J.D. Yue, H.D. Shi, Y.L. Zhang, L.Z. Mu, Physics Reports Volume 544, 241–322, (2014)
+
+\bibitem{Fiurasek1} J.. Fiur{\' a}á{\v s}šek,  Phys. Rev. A \textbf{70}, 032308 (2004)
+%Optimal probabilistic cloning and purification of quantum states
+\bibitem{Bergou} J. Bergou and M. Hillery, Introduction to the Theory of Quantum Information Processing, Springer (2013)
+
+
+
+
+
+\bibitem{Bergou1} J. A. Bergou, U. Futschik, and E. Feldman, Phys. Rev. Lett. 108, 250502 (2012)
+%Optimal Unambiguous Discrimination of Pure Quantum States
+
+
+\end{thebibliography}     
+\end{document}

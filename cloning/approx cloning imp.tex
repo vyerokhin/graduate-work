@@ -1,0 +1,199 @@
+
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt,oneside,english,reqno]{amsbook}
+\renewcommand{\familydefault}{\rmdefault}
+\usepackage[T1]{fontenc}
+
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{amsbsy,latexsym,amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[mathscr]{eucal}
+\usepackage{epsfig,graphics,graphicx}
+\usepackage{color}
+\usepackage{amsthm}
+\usepackage{amstext}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{setspace}
+\doublespacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+%%%%%%%
+\newtheorem{lemma}{Lemma}
+
+ \newcommand{\abs}[1]{\left|{#1}\right|}
+ \newcommand{\av}[1]{\left\langle #1 \right\rangle}
+ 
+  \newcommand{\br}[1]{\langle #1|}
+  \newcommand{\ke}[1]{|#1\rangle}
+  \newcommand{\bk}[2]{\langle #1|#2\rangle}
+  \newcommand{\kb}[2]{\ke{#1}\br{#2}}
+  \newcommand{\var}[2]{\langle #1,#2\rangle} 
+  
+  \newcommand{\al}[1]{^{(#1)}}
+  \newcommand{\da}{^\dagger} 
+  
+  \newcommand{\pt}[1]{\left( #1 \right)}
+  \newcommand{\pq}[1]{\left[ #1 \right]}
+  \newcommand{\pg}[1]{\left\{ #1 \right\}} 
+  
+  \newcommand{\lpt}[1]{\left( #1 \right.}
+  \newcommand{\lpq}[1]{\left[ #1 \right.]}
+  \newcommand{\lpg}[1]{\left\{ #1 \right.}
+  \newcommand{\rpt}[1]{\left. #1 \right)}
+  \newcommand{\rpq}[1]{\left. #1 \right]}
+  \newcommand{\rpg}[1]{\left. #1 \right\}} 
+
+
+\newcommand{\td}[1]{\widetilde{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{section}{chapter}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+\section{Implementation of Probabilistic Approximate Cloning}
+In order to clone N copies of state $\ke {\psi}$ approximately we need N+1 ports for our interferometer.
+This results in very complicated applications of the R-Z algorithm when N becomes large.  We therefore
+demonstrate the solution on $1 \rightarrow 2$ cloning with equal prior probabilities.  If we perform this
+operation as a one-shot measurement we need a 5x5 matrix and up to (more) beamsplitters.  
+
+However we can probabilistically optimally separate the two input states using the results of the previous section,
+then apply a cloning unitary to make the desired copies.  Since we know the optimal relationship
+between input and ouput overlaps from the previous chapter, the first step is choosing the desired final overlap
+and failure rate.  Given the final overlap we optimally deterministically transform these states into the clones.
+This reduces the complexity of the problem since now we are working with a 4x4 matrix.  
+
+\subsection{Separation Implementation}
+\begin{eqnarray}
+U\ke {\psi_1} = \sqrt{p_1}\ke{\phi_1}+ \sqrt{q_1}\ke{0}\\
+U\ke {\psi_2} = \sqrt{p_2}\ke{\phi_2}+ \sqrt{q_2}\ke{0}
+\end{eqnarray}
+where the states are
+\begin{eqnarray}
+\ke {\psi_1} = c_1 \ke{1} + s_1 \ke{2}\\
+\ke {\psi_2} = c_1 \ke{1} - s_1 \ke{2}\\
+\ke {\phi_1} = c_2 \ke{1} + s_2 \ke{2}\\
+\ke {\phi_2} = c_2 \ke{1} - s_2 \ke{2}\\
+\end{eqnarray}
+then we get the equations
+\begin{eqnarray}
+\br 0 U \ke {\psi_1} &=&c_1 U_{01} + s_1 U_{02} = \sqrt{q_1}\\
+\br 0 U \ke {\psi_1} &=&c_1 U_{11} + s_1 U_{12} = c_2 \sqrt{p_1}\\
+\br 0 U \ke {\psi_1} &=&c_1 U_{21} + s_1 U_{22} = s_2\sqrt{p_1}
+\end{eqnarray}
+and
+\begin{eqnarray}
+\br 0 U \ke {\psi_2} &=& c_1 U_{01} - s_1 U_{02} = \sqrt{q_2}\\
+\br 1 U \ke {\psi_2} &=&c_1 U_{11} - s_1 U_{12} = c_2\sqrt{p_2}\\
+\br 2 U \ke {\psi_2} &=& c_1 U_{21} - s_1 U_{22} = -s_2\sqrt{p_2}
+\end{eqnarray}
+we can solve the the two set of equations pairwise for the first six matrix elements as
+\begin{equation}
+{}[U]=
+\begin{pmatrix}\bullet & \frac{\sqrt{q_1}+\sqrt{q_2}}{2c_1} & \frac{\sqrt{q_1}-\sqrt{q_2}}{2s_1}\\
+\bullet &\frac{c_2(\sqrt{p_1}+\sqrt{p_2})}{2c_1} & \frac{c_2(\sqrt{p_1}-\sqrt{p_2})}{2s_1} \\
+\bullet & \frac{s_2(\sqrt{p_1}-\sqrt{p_2})}{2c_1} & \frac{s_2(\sqrt{p_1}+\sqrt{p_2})}{2s_1} 
+\end{pmatrix}
+\end{equation}
+
+  Applying the unitarity constraint
+$U^\dagger U = I$ gives us nine equations for the remaining three uknown elements.  Numerical optimization
+at this point is straightforward for all values of the parameters and one may follow the R-Z algorithm or Sun $\textit{et all}$ from there.
+\subsubsection{Separation Implementation: Equal priors}
+We give the closed form solution for the equal priors condition.  Here $p_1 = p_2$ and $q_1 = q_2$ thereby simplifying the equations.
+
+\begin{equation}
+{}[U]=
+\begin{pmatrix}\bullet & \frac{\sqrt{q}}{c_1} & 0\\
+\bullet &\frac{c_2\sqrt{p}}{c_1} & 0 \\
+\bullet & 0 & \frac{s_2\sqrt{p}}{s_1} 
+\end{pmatrix}
+\end{equation}
+
+Using the optimal sucess rate 
+\begin{equation}
+p = \frac{\bk{\psi_1}{\psi_2}-1}{\bk{\phi_1}{\phi_2}-1}
+\end{equation}
+this simplifies to
+\begin{equation}
+{}[U]=
+\begin{pmatrix}\bullet & \frac{\sqrt{s_2^2-s_1^2}}{c_1s_2} & 0\\
+\bullet &\frac{c_2s_1}{c_1s_2} & 0 \\
+\bullet & 0 & 1
+\end{pmatrix}
+\end{equation}
+
+implying we can choose the remaining elements to be
+
+\begin{equation}
+{}[U]=
+\begin{pmatrix}\frac{c_2s_1}{c_1s_2}& \frac{\sqrt{s_2^2-s_1^2}}{c_1s_2} & 0\\
+-\frac{\sqrt{s_2^2-s_1^2}}{c_1s_2} &\frac{c_2s_1}{c_1s_2} & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\end{equation}
+and only one beam splitter is needed to perform this operation.
+\subsection{Deterministic Cloning Implementation}
+The unitary transformation
+for the second step is
+\begin{eqnarray}
+U\ke {\phi_1} \ke 0 = \ke{\xi_1}\ke{\xi_1}\\
+U\ke {\phi_2} \ke 0 = \ke{\xi_2}\ke{\xi_2}
+\end{eqnarray}
+where 
+$\ke {\xi_1} = c_3 \ke{1} + s_3 \ke{2}$ and
+$\ke {\xi_1} = c_3 \ke{1} - s_3 \ke{2}$
+Following a similar procedure we choose the basis states $ \ke {00}$,$ \ke {10}$,$ \ke {01}$, and$ \ke {11}$,
+giving us the final unitary as 
+\begin{equation}
+{}[U]=
+\begin{pmatrix} \frac{c_3^2}{c_2} &0 & 0 &\frac{s_3^2}{c_2}\\
+0 &\frac{c_3 s_3}{s_2} &-\frac{c_3 s_3}{s_2}&0 \\
+0 &\frac{c_3 s_3}{s_2} &\frac{c_3 s_3}{s_2}&0 \\
+\frac{s_3^2}{c_2} & 0&0&\frac{c_3^2}{c_2}
+\end{pmatrix}
+\end{equation}
+Since this last step is deterministic cloning we have the relationship between the overlaps as $ \bk {\phi_1}{\phi_2} = \bk {\xi_1}{\xi_2}^2$.  This leads to the relation $s_2^2 = 2 c_3^2 s_3^2$ and $c_3^2 = \frac{1}{2} \pm \sqrt{1-2s_2^2}$, meaning that the $M_{23}$ beamsplitter is just a 50-50 beamsplitter:
+\begin{equation}
+{}[U]=
+\begin{pmatrix} \frac{c_3^2}{c_2} &0 & 0 &\frac{s_3^2}{c_2}\\
+0 &\frac{1}{\sqrt{2}} &\frac{1}{\sqrt{2}}&0 \\
+0 &\frac{1}{\sqrt{2}} &\frac{1}{\sqrt{2}}&0 \\
+\frac{s_3^2}{c_2} & 0&0&\frac{c_3^2}{c_2}
+\end{pmatrix}
+\end{equation}
+This is clearly the action of two separate beam splitters $M_{14}$ and $M_{23}$ such that
+
+\begin{eqnarray}
+{}[M_{14}]=
+\begin{pmatrix}\frac{c_3^2}{c_2} &0 & 0 &\frac{s_3^2}{c_2}\\
+0&1&0&0\\
+0&0&1&0\\
+\frac{s_3^2}{c_2} & 0&0&\frac{c_3^2}{c_2}
+\end{pmatrix}
+{}[M_{23}]=
+\begin{pmatrix}1&0&0&0\\
+0&\frac{1}{\sqrt{2}} &\frac{1}{\sqrt{2}} &0 \\
+0&-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}&0\\
+0&0&0&1
+\end{pmatrix}
+\end{eqnarray}
+
+The variables $c_2$ and $c_3$ are functions of the failure rate $Q$, the a-priori probabilities $\eta_i$ and initial overlap $c_1$.
+\end{document}
+

@@ -1,0 +1,18 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1.1}{\ignorespaces \hspace {1cm}Min Error}}{10}
+\contentsline {figure}{\numberline {2.2.1}{\ignorespaces \hspace {1cm}$Q_{{\rm c}}$ and $Q_{{\rm b}}$ vs.~$\eta _{1}$}}{13}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Unitarity curve, $q_{2}$ vs. $q_{1}$, from Eq.~(\ref {unit cond}). The figure also shows the optimal straight segment \unhbox \voidb@x \hbox {$Q=\eta _1 q_1+\eta _2 q_2$} and its normal vector~$(\eta _1,\eta _2)$. For this plots~$s = 0.6$, $m = 1$, and $n =2$.}}{46}
+\contentsline {figure}{\numberline {4.2.2}{\ignorespaces Unitarity curves, $q_{2}$ vs. $q_{1}$, from Eq.~(\ref {unit cond}) for different values of~$s$ and for (a) $m=1$, $n=2$ and (b) $m=1$, $n=5$. The curves are symmetric under mirror reflection along the dotted line $q_1=q_2$, i.e., under the transformation~$q_1\leftrightarrow q_2$. The dashed lines in~(b) are the hyperbolae~$q_1 q_2=s^{2m}$.}}{48}
+\contentsline {figure}{\numberline {4.2.3}{\ignorespaces Minimum cloning failure probability $Q_{\rm min}$ vs. $\eta _1$ (solid lines) and~UD failure probability $Q_{\rm UD}$ vs. $\eta _1$ (dashed lines) for the same values of $m$, $n$ and $s$ used in the previous figure.}}{50}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1.1}{\ignorespaces The optimal separation point as the intersection of the parabola Eq.~(\ref {unit cond conic}) and ellipse $Q= \eta _1 q_1+\eta _2 q_2$. In this figure $\eta _1=0.2$, $s=0.6$ and $Q=Q_{\rm max}=0.45$. The optimal (minimum) value of $s'$, which gives the solid parabola, turns out to be $s'=0.17$. }}{62}
+\contentsline {figure}{\numberline {5.1.2}{\ignorespaces (a) Plots of $s'$ vs. $s$ for $\eta _1=0.1$ (solid lines) and $\eta _1=0.5$ (straight dashed lines) and for values of the failure rate. From left to right $Q_{\rm max}=0.2$, $0.4$, $0.6$, $0.8$. The dotted line is the (trivial) curve for $Q_{\rm max}=0$, which is the straight line $s'=s$. (b)~Minimum final overlap vs. maximum failure probability for various values of the initial overlap and the same two values of $\eta _1$ used in~(a).\vspace {-1em} }}{65}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Six-port linear optics implementation of a proof-of-principle separation protocol. The transmission (reflexion) coefficients of the beamsplitters, BS1 and BS2 are given by the (off-)diagonal entries of the matrices in Eqs.~(\ref {M1}) and~(\ref {M2}), respectively. The input states are feed through ports $1$ and $2$ as a superposition of zero and one photons in each port. The separated states are output through ports $1'$ and $2'$. Port $3$ is in the vacuum state. A click in the photodetector placed in port $3'$ signals failure.}}{73}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

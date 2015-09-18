@@ -1,0 +1,7875 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Optimal discrimination of a class of mixed states with a fixed rate of inconclus
+ive outcomes
+\end_layout
+
+\begin_layout Author
+Vadim Yerokhin, Andi Shehu, and János A.
+ Bergou
+\end_layout
+
+\begin_layout Affiliation
+Department of Physics and Astronomy, Hunter College of the City University
+ of New York, 695 Park Avenue, New York, NY 10065, USA 
+\end_layout
+
+\begin_layout Abstract
+Recently the problem of optimal state discrimination with a Fixed Rate of
+ Inconclusive Outcomes (FRIO strategy) has been solved for two pure quantum
+ states and a few other highly symmetric cases.
+ The strategy optimally interpolates between the Minimum Error discrimination
+ strategy (fixed rate of inconclusive outcomes is zero) and the Unambiguous
+ Discrimination strategy (fixed rate of inconclusive outcomes is the critical
+ rate, 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+, for which the error rate is zero).
+ Here we extend the FRIO strategy to two mixed states, whose eigenvectors
+ in their spectral representation form a Jordan basis.
+ We derive the minimum error rate 
+\begin_inset Formula $P_{E}$
+\end_inset
+
+ for a fixed inconclusive rate 
+\begin_inset Formula $Q$
+\end_inset
+
+ and, in particular, the optimal distribution of the total 
+\begin_inset Formula $Q$
+\end_inset
+
+ over the Jordan subspaces.
+ As 
+\begin_inset Formula $Q$
+\end_inset
+
+ is varied between the two limits, 
+\begin_inset Formula $0<Q<Q_{c}$
+\end_inset
+
+, a structure with multiple thresholds, 
+\begin_inset Formula $Q_{1}^{(th)}(=0)<Q_{2}^{(th)}<\ldots<Q_{N}^{(th)}<Q_{c}$
+\end_inset
+
+, emerges.
+ In the region, 
+\begin_inset Formula $Q_{1}^{(th)}<Q<Q_{2}^{(th)}$
+\end_inset
+
+, one subspace receives the total 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Above the second threshold 
+\begin_inset Formula $Q$
+\end_inset
+
+ is shared by two subspaces, above the third threshold by three, etc.
+ Above the last threshold, 
+\begin_inset Formula $Q_{N}^{(th)}<Q<Q_{c}$
+\end_inset
+
+, all subspaces participate in sharing 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ The optimal measurement can be projective or a POVM and we give the conditions
+ for the transition between the projective and POVM regimes.
+ The results are illustrated on the example of two rank 3 mixed states.
+ 
+\end_layout
+
+\begin_layout PACS
+03.67.-a, 03.65.Ta,42.50.-p 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "Intro"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In quantum information and quantum computing the information carriers are
+ quantum systems and information is encoded in their state 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "nielsen1"
+
+\end_inset
+
+.
+ Determining the state of the information carrier system is, therefore,
+ a fundamental task in quantum information processing.
+ Quantum state discrimination is one of the methods employed for this purpose
+ and is the subject of this paper, while some of the others are, e.g., state
+ estimation, tomography, and quantum learning.
+\end_layout
+
+\begin_layout Standard
+In state discrimination one deals with the following problem (for a recent
+ review see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bergourev"
+
+\end_inset
+
+).
+ One is given a quantum system that was prepared in one of 
+\begin_inset Formula $N$
+\end_inset
+
+ known quantum states, 
+\begin_inset Formula $\{\rho_{i}|i=1,\ldots,N\}$
+\end_inset
+
+, but we don't know which.
+ The task is to identify the state, by performing some measurement on the
+ system, as well as allowed by the laws of quantum mechanics.
+ If the possible states are mutually orthogonal this is a relatively straightfor
+ward task: one just has to set up detectors along these orthogonal directions
+ and determine which one clicks (assuming perfect detectors).
+ However, if the states are not mutually orthogonal the problem is highly
+ nontrivial and optimization with respect to some reasonable criteria leads
+ to complex measurement strategies often involving generalized measurements
+ (Positive Operator Valued Measures, POVMs).
+ Finding the optimum measurement strategy is the central task of state discrimin
+ation.
+\end_layout
+
+\begin_layout Standard
+The two fundamental state discrimination strategies are the so-called minimum-er
+ror (ME) strategy and the unambiguous discrimination (UD) strategy.
+ In ME, every time a system is given and a measurement is performed on it
+ a conclusion must be drawn about its state.
+ Errors are permitted and in the optimal strategy the probability of making
+ an error is minimized 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "helstrom"
+
+\end_inset
+
+.
+ In UD, no errors are permitted at the expense of allowing an inconclusive
+ measurement outcome to occur.
+ When it occurs we don't learn anything about the state of the system and
+ in the optimal strategy the probability of the inconclusive outcome is
+ minimized 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ivanovic,dieks,peres,jaeger"
+
+\end_inset
+
+.
+ It has been recognized that states can be discriminated unambiguously only
+ if they are linearly independent 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chefles1"
+
+\end_inset
+
+.
+ Discrimination with maximum confidence (MC) can be applied to states that
+ are not necessarily independent and for linearly independent states it
+ reduces to unambiguous discrimination 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "croke,herzog1"
+
+\end_inset
+
+, so it can be regarded as a generalized UD strategy.
+ In the MC strategy Bayes' rule is used to maximize the chance of the appropriat
+e detector clicking for its desired state.
+\end_layout
+
+\begin_layout Standard
+It is clear that UD (or MC for linearly dependent states) and ME are the
+ two extremes of a more general strategy and one can approach this more
+ general strategy from either end.
+ Starting from the UD end one can allow a fixed inconclusive rate 
+\begin_inset Formula $Q$
+\end_inset
+
+ to occur that is smaller than the optimal (minimal) inconclusive rate 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+ for UD, 
+\begin_inset Formula $0\leq Q\leq Q_{c}$
+\end_inset
+
+.
+ Then one also needs to allow for errors to occur and one can minimize the
+ error rate for the fixed value of 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ This scheme was introduced by Chefles and Barnett 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chefles2"
+
+\end_inset
+
+, where they immediately provided the optimal solution for two pure states
+ with equal prior probabilities, although at the time they did not prove
+ full optimality of their solution.
+ Later, Fiurášek and Ježek 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fiurasek"
+
+\end_inset
+
+ generalized this result for mixed states.
+ Useful bounds were obtained in Refs.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang,eldar"
+
+\end_inset
+
+, using the method of Semidefinite Programming (SDP).
+ Alternatively, one can start from the ME end and choose a certain fixed
+ rate 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+ of errors to occur that is smaller than the optimal minimum error rate
+ 
+\begin_inset Formula $P_{E}$
+\end_inset
+
+, 
+\begin_inset Formula $0\leq P_{e}\leq P_{E}$
+\end_inset
+
+.
+ Then one needs to allow for inconclusive outcomes to occur and one can
+ minimize the inconclusive rate for a fixed value of 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "touzel"
+
+\end_inset
+
+.
+ The first approach yields the minimal error rate as a function of the given
+ inconclusive rate, 
+\begin_inset Formula $P_{e}(Q)$
+\end_inset
+
+, while the second yields the minimum inconclusive rate as a function of
+ the given error rate 
+\begin_inset Formula $Q(P_{e})$
+\end_inset
+
+.
+ Since the two expressions result from optimizations under different conditions,
+ it is not immediately obvious that they are, in fact, the same (in the
+ sense of being inverses of each other).
+ It is relatively straightforward to prove, however, that this must be true
+ and the proof is based on showing that the opposite leads to contradiction
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "herzog2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In a recent burst of activity both approaches were solved analytically for
+ two pure states and for other, highly symmetric situations.
+ Actually, the second approach was solved earlier, first for two pure states
+ with equal priors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hayashi"
+
+\end_inset
+
+ and then for general occurrence probabilities 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "sugimoto"
+
+\end_inset
+
+.
+ However the connection with the first approach remained unnoticed in these
+ two works.
+ Quite recently, the first approach has been solved completely by two groups,
+ using entirely different methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan,Herzog1"
+
+\end_inset
+
+.
+ Namely, Bagan 
+\shape italic
+et al.
+
+\shape default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan"
+
+\end_inset
+
+ solved the problem introducing a transformation which formally eliminates
+ the inconclusive part of the problem and reduces it to a ME problem with
+ an extra optimization parameter.
+ On the other hand, Herzog employed the SDP approach to obtain the solution
+ for two pure states with arbitrary priors and for classes of special mixed
+ states 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Herzog1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The goal of this paper is to extend the method developed in Ref.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan"
+
+\end_inset
+
+ to a class of mixed states whose spectral form is such that the eigenvectors
+ form a Jordan basis for the Hilbert space of the problem.
+ The UD of such mixed states has been investigated and the optimal solution
+ has been obtained in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HB,BFH"
+
+\end_inset
+
+.
+ Later this was extended to programmable quantum state discriminators, where
+ in a different context the ME of such mixed states has been solved 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BBFHH"
+
+\end_inset
+
+.
+ Thus, we know both the UD and the ME limit for these states.
+ In this paper we will derive the optimal strategy with a Fixed Rate of
+ Inconclusive Outcomes (FRIO) that optimally interpolates between these
+ two known limits.
+ In particular, as the main finding of our paper, we will show that the
+ optimal distribution of the fixed rate of inconclusive outcomes, 
+\begin_inset Formula $Q$
+\end_inset
+
+, among the 2-dimensional subspaces spanned by the pair of Jordan basis
+ vectors is highly non-trivial and an interesting threshold-like structure
+ emerges: As we start increasing 
+\begin_inset Formula $Q$
+\end_inset
+
+ from 
+\begin_inset Formula $Q=0$
+\end_inset
+
+, first only one subspace receives the entire inconclusive rate.
+ Then, as we increase 
+\begin_inset Formula $Q$
+\end_inset
+
+ further, at a certain threshold a second subspace starts sharing the inconclusi
+ve rate.
+ If we increase 
+\begin_inset Formula $Q$
+\end_inset
+
+ further, at another threshold a third subspace also starts sharing 
+\begin_inset Formula $Q$
+\end_inset
+
+, and so on, until above a last threshold all subspaces share the available
+ inconclusive rate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%The traditional measurement minimizes the chance of mistakenly identifying
+ the state 
+\backslash
+cite{helstrom}.
+ It is known as the minimum error (ME) strategy.
+ In this strategy the measurements aim to identify the most prominent states,
+ either pure 
+\backslash
+cite{Ban} or mixed 
+\backslash
+cite{Eldar,Chou}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%For experimental purposes extending these strategies to include more classes
+ of mixed states is necessary.
+  Firstly, in the laboratory pure states are always accompanied by noise.
+  Second, applications with multiple channels are necessary for extending
+ the functionality of communications and computing protocols 
+\backslash
+cite{Kumar,Li,Bae,Zeilinger}.
+  In this paper we generalize previous results by using an operator transformati
+on to study the intermediate measurements in multiple subspaces.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The paper is organized as follows.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:2"
+
+\end_inset
+
+ we briefly review the FRIO solution for two pure states, viz.
+ the transformation solution found in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan"
+
+\end_inset
+
+, because the treatment presented in the body of the paper relies heavily
+ on this method.
+ In Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:3"
+
+\end_inset
+
+ we extend the FRIO problem to 2 subspaces, each two-dimensional.
+ Then, in Sec.
+ IV we consider a general Jordan Basis case, consisting of 
+\begin_inset Formula $N$
+\end_inset
+
+ two-dimensional subspaces, where a Lagrangian optimization to minimize
+ the error rate for fixed 
+\begin_inset Formula $Q$
+\end_inset
+
+ over all subspaces leads to the threshold structure.
+ We illustrate the results on the example where the two mixed states to
+ be discriminated are each of rank 3 and together they span a 6-dimensional
+ Hilbert space.
+ Because of the Jordan structure, the Hilbert space consists of three mutually
+ orthogonal 2-dimensional Jordan subspaces.
+ In Sec.
+ V we deal with the projective regimes separately.
+ Finally, in Sec.
+ VI we conclude with a discussion.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Review of the FRIO solution for two pure states
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We first present a brief review of the method developed in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan"
+
+\end_inset
+
+ for the two pure state optimal FRIO problem since the rest of the paper
+ relies heavily on this method.
+ We derive the maximum probability of success or, equivalently, the minimum
+ probability of error in identifying the states, when a certain fixed rate
+ of inconclusive outcomes is allowed.
+ By varying the inconclusive rate, the scheme optimally interpolates between
+ Unambiguous and Minimum Error discrimination (UD and ME), the two standard
+ approaches to quantum state discrimination.
+\end_layout
+
+\begin_layout Standard
+In all of these scenarios (UD, ME or FRIO) one is given a system which is
+ promised to be prepared in one of two known pure states, 
+\begin_inset Formula $\rho_{1}=\ke{\psi_{1}}\br{\psi_{1}}$
+\end_inset
+
+ or 
+\begin_inset Formula $\rho_{2}=\ke{\psi_{2}}\br{\psi_{2}}$
+\end_inset
+
+, but we don't know which.
+ The pure states are prepared with prior probabilities 
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{2}$
+\end_inset
+
+, respectively, such that 
+\begin_inset Formula $\eta_{1}+\eta_{2}=1$
+\end_inset
+
+.
+ It is well known that two pure states can be discriminated both unambiguously
+ and with minimum error.
+ The optimal (minimal) inconclusive rate, 
+\begin_inset Formula $Q_{{\rm c}}$
+\end_inset
+
+ for UD has been derived in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ivanovic,dieks,peres,jaeger"
+
+\end_inset
+
+, and is given by 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Since two pure states can be unambiguously discriminated, the critical
+ probability $Q_{
+\backslash
+rm c}$ coincides %with the optimal failure probability~$Q^{
+\backslash
+rm UD}$
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+Q_{{\rm c}}=\left\{ \begin{array}{l}
+\eta_{1}+\eta_{2}\cos^{2}\theta,\mbox{if \ensuremath{{\displaystyle \eta_{1}<\frac{\cos^{2}\theta}{1+\cos^{2}\theta}\equiv\eta_{1}^{(l)}}},}\\[0.7em]
+\eta_{2}+\eta_{1}\cos^{2}\theta,\mbox{if \ensuremath{\eta_{1}>{\displaystyle \frac{1}{1+\cos^{2}\theta}\equiv\eta_{1}^{(r)}}},}\\[0.7em]
+2\sqrt{\eta_{1}\eta_{2}}\cos\theta\equiv Q_{0},\mbox{if \ensuremath{\eta_{1}^{(l)}\le\eta_{1}\le\eta_{1}^{(r)}}}\ ,
+\end{array}\right.\label{Qmax}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $|\langle\psi_{1}|\psi_{2}\rangle|\equiv\cos\theta$
+\end_inset
+
+ is the overlap of the states.
+\end_layout
+
+\begin_layout Standard
+The optimal (minimal) error rate for ME has been derived in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "helstrom"
+
+\end_inset
+
+ and is given by 
+\begin_inset Formula 
+\begin{equation}
+P_{{\rm E}}=\frac{1}{2}\left(1-\sqrt{1-4\eta_{1}\eta_{2}\cos^{2}\theta}\;\right).\label{PE}
+\end{equation}
+
+\end_inset
+
+For a compact derivation of these basic results see 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "bergourev"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the FRIO strategy we want three measurement outcomes, one that we identify
+ with the first state, one that we identify with the second state and one
+ that we do not identify with a state, corresponding to the inconclusive
+ outcome.
+ Therefore, we look for the solution as a three-element POVM (Positive Operator
+ Valued Measure), 
+\begin_inset Formula 
+\begin{equation}
+\Pi_{1}+\Pi_{2}+\Pi_{0}=I\ ,\label{POVM}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the identity operator in the Hilbert space of the states.
+ We identify a click in 
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+) with the first (second) state, while a click in 
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ corresponds to the inconclusive outcome.
+ We wish to optimize (maximize) the success rate, 
+\begin_inset Formula $P_{s}=\eta_{1}tr[\Pi_{1}\rho_{1}]+\eta_{2}tr[\Pi_{2}\rho_{2}]$
+\end_inset
+
+ or, equivalently, minimize the error rate, 
+\begin_inset Formula $P_{e}=\eta_{1}tr[\Pi_{2}\rho_{1}]+\eta_{2}tr[\Pi_{1}\rho_{2}]$
+\end_inset
+
+, for a fixed failure rate, 
+\begin_inset Formula 
+\begin{equation}
+Q=tr[\Pi_{0}(\eta_{1}\rho_{1}+\eta_{2}\rho_{2})]\ .\label{Q}
+\end{equation}
+
+\end_inset
+
+Obviously, 
+\begin_inset Formula $0\leq Q\leq Q_{{\rm c}}$
+\end_inset
+
+ and for 
+\begin_inset Formula $Q=Q_{{\rm c}}$
+\end_inset
+
+ the FRIO strategy reduces to UD with 
+\begin_inset Formula $P_{e}=0$
+\end_inset
+
+ while for 
+\begin_inset Formula $Q=0$
+\end_inset
+
+ the FRIO strategy reduces to ME with the error rate given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PE"
+
+\end_inset
+
+.
+ For a given intermediate value of 
+\begin_inset Formula $Q$
+\end_inset
+
+ the strategy minimizes 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The method of solution is based on the observation that, for optimal FRIO,
+ 
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ must be a rank one operator.
+ Namely, if we assume the opposite, i.e., 
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ is a rank two operator then it maps the two input states into a pair of
+ other two states that can be further discriminated, contradicting that
+ the strategy is optimal.
+ The starting point is to write 
+\begin_inset Formula $\Pi_{1}+\Pi_{2}=I-\Pi_{0}\equiv\Omega$
+\end_inset
+
+.
+ Multiplying both sides of this equation by 
+\begin_inset Formula $\Omega^{-1/2}$
+\end_inset
+
+ we have
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\tilde{\Pi}_{1}+\tilde{\Pi}_{2}=I$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+\tilde{\Pi}_{i}=\Omega^{-1/2}\Pi_{i}\,\Omega^{-1/2}\ge0.\label{tildeops}
+\end{equation}
+
+\end_inset
+
+So 
+\begin_inset Formula $\{\tilde{\Pi}_{1},\tilde{\Pi}_{2}\}$
+\end_inset
+
+ is a POVM.
+ Note that 
+\begin_inset Formula $\Omega^{-1/2}$
+\end_inset
+
+ exists unless
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ has a unit eigenvalue, in which case we address the problem differently
+ (see later).
+ Defining the normalized transformed states 
+\begin_inset Formula $\tilde{\rho}_{i}$
+\end_inset
+
+ and 
+\emph on
+a priori
+\emph default
+ probabilities 
+\begin_inset Formula $\tilde{\eta}_{i}$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\tilde{\rho}_{i}=\frac{\Omega^{1/2}\rho_{i}\Omega^{1/2}}{\tr(\Omega\rho_{i})},\qquad\tilde{\eta}_{i}=\frac{\eta_{i}\tr(\Omega\rho_{i})}{1-Q},\label{tildestates}
+\end{equation}
+
+\end_inset
+
+the error probability,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{e}=(1-Q)\tilde{P}_{e}$
+\end_inset
+
+, becomes 
+\begin_inset Formula 
+\begin{eqnarray}
+\tilde{P}_{e} & = & \tr(\tilde{\eta}_{1}\tilde{\rho}_{1}\tilde{\Pi}_{2})+\tr(\tilde{\eta}_{2}\tilde{\rho}_{2}\tilde{\Pi}_{1}),\label{tildePe}
+\end{eqnarray}
+
+\end_inset
+
+and 
+\begin_inset Formula $\tilde{P}_{s}=1-\tilde{P}_{e}$
+\end_inset
+
+.
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "tildePe"
+
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\Pi}_{1}+\tilde{\Pi}_{2}=\id$
+\end_inset
+
+ define a ME discrimination problem for the transformed states and 
+\emph on
+priors
+\emph default
+ given in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "tildestates"
+
+\end_inset
+
+.
+ The optimal solution to this ME discrimination problem immediately follows
+ by using the tilde quantities in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PE"
+
+\end_inset
+
+, with 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+tilde{P}_{e}=
+\backslash
+frac{1}{2}
+\backslash
+left(1-
+\backslash
+sqrt{1-4
+\backslash
+tilde
+\backslash
+eta_1
+\backslash
+tilde
+\backslash
+eta_2|
+\backslash
+langle
+\backslash
+tilde
+\backslash
+psi_1|
+\backslash
+tilde
+\backslash
+psi_2
+\backslash
+rangle|^2}
+\backslash
+;%
+\backslash
+right).
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{tildePe2}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $|\tilde{\psi}_{i}\rangle=\Omega^{1/2}|\psi_{i}\rangle/\sqrt{\langle\psi_{i}|\Omega|\psi_{i}\rangle}$
+\end_inset
+
+ being the properly normalized transformed states.
+\end_layout
+
+\begin_layout Standard
+Since the optimal
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ is a positive rank one operator it can be written as 
+\begin_inset Formula $\Pi_{0}=\xi|0\rangle\langle0|$
+\end_inset
+
+, where 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is its eigenvalue, 
+\begin_inset Formula $0\leq\xi\leq1$
+\end_inset
+
+, and the eigenstate belonging to 
+\begin_inset Formula $\xi$
+\end_inset
+
+ is 
+\begin_inset Formula $|0\rangle$
+\end_inset
+
+ and the orthogonal state is 
+\begin_inset Formula $|1\rangle$
+\end_inset
+
+.
+ In this basis 
+\begin_inset Formula $\Omega=(1-\xi)|0\rangle\langle0|+|1\rangle\langle1|$
+\end_inset
+
+.
+ Writing the input states also in this basis, 
+\begin_inset Formula $|\psi_{i}\rangle=c_{i}|0\rangle+s_{i}|1\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{i}\equiv\cos\theta_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{i}\equiv\sin\theta_{i}$
+\end_inset
+
+, and obtaining the transformed states and priors from Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "tildestates"
+
+\end_inset
+
+, after some simplifications we get 
+\begin_inset Formula 
+\begin{equation}
+\tilde{P}_{e}^{{\rm ME}}=\frac{1}{2}\left\{ 1-\sqrt{1-4\eta_{1}\eta_{2}(\cos\theta-\xi c_{1}c_{2})^{2}/(1-Q)^{2}}\right\} ,\label{tildePe3}
+\end{equation}
+
+\end_inset
+
+where we used that 
+\begin_inset Formula $\theta_{1}-\theta_{2}\equiv\theta$
+\end_inset
+
+.
+ It follows from
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Q"
+
+\end_inset
+
+) that 
+\begin_inset Formula 
+\begin{equation}
+\xi=\frac{Q}{\eta_{1}c_{1}^{2}+\eta_{2}c_{2}^{2}}.\label{xi}
+\end{equation}
+
+\end_inset
+
+Hence Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "tildePe3"
+
+\end_inset
+
+ depends only on one parameter, say
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+, which determines the orientation of 
+\begin_inset Formula $\Pi_{0}$
+\end_inset
+
+ relative to that of the two pure states.
+ The minimization over 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ simplifies considerably, using Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "xi"
+
+\end_inset
+
+) and defining 
+\begin_inset Formula $c_{1}\,\eta_{1}^{1/2}(\eta_{1}c_{1}^{2}+\eta_{2}c_{2}^{2})^{-1/2}\equiv\cos\varphi$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $c_{2}\,\eta_{2}^{1/2}(\eta_{1}c_{1}^{2}+\eta_{2}c_{2}^{2})^{-1/2}\equiv\sin\varphi$
+\end_inset
+
+.
+ The resulting expression is minimum for
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\varphi=\pi/4$
+\end_inset
+
+, yielding 
+\begin_inset Formula 
+\begin{equation}
+P_{e}^{{\rm min}}\!=\!\frac{1}{2}\!\left\{ 1-Q-\sqrt{(1-Q)^{2}-\left(Q_{0}-Q\right)^{2}}\right\} \ ,\label{PeSol1}
+\end{equation}
+
+\end_inset
+
+for all 
+\begin_inset Formula $Q\leq Q_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula $Q_{0}$
+\end_inset
+
+ was introduced in the third line of
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+.
+ This is the optimal error rate for an intermediate range of the prior probabili
+ties.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%One can invert $P^{
+\backslash
+rm min}_e(Q)$ to obtain $Q$ and, in turn, $P^{
+\backslash
+rm max}_s$ as function of~$P_e$, %$P^{
+\backslash
+rm max}_s(P_e) = [P_e^{1/2}+(1-Q_0)^{1/2}]^2$, in agreement with~
+\backslash
+cite{hayashi}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the validity of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+, 
+\begin_inset Formula $\xi\le1$
+\end_inset
+
+ must hold.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%This condition determines the range of  %
+\backslash
+emph{priors} for which Eq.~
+\backslash
+eqref{PeSol1} is valid.
+\end_layout
+
+\end_inset
+
+The definitions of 
+\begin_inset Formula $\cos\varphi$
+\end_inset
+
+ and 
+\begin_inset Formula $\sin\varphi$
+\end_inset
+
+ after Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "xi"
+
+\end_inset
+
+) give 
+\begin_inset Formula ${\sqrt{\eta}_{2}c_{2}=\sqrt{\eta}_{1}c_{1}}$
+\end_inset
+
+ for 
+\begin_inset Formula $\varphi=\pi/4$
+\end_inset
+
+ which, in turn, leads to 
+\begin_inset Formula $\eta_{1}c_{1}^{2}=\eta_{2}c_{2}^{2}=\eta_{1}\eta_{2}\,{\sin^{2}\theta/(1-Q_{0})}$
+\end_inset
+
+, and
+\begin_inset space ~
+\end_inset
+
+Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "xi"
+
+\end_inset
+
+ yields 
+\begin_inset Formula $\xi=(1-Q_{0})Q/(2\eta_{1}\eta_{2}\sin^{2}\theta)$
+\end_inset
+
+.
+ Setting 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ defines the boundary 
+\begin_inset Formula $Q_{b}$
+\end_inset
+
+, between the projective and POVM regimes, 
+\begin_inset Formula 
+\begin{equation}
+Q_{{\rm b}}\equiv{2\eta_{1}\eta_{2}\sin^{2}\theta/(1-Q_{0})}.\label{Qb}
+\end{equation}
+
+\end_inset
+
+Hence
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\xi\leq1$
+\end_inset
+
+ if 
+\begin_inset Formula $Q\leq Q_{{\rm b}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+ if 
+\begin_inset Formula $Q>Q_{{\rm b}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig1"
+
+\end_inset
+
+ we plot 
+\begin_inset Formula $Q_{{\rm c}}$
+\end_inset
+
+ and
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q_{{\rm b}}$
+\end_inset
+
+ vs.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+ together for a fixed overlap, 
+\begin_inset Formula $\cos\theta=0.5$
+\end_inset
+
+ (
+\begin_inset Formula $\theta=\pi/3$
+\end_inset
+
+).
+ The two curves intersect at 
+\begin_inset Formula $\eta_{1}=\eta_{1}^{(l)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{1}=\eta_{1}^{(r)}$
+\end_inset
+
+, the same points as in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+.
+ The interval 
+\begin_inset Formula $0\leq\eta_{1}\leq1$
+\end_inset
+
+ is thus divided into three regions.
+ In regions
+\begin_inset space ~
+\end_inset
+
+I and
+\begin_inset space ~
+\end_inset
+
+III, we have 
+\begin_inset Formula $Q_{{\rm b}}<Q_{{\rm c}}$
+\end_inset
+
+ and the solution
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+ is valid for 
+\begin_inset Formula $0\leq Q<Q_{{\rm b}}$
+\end_inset
+
+ only.
+ In Region II, 
+\begin_inset Formula $\eta_{1}^{(l)}\leq\eta_{1}\leq\eta_{1}^{(r)}$
+\end_inset
+
+, we have 
+\begin_inset Formula $Q_{{\rm c}}=Q_{0}<Q_{{\rm b}}$
+\end_inset
+
+ and the solution 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+ is valid for the entire 
+\begin_inset Formula $0\leq Q\leq Q_{{\rm c}}$
+\end_inset
+
+ range.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%[floatfix]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement ht!
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename Fig1.png
+	height 4.5cm
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q_{{\rm c}}$
+\end_inset
+
+ (dashed line, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+) and 
+\begin_inset Formula $Q_{{\rm b}}$
+\end_inset
+
+ (solid line, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qb"
+
+\end_inset
+
+) vs.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+ for 
+\begin_inset Formula $\theta=\pi/3$
+\end_inset
+
+.
+ Measurements can be optimized in the area under the dashed line, 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+.
+ Measurements in the area above 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+ are suboptimal.
+ In the shaded areas between 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{b}$
+\end_inset
+
+ (regions I, left, and III, right) the optimal FRIO measurement is a projective
+ measurement, in the unshaded area below 
+\begin_inset Formula $Q_{c}$
+\end_inset
+
+ (region II) the optimal measurement is a POVM.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig1"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the shaded parts of regions I and III one has 
+\begin_inset Formula $Q_{{\rm b}}\leq Q\leq Q_{{\rm c}}$
+\end_inset
+
+ and, necessarily, 
+\begin_inset Formula $\xi=1$
+\end_inset
+
+.
+ Hence,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Pi_{0}=|0\rangle\langle0|$
+\end_inset
+
+ and 
+\begin_inset Formula $\Omega=|1\rangle\langle1|$
+\end_inset
+
+ are projectors.
+ Therefore,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Omega^{-1/2}$
+\end_inset
+
+ does not exist in these areas and the case needs special consideration.
+\end_layout
+
+\begin_layout Standard
+The calculation of the error probability is most easily performed by realizing
+ that 
+\begin_inset Formula $\Pi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Pi_{2}$
+\end_inset
+
+ become degenerate, both must be proportional to 
+\begin_inset Formula $\Pi_{d}=|1\rangle\langle1|$
+\end_inset
+
+.
+ The three-element POVM becomes a standard two element projective measurement,
+ 
+\begin_inset Formula $\{\Pi_{d}=|1\rangle\langle1|,\ \Pi_{0}=|0\rangle\langle0|\}$
+\end_inset
+
+.
+ We identify a click in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\Pi_{d}$
+\end_inset
+
+ with 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $\rho_{2}$
+\end_inset
+
+) if 
+\begin_inset Formula $\eta_{1}\ge\eta_{2}$
+\end_inset
+
+ (
+\begin_inset Formula $\eta_{2}\ge\eta_{1}$
+\end_inset
+
+), so 
+\begin_inset Formula $P_{e(s)}=\eta_{2}s_{2}^{2},\quad P_{s(e)}=\eta_{1}s_{1}^{2}$
+\end_inset
+
+, with 
+\begin_inset Formula $Q=1-P_{e}-P_{s}$
+\end_inset
+
+.
+ These equations completely determine the solution.
+ There is nothing to optimize here, so we drop the superscript 
+\begin_inset Formula ${\rm min}$
+\end_inset
+
+ in what follows.
+ 
+\begin_inset Formula $\theta_{1}-\theta_{2}=\theta$
+\end_inset
+
+ immediately gives 
+\begin_inset Formula $Q(P_{e})$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+Q\!=\!1\!-\!P_{e}\!-\eta_{1(2)}\!\!\left(\!\sqrt{\!\frac{P_{e}}{\eta_{2(1)}}}\cos\theta\!\pm\!\sqrt{1\!-\!\frac{P_{e}}{\eta_{2(1)}}}\,\sin\theta\!\right)^{\!2}\!.\label{PeSol2}
+\end{equation}
+
+\end_inset
+
+Inverting this equation gives 
+\begin_inset Formula $P_{e}(Q)$
+\end_inset
+
+ yields 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+P_{e}=\eta_{2}\frac{2\eta_{1}\cos^{2}\theta(1-Q-Q_{2})-(\eta_{1}-\eta_{2})(Q-Q_{2})-2\eta_{1}\eta_{2}\sin\theta\cos\theta\sqrt{Q(1-Q)-\eta_{1}\eta_{2}\sin^{2}\theta}}{1-4\eta_{1}\eta_{2}\sin^{2}\theta}\ ,\label{PeSol2Exp}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+ but the resulting expression is not particularly insightful.
+ However, we note that for 
+\begin_inset Formula $P_{e}=0$
+\end_inset
+
+ (UD limit) one has
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q=Q_{2}$
+\end_inset
+
+, given by the second line in Eq.
+\begin_inset space ~
+\end_inset
+
+(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Qmax"
+
+\end_inset
+
+), and for 
+\begin_inset Formula $Q=Q_{{\rm b}}$
+\end_inset
+
+, 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+ reduces to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+, as it should.
+\end_layout
+
+\begin_layout Section
+Subspaces formalism: FRIO discrimination of two Rank 2 mixed states
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this and the next section we consider the FRIO discrimination of two
+ mixed states that exhibit a Jordan structure.
+ The two states, with their respective 
+\emph on
+prior
+\emph default
+ probabilities 
+\begin_inset Formula $\eta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{2}$
+\end_inset
+
+, are given in spectral (diagonal) form as, 
+\begin_inset Formula 
+\begin{eqnarray}
+\rho_{1} & = & \sum_{i=1}^{N}r_{i}\vert r_{i}\rangle\langle r_{i}\vert\nonumber \\
+\rho_{2} & = & \sum_{i=1}^{N}s_{i}\vert s_{i}\rangle\langle s_{i}\vert\ .\label{rho1and2}
+\end{eqnarray}
+
+\end_inset
+
+where 
+\begin_inset Formula $\langle r_{i}\vert r_{j}\rangle=\delta_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $\langle s_{i}\vert s_{j}\rangle=\delta_{ij}$
+\end_inset
+
+.
+ Each density matrix has rank 
+\begin_inset Formula $N$
+\end_inset
+
+ and together they span a 
+\begin_inset Formula $2N$
+\end_inset
+
+ dimensional Hilbert space.
+ We assume that the Jordan condition, 
+\begin_inset Formula 
+\begin{equation}
+\langle r_{i}\vert s_{j}\rangle=\delta_{ij}\cos\theta_{i}\ ,\label{jordan}
+\end{equation}
+
+\end_inset
+
+holds so the set 
+\begin_inset Formula $\{\vert r_{i}\rangle,\vert s_{i}\rangle\vert i=1,\ldots,N\rangle\}$
+\end_inset
+
+ forms a Jordan basis for the 
+\begin_inset Formula $2N$
+\end_inset
+
+ dimensional Hilbert space.
+\end_layout
+
+\begin_layout Standard
+Due to the Jordan structure, instead of one 
+\begin_inset Formula $2N$
+\end_inset
+
+ dimensional problem we have 
+\begin_inset Formula $N$
+\end_inset
+
+ mutually orthogonal 2-dimensional subspaces.
+ The 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ subspace is spanned by 
+\begin_inset Formula $\vert r_{i}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\vert s_{i}\rangle$
+\end_inset
+
+ with 
+\emph on
+prior
+\emph default
+ probabilities 
+\begin_inset Formula $\eta_{1}r_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{2}s_{i}$
+\end_inset
+
+, respectively.
+ The full discrimination of 
+\begin_inset Formula $\rho_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho_{2}$
+\end_inset
+
+ can be accomplished by performing the discrimination in each subspace independe
+ntly of the others, i.e., by discriminating 
+\begin_inset Formula $\vert r_{i}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\vert s_{i}\rangle$
+\end_inset
+
+ in each subspace which is much simpler than the original problem.
+ A physical implementation of this scheme is provided, e.g., by the transmission
+ of two input states over several optical fibers.
+ Each fiber contains two degrees of freedom, that could be two orthogonal
+ polarizations.
+\end_layout
+
+\begin_layout Standard
+In the present section we will focus on the 
+\begin_inset Formula $N=2$
+\end_inset
+
+ case when we have to deal with two 2-dimensional subspaces only.
+ We leave the general case of arbitrary 
+\begin_inset Formula $N$
+\end_inset
+
+ to the next section.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%The two Rank 2 density matrices together span four dimensions and they
+ are given as:
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+rho_1 &=& r_1 
+\backslash
+vert r_1 
+\backslash
+rangle 
+\backslash
+langle r_1 
+\backslash
+vert  + r_2 
+\backslash
+vert r_2 
+\backslash
+rangle 
+\backslash
+langle r_2 
+\backslash
+vert 
+\backslash
+nonumber 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+rho_2 &=& s_1 
+\backslash
+vert s_1 
+\backslash
+rangle 
+\backslash
+langle s_1 
+\backslash
+vert  + s_2 
+\backslash
+vert s_2 
+\backslash
+rangle 
+\backslash
+langle s_2 
+\backslash
+vert 
+\backslash
+ .
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%These mixed states are shown in Fig.
+ 
+\backslash
+ref{Fig1}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{figure}[th]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{array}{c}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includegraphics[height=4 cm]{Figure1.png} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{array}%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{Visual representation of the input states in subspaces one and two.}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{Fig1}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+As discussed above, in this case we are dealing with two orthogonal 2-dimensiona
+l subspaces.
+ The 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ subspace is spanned by 
+\begin_inset Formula $\{\vert r_{i}\rangle,\vert s_{i}\rangle\}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2$
+\end_inset
+
+ and our task is to perform the optimal FRIO discrimination of 
+\begin_inset Formula $\{\vert r_{i}\rangle$
+\end_inset
+
+ and 
+\begin_inset Formula $\vert s_{i}\rangle\}$
+\end_inset
+
+ within subspace 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ The prior probability of 
+\begin_inset Formula $\vert r_{i}\rangle$
+\end_inset
+
+ is 
+\begin_inset Formula $\eta_{1}r_{i}$
+\end_inset
+
+ while the prior probability of 
+\begin_inset Formula $\vert s_{i}\rangle$
+\end_inset
+
+ is 
+\begin_inset Formula $\eta_{2}s_{i}$
+\end_inset
+
+.
+ We define their normalized probabilities as 
+\begin_inset Formula 
+\begin{eqnarray}
+\eta_{1,i} & \equiv & \frac{\eta_{1}r_{i}}{\eta_{1}r_{i}+\eta_{2}s_{i}},\nonumber \\
+\eta_{2,i} & \equiv & \frac{\eta_{2}s_{i}}{\eta_{1}r_{i}+\eta_{2}s_{i}}\ ,\label{etaij}
+\end{eqnarray}
+
+\end_inset
+
+such that 
+\begin_inset Formula $\eta_{1,i}+\eta_{2,i}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now introduce a fixed rate of inconclusive outcomes for subspace 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+, such that 
+\begin_inset Formula $0\leq Q_{i}\leq Q_{c,i}$
+\end_inset
+
+ where 
+\begin_inset Formula $Q_{c,i}$
+\end_inset
+
+ is given by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+ with the obvious substitutions 
+\begin_inset Formula $\eta_{1}\rightarrow\eta_{1,i}$
+\end_inset
+
+, 
+\begin_inset Formula $\eta_{2}\rightarrow\eta_{2,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\cos\theta\rightarrow\cos\theta_{i}=\langle r_{i}\vert s_{i}\rangle$
+\end_inset
+
+.
+ We note that this reduces the problem to the FRIO discrimination of two
+ pure states in subspace 
+\begin_inset Formula $i$
+\end_inset
+
+, with prior probabilities given above.
+ It follows immediately that the solution is given by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+ in the POVM regime of 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $Q_{i}\leq Q_{c,i},Q_{th,i}$
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol2"
+
+\end_inset
+
+ in the projective regime of 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $Q_{th,i}<Q_{i}\leq Q_{c,i}$
+\end_inset
+
+, again with the above substitutions.
+\end_layout
+
+\begin_layout Standard
+In the following we will focus mainly on the POVM regime where the solution
+ in each subspace is given explicitly by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{equation}
+P_{e,i}=\frac{1}{2}(1-Q_{i}-\sqrt{(1-Q_{i})^{2}-(Q_{0,i}-Q_{i})^{2}})\ ,\label{Pei2}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $Q_{0,i}=2\sqrt{\eta_{1,i}\eta_{2,i}}\langle r_{i}|s_{i}\rangle$
+\end_inset
+
+ (
+\begin_inset Formula $i=1,2$
+\end_inset
+
+).
+ 
+\begin_inset Formula $Q_{0}$
+\end_inset
+
+ was introduced in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+ for the single subspace (two pure states) case, 
+\begin_inset Formula $Q_{0,i}$
+\end_inset
+
+ is its generalization for the case of two (or many) subspaces.
+ We introduce the weight 
+\begin_inset Formula $\omega_{i}$
+\end_inset
+
+ of subspace 
+\begin_inset Formula $i$
+\end_inset
+
+ as 
+\begin_inset Formula 
+\begin{equation}
+\eta_{1}r_{i}+\eta_{2}s_{i}=\omega_{i}\ ,\label{omegai}
+\end{equation}
+
+\end_inset
+
+where, obviously, 
+\begin_inset Formula 
+\begin{equation}
+\omega_{1}+\omega_{2}=1\ .\label{weights}
+\end{equation}
+
+\end_inset
+
+Then the total inconclusive rate is a weighted sum of the inconclusive rates
+ of the individual subspaces, 
+\begin_inset Formula 
+\begin{equation}
+Q=\omega_{1}Q_{1}+\omega_{2}Q_{2}\ .\label{Qtot2}
+\end{equation}
+
+\end_inset
+
+We notice now that the total inconclusive rate 
+\begin_inset Formula $Q$
+\end_inset
+
+ is fixed, with the fixed value satisfying 
+\begin_inset Formula $0\leq Q\leq Q_{0}$
+\end_inset
+
+, where 
+\begin_inset Formula 
+\begin{equation}
+Q_{0}\equiv\omega_{1}Q_{0,1}+\omega_{2}Q_{0,2}\ ,\label{Q0}
+\end{equation}
+
+\end_inset
+
+is the maximal inconclusive rate that the two subspaces can accommodate.
+\end_layout
+
+\begin_layout Standard
+Similary, the total error rate is a weighted sum of the error rates of the
+ individual subspaces 
+\begin_inset Formula 
+\begin{equation}
+P_{e}=\omega_{1}P_{e,1}+\omega_{2}P_{e,2}\ .\label{Pe2}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{e,i}$
+\end_inset
+
+ is given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The task is to determine the optimal distribution of 
+\begin_inset Formula $Q$
+\end_inset
+
+ between the two subspaces, the distribution that minimizes the total error
+ rate 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+, under the constraint that 
+\begin_inset Formula $Q$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qtot2"
+
+\end_inset
+
+ is fixed.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Since $Q$ on the l.h.s.
+ can be written as $Q= 
+\backslash
+omega_{1} Q + 
+\backslash
+omega_{2} Q$ due to 
+\backslash
+eqref{weights}, one would naturally assume that $Q_{1} = Q_{2} = Q$ and
+ each subspace contributes to the total inconclusive rate according to its
+ weight.
+  This, however, turns out not to be the case and the optimal distribution
+ of the the total inconclusive rate between the two subspaces is far from
+ being trivial.
+ We can find the optimal $Q_{1}$ and $Q_{2}$ in the following way.
+ 
+\end_layout
+
+\end_inset
+
+Then only one of the 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+s, say 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+, is an independent variable, since 
+\begin_inset Formula $Q_{2}=(Q-\omega_{1}Q_{1})/\omega_{2}$
+\end_inset
+
+.
+ Inserting this into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pe2"
+
+\end_inset
+
+ it becomes a function of the independent variable 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+ and the optimization with respect to this variable is straightforward,
+ yielding the optimal distribution of the fixed inconclusive outcomes between
+ the two subspaces.
+\end_layout
+
+\begin_layout Standard
+In order to express the optimal failure rates in compact form it will be
+ useful to introduce at this point the following convention.
+ Without loss of generality in what follows we assume the hierarchy 
+\begin_inset Formula 
+\begin{equation}
+Q_{0,1}\geq Q_{0,2}\ .\label{hierarchy2}
+\end{equation}
+
+\end_inset
+
+We also introduce the notation 
+\begin_inset Formula 
+\begin{equation}
+Q_{th}^{(1)}\equiv0\ \ \ \ Q_{th}^{(2)}\equiv\frac{\omega_{1}(Q_{0,1}-Q_{0,2})}{1-Q_{0,2}}\ .\label{Qth12}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%The optimization corresponds to finding the solution to $
+\backslash
+partial P_{e}/ 
+\backslash
+partial Q_{1} = 0$.
+ 
+\end_layout
+
+\end_inset
+
+Then result of the optimization can be written as 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+Q_{1}^{opt}=\left\{ \begin{array}{ll}
+\frac{Q}{\omega_{1}} & \mbox{if \ensuremath{Q_{th}^{(1)}\leq Q\leq Q_{th}^{(2)}}},\\
+\frac{1-Q_{0,1}}{1-Q_{0}}(Q-Q_{th}^{(2)})+\frac{Q_{th}^{(2)}}{\omega_{1}} & \mbox{if \ensuremath{Q_{th}^{(2)}<Q\leq Q_{0}}},
+\end{array}\right.\nonumber \\
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+and 
+\begin_inset Formula 
+\begin{eqnarray}
+Q_{2}^{opt}=\left\{ \begin{array}{ll}
+0 & \mbox{if \ensuremath{0\leq Q\leq Q_{th}^{(2)}}},\\
+\frac{1-Q_{0,2}}{1-Q_{0}}(Q-Q_{th}^{(2)}) & \mbox{if \ensuremath{Q_{th}^{(2)}<Q\leq Q_{0}}}.
+\end{array}\right.\label{Q2opt}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+Clearly, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qtot2"
+
+\end_inset
+
+ is satisfied by these solutions.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%but there is no range where the naive expectation, $Q_{1}=Q_{2}=Q$, would
+ hold.
+ The subspace with the larger $Q_{0,i}$ which is the first subspace in our
+ specific case, always accommodates a higher rate of inconclusive outcomes
+ than the subspace with the lower $Q_{0,i}$.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A particular feature of the optimal solution is that it exhibits a threshold
+ structure.
+ The subspace with the larger 
+\begin_inset Formula $Q_{0,i}$
+\end_inset
+
+, which is the first subspace following the hierarchy in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "hierarchy2"
+
+\end_inset
+
+, has the lower threshold.
+ For 
+\begin_inset Formula $Q_{th}^{(1)}(=0)\leq Q<Q_{th}^{(2)}$
+\end_inset
+
+ the second subspace does not accommodate any inconclusive outcome at all
+ and it operates at the Minimum Error level.
+ In this region of 
+\begin_inset Formula $Q$
+\end_inset
+
+ all the inconclusive outcome is accommodated by the first subspace only.
+ Above this threshold the two subspaces share the available inconclusive
+ rate.
+ If 
+\begin_inset Formula $\omega_{1}Q_{0,1}>\omega_{2}Q_{0,2}$
+\end_inset
+
+, the first subspace always accommodates more inconclusive rate than the
+ second, otherwise above some value of the total 
+\begin_inset Formula $Q$
+\end_inset
+
+ the second subspace will accomodate more inconclusive rate than the first.
+\end_layout
+
+\begin_layout Standard
+The situation is depicted in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig2"
+
+\end_inset
+
+, for some specific values of the parameters.
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4.5cm]{Fig2a.png}\\
+\mbox{(a)}\\
+\includegraphics[height=4.5cm]{Fig2b.png}\\
+\mbox{(b)}
+\end{array}$
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{1}Q_{{\rm 1}}^{{\rm opt}}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ (solid line) and 
+\begin_inset Formula $\omega_{2}Q_{{\rm 2}}^{{\rm opt}}$
+\end_inset
+
+ vs.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q$
+\end_inset
+
+ (dashed line).
+ For the figure we used 
+\begin_inset Formula $\eta_{1}=\eta_{2}=1/2$
+\end_inset
+
+ and the following parameter values: (a) 
+\begin_inset Formula $\theta_{1}=\pi/4$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{2}=2\pi/7$
+\end_inset
+
+, 
+\begin_inset Formula $r_{1}=3/4$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $s_{1}=3/4$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{2}=1/4$
+\end_inset
+
+; (b) 
+\begin_inset Formula $\cos\theta_{1}=1/4\sqrt{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\cos\theta_{2}=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $r_{1}=3/4$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $s_{1}=3/4$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{2}=1/4$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig2"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, inserting 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Q1opt"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Q2opt"
+
+\end_inset
+
+ into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+ and using the resulting expressions in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pe2"
+
+\end_inset
+
+ yields the optimal error probability, 
+\begin_inset Formula $P_{E}$
+\end_inset
+
+, with a fixed rate of inconclusive outcomes, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+P_{E}=\left\{ \begin{array}{ll}
+\frac{1}{2}\!\left\{ 1-Q-\sqrt{(\omega_{1}-Q)^{2}-\left(\omega_{1}Q_{0,1}-Q\right)^{2}}-\sqrt{(\omega_{2})^{2}-\left(\omega_{2}Q_{0,2}\right)^{2}}\right\}  & \mbox{ if \ensuremath{Q_{th}^{(1)}\leq Q\leq Q_{th}^{(2)}}}\ ,\\
+\frac{1}{2}\!\left\{ 1-Q-\sqrt{(1-Q)^{2}-\left(Q_{0}-Q\right)^{2}}\right\}  & \mbox{ if \ensuremath{Q_{th}^{(2)}<Q\leq Q_{0}}}\ ,
+\end{array}\right.\label{PE2}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{E} = 
+\backslash
+frac{1}{2}[1 - Q - 
+\backslash
+sum_{i=1}^{2} 
+\backslash
+omega_{i} 
+\backslash
+sqrt{ (1 - Q_{i}^{opt})^2 -(Q_{0,i} - Q_{i}^{opt} )^2} ] 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{PE2} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+ which is the main result of this section.
+ It is valid in all regions of the parameter 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ In particular, for the maximum allowable inconclusive rate, 
+\begin_inset Formula $Q=\omega_{1}Q_{0,1}+\omega_{2}Q_{2,0}$
+\end_inset
+
+, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PE2"
+
+\end_inset
+
+ reduces to 
+\begin_inset Formula $P_{E}=0$
+\end_inset
+
+, corresponding to optimal Unambiguous Discrimination of two subspaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HB,BFH"
+
+\end_inset
+
+, while for 
+\begin_inset Formula $Q=0$
+\end_inset
+
+ it reduces to the Minimum Error expression for two subspaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BBFHH"
+
+\end_inset
+
+, as it should.
+ We close this section by displaying 
+\begin_inset Formula $P_{e,i}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig3"
+
+\end_inset
+
+, for some specific values of the parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement ht!
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4.5cm]{Fig3a.png}\\
+\mbox{(a)}\\
+\includegraphics[height=4.5cm]{Fig3b.png}\\
+\mbox{(b)}\\
+%\includegraphics[height=4.5cm]{2stateintersectionerrorzoomed-1.png}
+\end{array}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+includegraphics[height=4.5 cm]{2 states error-1.png} 
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{1}P_{e,{\rm 1}}^{{\rm opt}}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ (solid line) and 
+\begin_inset Formula $\omega_{2}P_{e,{\rm 2}}^{{\rm opt}}$
+\end_inset
+
+ vs.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q$
+\end_inset
+
+ (dashed line).
+ For the figure we used the same parameter values as in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig2"
+
+\end_inset
+
+.
+ The insert in (b) shows that the solid and dashed lines intersect for a
+ very small value of 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig3"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Defining our measurement operators for the first subspace, spanned by $
+\backslash
+vert r_{1}
+\backslash
+rangle$ and $
+\backslash
+vert s_{1}
+\backslash
+rangle$, %as
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+tilde 
+\backslash
+Pi_{1,1} + 
+\backslash
+tilde 
+\backslash
+Pi_{2,1} = I_1,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%where $I_1$ is the identity matrix of the first subspace.
+  We define the failure rate for the first subspace as $Q_1 = %
+\backslash
+xi_1 
+\backslash
+ke 0_{11} 
+\backslash
+br 0 $,which in terms of a measurement probability is also
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Q_1 = 
+\backslash
+xi_1 [ 
+\backslash
+eta_{1,1} 
+\backslash
+cos^2 
+\backslash
+phi_1 + 
+\backslash
+eta_{2,1} 
+\backslash
+cos^2 (
+\backslash
+theta_1 - 
+\backslash
+phi_1)],
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%where $
+\backslash
+theta_1 $ is the overlap angle between the two states in subspace 1, and
+ $
+\backslash
+phi_1$ is the angle $
+\backslash
+ke {r_1}$ %makes with respect to $
+\backslash
+vert 0 
+\backslash
+rangle_1$.
+  The error rate in that subspace is
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{e,1} = 
+\backslash
+eta_{1,1} 
+\backslash
+langle r_1 
+\backslash
+vert 
+\backslash
+Pi_2 
+\backslash
+vert r_1 
+\backslash
+rangle + 
+\backslash
+eta_{2,1} 
+\backslash
+langle s_1 
+\backslash
+vert 
+\backslash
+Pi_1 
+\backslash
+vert s_1 
+\backslash
+rangle.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%For our simplification trick to work we introduce the normalized state
+ vector 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vert 
+\backslash
+tilde{r}_1 
+\backslash
+rangle  = 
+\backslash
+frac{ 
+\backslash
+Omega^{1/2} 
+\backslash
+vert r_1 
+\backslash
+rangle}{
+\backslash
+sqrt{
+\backslash
+langle r_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert r_1 
+\backslash
+rangle}} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%and normalized coefficients
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+tilde{
+\backslash
+eta}_{1,1} = 
+\backslash
+frac{
+\backslash
+eta_{1,1} 
+\backslash
+langle r_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert r_1 
+\backslash
+rangle}{
+\backslash
+eta_{1,1} 
+\backslash
+langle r_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert %r_1 
+\backslash
+rangle + 
+\backslash
+eta_{2,1} 
+\backslash
+langle s_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert s_1 
+\backslash
+rangle}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%to get
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{e,1} &=& (
+\backslash
+eta_{1.1} 
+\backslash
+langle r_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert r_1 
+\backslash
+rangle + 
+\backslash
+eta_{2,1}
+\backslash
+langle s_1 
+\backslash
+vert 
+\backslash
+Omega 
+\backslash
+vert s_1 %
+\backslash
+rangle) 
+\backslash
+nonumber 
+\backslash
+
+\backslash
+ & & (
+\backslash
+tilde{
+\backslash
+eta}_{1,1}
+\backslash
+langle
+\backslash
+tilde{r}_1 
+\backslash
+vert 
+\backslash
+tilde{
+\backslash
+Pi}_2 
+\backslash
+vert 
+\backslash
+tilde{r}_1 
+\backslash
+rangle + 
+\backslash
+tilde{
+\backslash
+eta}_{2,1} %
+\backslash
+langle 
+\backslash
+tilde{s}_1 
+\backslash
+vert 
+\backslash
+tilde{
+\backslash
+Pi}_1 
+\backslash
+vert 
+\backslash
+tilde{s}_1
+\backslash
+rangle ).
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%We notice that the expression in the ( ) with all tildes contains a pure
+ state minimum error problem, while with the %notation $ 
+\backslash
+eta_{1,1} +
+\backslash
+eta_{2,1} = 
+\backslash
+omega_1$ the first term on the r.h.s.
+ can be reworked into $
+\backslash
+omega_1 - Q_1 $ to %rewrite the error rate as
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+[ P_{e,1}= 
+\backslash
+frac{1}{2} [
+\backslash
+omega_1 - Q_1] (1- 
+\backslash
+sqrt{1 - 4 
+\backslash
+tilde{
+\backslash
+eta}_{1,1} 
+\backslash
+tilde{
+\backslash
+eta}_{2,1} 
+\backslash
+vert 
+\backslash
+langle 
+\backslash
+tilde{r}_1 
+\backslash
+vert %
+\backslash
+tilde{s}_1 
+\backslash
+rangle 
+\backslash
+vert ^2 }).
+ 
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%If we substitute and simplify we find this equals to
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+[=
+\backslash
+frac{1}{2} ( 
+\backslash
+omega_1 - Q_1 - 
+\backslash
+sqrt{ ( 
+\backslash
+omega_1 - Q_1)^2 -(Q_{0,1} - Q_1 
+\backslash
+sin 2 
+\backslash
+phi )^2}),
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%where we used the notation $Q_{0,1} = 2 
+\backslash
+sqrt{
+\backslash
+eta_{1,1}
+\backslash
+eta_{2,1}} 
+\backslash
+cos 
+\backslash
+theta_1$ and 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% $ 
+\backslash
+sin 
+\backslash
+phi = 
+\backslash
+frac{ 
+\backslash
+sqrt {
+\backslash
+eta_{2,1}} 
+\backslash
+cos (
+\backslash
+theta_1 - 
+\backslash
+phi_1)}{
+\backslash
+sqrt{ 
+\backslash
+eta_{1,1} 
+\backslash
+cos^2 (
+\backslash
+phi_1)+ 
+\backslash
+eta_{2,1} 
+\backslash
+cos^2 %(
+\backslash
+theta_1 - 
+\backslash
+phi_1)}}$.
+  Minimization of the error rate as a function of $
+\backslash
+phi_1$ tells us to set $
+\backslash
+phi_1 =
+\backslash
+frac{
+\backslash
+pi}{4}$ so %finally
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}P_{e,1} = 
+\backslash
+frac{1}{2} ( 
+\backslash
+omega_1 - Q_1 - 
+\backslash
+sqrt{ ( 
+\backslash
+omega_1 - Q_1)^2 -(Q_{0,1} - Q_1 )^2}).%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%This result agrees with the single subspace limit and is simply the optimized
+ solution for that subspace alone.
+ We can %derive a similar result for the other subspace, so we can consider
+ an optimal distribution of failure among the two %subspaces.
+  However, we want to treat this distribution problem for $N$ subspaces
+ so we first generalize our %preceding solution to $2N$ dimensions.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Generalization %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The general case: FRIO discrimination of two Rank 
+\begin_inset Formula $N$
+\end_inset
+
+ mixed states, POVM regime
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this section we study the general case of two Rank 
+\begin_inset Formula $N$
+\end_inset
+
+ density matrices, with 
+\begin_inset Formula $N$
+\end_inset
+
+ being an arbitrary but fixed integer.
+ The two density matrices together span a 
+\begin_inset Formula $2N$
+\end_inset
+
+ dimensional Hilbert space and their eigenvectors form a Jordan basis for
+ the space.
+ They are given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "rho1and2"
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+rho_1 &=& 
+\backslash
+sum_{i=1}^{N} r_i 
+\backslash
+vert r_i 
+\backslash
+rangle 
+\backslash
+langle r_i 
+\backslash
+vert  
+\backslash
+nonumber 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+rho_2 &=& 
+\backslash
+sum_{i=1}^{N} s_i 
+\backslash
+vert s_i 
+\backslash
+rangle 
+\backslash
+langle s_i 
+\backslash
+vert  
+\backslash
+ .
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%These mixed states are shown in Fig.
+ 
+\backslash
+ref{Fig1}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{figure}[th]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{array}{c}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includegraphics[height=4 cm]{Figure1.png} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{array}%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{Visual representation of the input states in subspaces one and two.}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{Fig1}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+The definitions and properties presented in Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "jordan"
+
+\end_inset
+
+--
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "omegai"
+
+\end_inset
+
+ remain in effect but the part starting with Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "weights"
+
+\end_inset
+
+ has to be modified accordingly.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Because of the Jordan structure we are dealing with $N$ mutually orthogonal
+ orthogonal 2-dimensional %subspaces.
+ The $i^{th}$ subspace is spanned by $
+\backslash
+{
+\backslash
+vert r_{i}
+\backslash
+rangle,
+\backslash
+vert s_{i}
+\backslash
+rangle
+\backslash
+}$ for $i=1,
+\backslash
+ldots,N$.
+  %The prior probability of $
+\backslash
+vert r_{i}
+\backslash
+rangle$ is $
+\backslash
+eta_{1} r_{i}$ while the prior probability of $
+\backslash
+vert %s_{i}
+\backslash
+rangle$ is $
+\backslash
+eta_{2} s_{i}$.
+ We can define the normalized probabilities 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+eta_{1,i} &
+\backslash
+equiv& 
+\backslash
+frac{
+\backslash
+eta_{1} r_{i}}{
+\backslash
+eta_{1} r_{i} + 
+\backslash
+eta_{2} s_{i}}, 
+\backslash
+nonumber 
+\backslash
+
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+eta_{2,i} &
+\backslash
+equiv& 
+\backslash
+frac{
+\backslash
+eta_{2} s_{i}}{
+\backslash
+eta_{1} r_{i} + 
+\backslash
+eta_{2} s_{i}} 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%such that $
+\backslash
+eta_{1,i} + 
+\backslash
+eta_{2,i} = 1$.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Thus our task is again reduced to the the optimal FRIO discrimination of
+ the two pure states,  $
+\backslash
+vert %r_{i}
+\backslash
+rangle$ and $
+\backslash
+vert s_{i}
+\backslash
+rangle$, within subspace $i$ with the prior probabilities given by 
+\backslash
+eqref{etaij}.
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Similarly to the previoius section, we now introduce a fixed rate of inconclusi
+ve outcomes for subspace %$i$, $Q_{i}$,  such that $0 
+\backslash
+leq Q_{i} 
+\backslash
+leq Q_{c,i}$ where $Q_{c,i}$ is given by Eq.
+ 
+\backslash
+eqref{Qmax} with the %obvious substitutions $
+\backslash
+eta_{1} 
+\backslash
+rightarrow 
+\backslash
+eta_{1,i}$, $
+\backslash
+eta_{2} 
+\backslash
+rightarrow 
+\backslash
+eta_{2,i}$ and $
+\backslash
+cos 
+\backslash
+theta %
+\backslash
+rightarrow 
+\backslash
+cos 
+\backslash
+theta_{i} = 
+\backslash
+langle r_{i}
+\backslash
+vert s_{i}
+\backslash
+rangle$.
+ We note that this reduces the problem to the %FRIO discrimination of two
+ pure states in subspace $i$, with prior probabilities given by 
+\backslash
+eqref{etaij}.
+ The %solution is given by 
+\backslash
+eqref{PeSol1} in the POVM regime of $Q_{i}$, $Q_{i} 
+\backslash
+leq Q_{c,i}, Q_{th,i}$, and %
+\backslash
+eqref{PeSol2} in the projective regime of $Q_{i}$, $Q_{th,i} < Q_{i} 
+\backslash
+leq Q_{c,i}$, again with the above %substitutions.
+  
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In the following we will focus mainly on the POVM regime where the solution
+ is given explicitly by
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{e,i} = 
+\backslash
+frac{1}{2} ( 1 - Q_i - 
+\backslash
+sqrt{ (1 - Q_i)^2 -(Q_{0,i} - Q_i )^2}) 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{Pei}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%for subspace $i$.
+ We introduce the weight $
+\backslash
+omega_{i}$ of subspace $i$ as 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+eta_{1,i} +
+\backslash
+eta_{2,i} = 
+\backslash
+omega_{i} 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% 
+\end_layout
+
+\end_inset
+
+The weights of the subspaces, introduced in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "omegai"
+
+\end_inset
+
+ now satisfy 
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{N}\omega_{i}=1\ .\label{Nweights}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The total inconclusive rate can again be written as a weighted sum of the
+ inconclusive rates of the individual subspaces, 
+\begin_inset Formula 
+\begin{equation}
+Q=\sum_{i=1}^{N}\omega_{i}Q_{i}\ .\label{NQtot}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $Q$
+\end_inset
+
+ is fixed, with the fixed value satisfying 
+\begin_inset Formula $0\leq Q\leq Q_{0}$
+\end_inset
+
+, where now 
+\begin_inset Formula 
+\begin{equation}
+Q_{0}\equiv\sum_{i=1}^{N}\omega_{i}Q_{0,i}\ ,\label{NQ0}
+\end{equation}
+
+\end_inset
+
+is the maximal inconclusive rate that the 
+\begin_inset Formula $N$
+\end_inset
+
+ subspaces can accommodate.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Since $Q$ on the l.
+ h.s.
+ can be written as $Q= 
+\backslash
+sum_{i=1}^{N}
+\backslash
+omega_{i} Q$ due to 
+\backslash
+eqref{weights}, %one would again naively assume that $
+\backslash
+omega_{i}Q_{i} = 
+\backslash
+omega_{i} Q$ and each subspace %contributes to the total inconclusive rate
+ according to its weight.
+  This, however, turns out not to be the %case and the optimal distribution
+ of the the total inconclusive rate between the two subspaces is again %nontrivi
+al.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Recognizing that the likelihood of finding a particle in a subspace isn't
+ 1, we want to normalize our %problem so that we can solve it like the 2d
+ case where we had $P_e+ P_s+ Q= 1$.
+ Instead, in our %problem we have $P_{e,i} + P_{s,i} + Q_i = 
+\backslash
+eta_{1,i} + 
+\backslash
+eta_{2,i} = 
+\backslash
+omega_i$ where $P_{s,i}$ and $Q_i$ %are the success and the failure probabilitie
+s in that subspace.
+  Since our measurements span the Hilbert %space of this subspace, the total
+ probability of a particle being measured therein we call $
+\backslash
+omega_i$, or %the weight of that subspace.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%We can define weighted result probabilities
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+bar{P}_{e,i} +
+\backslash
+bar{P}_{s,i} + 
+\backslash
+bar{Q}_i = 1 
+\backslash
+ , 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%with $ 
+\backslash
+bar{
+\backslash
+bullet} = 
+\backslash
+frac{
+\backslash
+bullet}{
+\backslash
+omega_i} $.
+ We can define new constants $
+\backslash
+bar{
+\backslash
+eta}_{1,i} $ and $ %
+\backslash
+bar{
+\backslash
+eta}_{2,i}$ that still sum to 1, so that the states and measurements in
+ (3.8) don't change.
+  Now it is %straightforward to apply the 2d solution to each subspace,
+ where our error rate becomes
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+bar{P}_{e,i} = 
+\backslash
+frac{1}{2}( 1-
+\backslash
+bar{Q}_i - 
+\backslash
+sqrt{(1-
+\backslash
+bar{Q}_i)^2 - (
+\backslash
+bar{Q}_{0,i} -
+\backslash
+bar{Q}_i)^2}) 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%where $
+\backslash
+bar{Q}_{0,i} = 2 
+\backslash
+sqrt{
+\backslash
+bar{
+\backslash
+eta}_{1,i}
+\backslash
+bar{
+\backslash
+eta}_{2,i}}
+\backslash
+cos
+\backslash
+theta_i$.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%If we remove the bars, this becomes the generalized version of the solution
+ we derived for one subspace %in (3.7):
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{e,i}= 
+\backslash
+frac{1}{2}( 
+\backslash
+omega_i-Q_i - 
+\backslash
+sqrt{(
+\backslash
+omega_i-Q_i)^2 - (Q_{0,i} - Q_i)^2}) 
+\backslash
+ .
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Lagrangian %Optimization
+ %PI0%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsection{Lagrangian Optimization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, the total error rate is a weighted sum of the error rates of
+ the individual subspaces, 
+\begin_inset Formula 
+\begin{equation}
+P_{e}=\sum_{i=1}^{N}\omega_{i}P_{e,i}\ .\label{NPe}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The remaining task is to determine the optimal distribution of 
+\begin_inset Formula $Q$
+\end_inset
+
+ between the 
+\begin_inset Formula $N$
+\end_inset
+
+ subspaces, the distribution that minimizes the total error rate 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+, under the constraint that 
+\begin_inset Formula $Q$
+\end_inset
+
+ in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "NQtot"
+
+\end_inset
+
+ is fixed, i.e., to determine the optimal values of 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ as a function of the fixed 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to perform the optimization we employ the Lagrange multiplier method
+ because it leads to symmetric and easily tractable equations.
+ Adding 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ times the constraint, 
+\begin_inset Formula $Q-\sum_{i=1}^{N}Q_{i}=0$
+\end_inset
+
+, to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "NPe"
+
+\end_inset
+
+ yields the constrained function 
+\begin_inset Formula 
+\begin{equation}
+F=\sum_{i=1}^{N}\omega_{i}P_{e,i}+\lambda(Q-\sum_{i=1}^{N}\omega_{i}Q_{i})\ ,\label{constrainedF}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $P_{e,i}$
+\end_inset
+
+ is inserted from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+, so it is also a function of 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is the Lagrange multiplier.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Finding the optimal $Q_{i}$'s then involves the following steps.
+ Setting $
+\backslash
+partial F/ 
+\backslash
+partial Q_{i} = 0$ gives $N$ equations that allow us to express $Q_{i}$
+ as a function of $
+\backslash
+lambda$, $Q_{i} (
+\backslash
+lambda)$.
+  Setting $
+\backslash
+partial F/ 
+\backslash
+partial 
+\backslash
+lambda = 0$ just reproduces the constraint and inserting $Q_{i}(
+\backslash
+lambda)$ into the constraint yields the solution for $
+\backslash
+lambda$.
+ Finally, using this value of $
+\backslash
+lambda$ in $Q_{i}(
+\backslash
+lambda)$ gives us the optimized value of the individual failure rate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ can be treated as independent variables.
+ Simultaneous optimization of 
+\begin_inset Formula $F$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is straightforward.
+ Before we present the results it will prove useful to introduce a hierarchy
+ of the subspaces.
+ So, in what follows we will assume 
+\begin_inset Formula 
+\begin{equation}
+Q_{0,1}\geq Q_{0,2}\geq\ldots\geq Q_{0,N}\ ,\label{hierarchy}
+\end{equation}
+
+\end_inset
+
+which generalizes the ordering used in the case of two subspaces in the
+ previous section.
+\end_layout
+
+\begin_layout Standard
+Then the optimal 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ can be written as 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+Q_{i}^{opt}=\left\{ \begin{array}{ll}
+\frac{1-Q_{0,i}}{\sum_{i=1}^{k}\omega_{i}-\sum_{i=1}^{k}\omega_{i}Q_{0,i}}Q+\frac{Q_{0,i}\sum_{i=1}^{k}\omega_{i}-\sum_{i=1}^{k}\omega_{i}Q_{0,i}}{\sum_{i=1}^{k}\omega_{i}-\sum_{i=1}^{k}\omega_{i}Q_{0,i}} & \ \ \ \mbox{if \ensuremath{Q_{th}^{(k)}\leq Q\leq Q_{th}^{(k+1)}} and \ensuremath{i\leq k}}\ ,\\
+0 & \ \ \ \mbox{if \ensuremath{i>k}}\ .
+\end{array}\right.\label{Qiopt}
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+label{Qiopt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    Q_{}^{opt} = 
+\backslash
+left
+\backslash
+{ 
+\backslash
+begin{array}{ll}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+frac{Q}{ 
+\backslash
+omega_{1} } & 
+\backslash
+mbox{ if $0 
+\backslash
+leq Q 
+\backslash
+leq   Q_{th}$} 
+\backslash
+ , 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+frac{1-Q_{0,1}}{1-Q_{0}}(Q - Q_{th}) + 
+\backslash
+frac{Q_{th}}{ 
+\backslash
+omega_{1} } & 
+\backslash
+mbox{if $ Q_{th} < Q 
+\backslash
+leq %Q_{0}$}  
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+end{array}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+right.
+ 
+\backslash
+nonumber 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%and
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+label{Q2opt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    Q_{2}^{opt} = 
+\backslash
+left
+\backslash
+{ 
+\backslash
+begin{array}{ll}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    0 & 
+\backslash
+mbox{ if $0 
+\backslash
+leq Q 
+\backslash
+leq  Q_{th} $}
+\backslash
+ , 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+frac{1-Q_{0,2}}{1-Q_{0}} (Q-Q_{th})& 
+\backslash
+mbox{ if $Q_{th} < Q 
+\backslash
+leq
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    Q_{0} $}  
+\backslash
+ .
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+end{array}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%    
+\backslash
+right.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{eqnarray}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+ Here 
+\begin_inset Formula $k=1,2,\ldots,N$
+\end_inset
+
+ and we introduced the notation 
+\begin_inset Formula 
+\begin{equation}
+Q_{th}^{(k)}=\frac{\sum_{i=1}^{k}\omega_{i}Q_{0,i}-Q_{0,k}\sum_{i=1}^{k}\omega_{i}}{1-Q_{0,k}}\ .
+\end{equation}
+
+\end_inset
+
+and also 
+\begin_inset Formula $Q_{th}^{(N+1)}=Q_{0}=Q_{max}$
+\end_inset
+
+, cf.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "NQ0"
+
+\end_inset
+
+.
+ Obviously, for 
+\begin_inset Formula $k=1,2$
+\end_inset
+
+ these results reproduce the results for two subspaces, Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qth12"
+
+\end_inset
+
+--
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Q2opt"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Inserting the optimal failure rates into the subspace-error rates 
+\begin_inset Formula $P_{e,i}$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+, gives the optimal error rates for the subspaces, 
+\begin_inset Formula $P_{e,i}^{opt}$
+\end_inset
+
+.
+ Then using these optimal subspace-error rates in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "NPe"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Now the optimized subspace error rate is
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{e,i} = 
+\backslash
+frac{1}{2}( 
+\backslash
+omega_i-Q_i - (
+\backslash
+omega_i - Q_{0,i})
+\backslash
+sqrt{
+\backslash
+frac{1+ Q_0 -2 Q}{1-Q_0}}) 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+gives the total optimal error rate 
+\begin_inset Formula $P_{E}=\sum_{i=1}^{N}P_{e,i}^{opt}$
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_e = 
+\backslash
+frac{1}{2}(1-Q-
+\backslash
+sqrt{(1-Q)^2-(Q-Q_0)^2}) 
+\backslash
+ .
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{widetext}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+P_{E}=\left\{ \begin{array}{ll}
+\frac{1}{2}\left[1-Q-\sqrt{\left(\sum_{i=1}^{k}\omega_{i}-Q\right)^{2}-\left(\sum_{i=1}^{k}\omega_{i}Q_{0,i}-Q\right)^{2}}-\sum_{i=k+1}^{N}\sqrt{(\omega_{i})^{2}-\left(\omega_{i}Q_{0,i}\right)^{2}}\right] & \mbox{ if \ensuremath{Q_{th}^{(k)}\leq Q\leq Q_{th}^{(k+1)}}}\\
+{} & \mbox{ and \ensuremath{k<N}}\ ,\\
+\frac{1}{2}\!\left[1-Q-\sqrt{(1-Q)^{2}-\left(Q_{0}-Q\right)^{2}}\right] & \mbox{ if \ensuremath{Q_{th}^{(N)}<Q\leq Q_{0}}}\ ,
+\end{array}\right.\nonumber \\
+\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%P_{E} = 
+\backslash
+frac{1}{2}[1 - Q - 
+\backslash
+sum_{i=1}^{2} 
+\backslash
+omega_{i} 
+\backslash
+sqrt{ (1 - Q_{i}^{opt})^2 -(Q_{0,i} - Q_{i}^{opt} )^2} ] 
+\backslash
+ ,
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{PE2} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{widetext}
+\end_layout
+
+\end_inset
+
+ which is valid in all regions of the parameter 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $N=2$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PEN"
+
+\end_inset
+
+ reduces to the two-subspaces solution, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PE2"
+
+\end_inset
+
+.
+ For the maximum allowable inconclusive rate, 
+\begin_inset Formula $Q=Q_{0}$
+\end_inset
+
+, the second line in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PEN"
+
+\end_inset
+
+ holds and it reduces to 
+\begin_inset Formula $P_{E}=0$
+\end_inset
+
+, corresponding to optimal Unambiguous Discrimination of the subspaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "HB,BFH"
+
+\end_inset
+
+, while for 
+\begin_inset Formula $Q=0$
+\end_inset
+
+ the first line holds and it reduces to the Minimum Error expression for
+ 
+\begin_inset Formula $N$
+\end_inset
+
+ subspaces 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BBFHH"
+
+\end_inset
+
+, as expected.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%We remind ourselves that while this appears identical to the 2d solution
+ (2.2), it in fact contains %parameters that are summed over all subspaces.
+  This means that there is an onto relationship between N %dimensional and
+ 2d solutions that allows us to construct a variety of subspace strategies
+ that replicate any %2d solution.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ThresholdStructure%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsection{Threshold Structure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, the most interesting aspect of the optimal solution is that a structure
+ with multiple thresholds emerges.
+ For 
+\begin_inset Formula $Q_{th}^{(1)}=0\leq Q<Q_{th}^{(2)}$
+\end_inset
+
+ the total available inconclusive rate is accommodated by the first subspace
+ only and all others operate at the Minimum Error level.
+ According to the hierarchy introduced in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "hierarchy"
+
+\end_inset
+
+, the first subspace is the one with the largest 
+\begin_inset Formula $Q_{0,i}$
+\end_inset
+
+.
+ Then between 
+\begin_inset Formula $Q_{th}^{(2)}\leq Q<Q_{th}^{(3)}$
+\end_inset
+
+ the second subspace, the one with the second largest 
+\begin_inset Formula $Q_{0,i}$
+\end_inset
+
+ will also participate in sharing the available inconclusive rate, while
+ the remaining 
+\begin_inset Formula $N-2$
+\end_inset
+
+ subspaces continue to operate at the minimum error level.
+ In general, in the interval 
+\begin_inset Formula $Q_{th}^{(k)}\leq Q<Q_{th}^{(k+1)}$
+\end_inset
+
+ the first 
+\begin_inset Formula $k$
+\end_inset
+
+ subspaces share the available inconclusive rate and the remaining 
+\begin_inset Formula $N-k$
+\end_inset
+
+ subspaces remain at the minimum arror level.
+ Finally, in the range 
+\begin_inset Formula $Q_{th}^{(N)}\leq Q\leq Q_{0}=Q_{max}$
+\end_inset
+
+ all 
+\begin_inset Formula $N$
+\end_inset
+
+ subspaces participate in sharing the available inconclusive rate.
+\end_layout
+
+\begin_layout Standard
+It is easy to show that the expressions are continuous at the threshold,
+ i.e.
+ the expressions valid below the threshold and the ones valid above the
+ threshold tend to the same values at the threshold, although their slopes
+ are, in general, different below and above the threshold.
+ Furthermore, if 
+\begin_inset Formula $\omega_{i}Q_{0,i}>\omega_{i+1}Q_{0,i+1}$
+\end_inset
+
+, the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ subspace always accommodates more inconclusive rate than the 
+\begin_inset Formula $i+1^{st}$
+\end_inset
+
+ for all 
+\begin_inset Formula $i=1,2,\ldots,N$
+\end_inset
+
+, otherwise above some value of the total 
+\begin_inset Formula $Q$
+\end_inset
+
+ the 
+\begin_inset Formula $i+1^{st}$
+\end_inset
+
+ subspace will accomodate more inconclusive rate than the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ subspace, the 
+\begin_inset Formula $Q_{i}^{opt}(Q)$
+\end_inset
+
+ curves will intersect (see part (b) of Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig2"
+
+\end_inset
+
+ for an example).
+\end_layout
+
+\begin_layout Standard
+We illustrate these results on the example of 
+\begin_inset Formula $N=3$
+\end_inset
+
+.
+ In Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig4"
+
+\end_inset
+
+, we plot the optimal failure rates 
+\begin_inset Formula $\omega_{i}Q_{i}^{{\rm opt}}$
+\end_inset
+
+ and in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig5"
+
+\end_inset
+
+, we plot the optimal error rates 
+\begin_inset Formula $\omega_{i}P_{e,i}^{{\rm opt}}$
+\end_inset
+
+ for the three subspaces as a function of the total failure rate 
+\begin_inset Formula $Q$
+\end_inset
+
+ for some specific values of the parameters.
+ 
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4cm]{Fig4.png}\end{array}$
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Optimal subspace failure rates 
+\begin_inset Formula $\omega_{i}Q_{i}^{opt}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qiopt"
+
+\end_inset
+
+, for three subspaces (
+\begin_inset Formula $i=1,2,3$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\omega_{1}Q_{1}^{opt}$
+\end_inset
+
+: solid line.
+ 
+\begin_inset Formula $\omega_{2}Q_{2}^{opt}$
+\end_inset
+
+: dashed line.
+ 
+\begin_inset Formula $\omega_{3}Q_{3}^{opt}$
+\end_inset
+
+: dotted line.
+ For the figure we used 
+\begin_inset Formula $\eta_{1}=\eta_{2}=1/2$
+\end_inset
+
+ and the following parameter values: 
+\begin_inset Formula $\theta_{1}=\pi/4$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{2}=\pi/3$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{3}=\pi/3$
+\end_inset
+
+, 
+\begin_inset Formula $r_{1}=5/8$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=1/4$
+\end_inset
+
+, 
+\begin_inset Formula $r_{3}=1/8$
+\end_inset
+
+, 
+\begin_inset Formula $s_{1}=3/8$
+\end_inset
+
+, 
+\begin_inset Formula $s_{2}=1/4$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{3}=3/8$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig4"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4cm]{Fig5.png}\end{array}$
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Optimal subspace error rates 
+\begin_inset Formula $\omega_{i}P_{e,i}^{opt}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+ with 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qiopt"
+
+\end_inset
+
+, for three subspaces (
+\begin_inset Formula $i=1,2,3$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\omega_{1}P_{e,1}^{opt}$
+\end_inset
+
+: solid line.
+ 
+\begin_inset Formula $\omega_{2}P_{e,2}^{opt}$
+\end_inset
+
+: dashed line.
+ 
+\begin_inset Formula $\omega_{3}P_{e,3}^{opt}$
+\end_inset
+
+: dotted line.
+ For the plots we used the same parameter values as for Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig4"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig5"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The results presented so far, in Sections III and IV, are valid if the parameter
+s are such that in all subspaces we are in the POVM regime, i.e., 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ is in the unshaded region (region II) of Fig.
+ 1 for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ When the parameters are such that in some subspaces we are in the projective
+ regime, i.e., 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ falls in the shaded regions of Fig.
+ 1 (regions I and III) for some 
+\begin_inset Formula $i$
+\end_inset
+
+ we have to modify the treatment to account for the fact that the error
+ expression for the corresponding subspace, 
+\begin_inset Formula $P_{e,i}$
+\end_inset
+
+, is no longer given by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+ but by 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol2Exp"
+
+\end_inset
+
+.
+ We will study this case in the next section.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%SSD%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Projective regime
+\end_layout
+
+\begin_layout Standard
+We have seen in Section II for the single subspace case that the POVM solution
+ is valid if the inconclusive rate is smaller than a boundary value, 
+\begin_inset Formula $Q\leq Q_{b}$
+\end_inset
+
+, where 
+\begin_inset Formula $Q_{b}$
+\end_inset
+
+ is given by Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qb"
+
+\end_inset
+
+.
+ With an obvious generalization, the POVM solution holds in subspace 
+\begin_inset Formula $i$
+\end_inset
+
+ if in that subspace 
+\begin_inset Formula $Q_{i}\leq Q_{b,i}$
+\end_inset
+
+ holds where the subspace boundary value is given by 
+\begin_inset Formula 
+\begin{equation}
+Q_{{\rm b,i}}\equiv{2\eta_{1,i}\eta_{2,i}\sin^{2}\theta_{i}/(1-Q_{0,i})}.\label{Qbi}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%In Fig.
+ 
+\backslash
+ref{Fig6} we plot $Q_{
+\backslash
+rm c,i}$ and~$Q_{
+\backslash
+rm b,i}$ vs.~$
+\backslash
+eta_{1}$ together for a fixed overlap, %$
+\backslash
+cos
+\backslash
+theta = 0.5$ ($
+\backslash
+theta = 
+\backslash
+pi/3$).
+ 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{figure}[ht]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+textbf{$Q_{i}$ vs.
+ $
+\backslash
+eta_{1,i}$}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{array}{c}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+includegraphics[height=4 cm]{Figure2.png} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{array}%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%$%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{$Q_i$ vs.
+ $
+\backslash
+eta_{1,i}$.
+ Dashed line: $Q_{b,i}$.
+ Solid line: $Q_{i}^{max}=Q_{c,i}$.
+ The two curves %intersect at $
+\backslash
+eta_{1,i}^{(l)}$ and $
+\backslash
+eta_{1,i}^{(r)}$.
+  For the plot we chose $
+\backslash
+theta_{i} = 
+\backslash
+pi /3$.}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{Fig6}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the region 
+\begin_inset Formula $Q_{b,i}\leq Q_{i}\leq Q_{c,i}$
+\end_inset
+
+ the optimal measurement is a standard projective quantum measurement (SQM).
+ The curves 
+\begin_inset Formula $Q_{b,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{c,i}$
+\end_inset
+
+ intersect at 
+\begin_inset Formula $\eta_{1,i}=\eta_{1,i}^{(l)}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{1,i}=\eta_{1,i}^{(r)}$
+\end_inset
+
+, the same points as in Eq.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qmax"
+
+\end_inset
+
+.
+ The interval 
+\begin_inset Formula $0\leq\eta_{1,i}\leq1$
+\end_inset
+
+ is thus divided into three regions.
+ In regions
+\begin_inset space ~
+\end_inset
+
+I and
+\begin_inset space ~
+\end_inset
+
+III, we have 
+\begin_inset Formula $Q_{{\rm b,i}}<Q_{{\rm c,i}}$
+\end_inset
+
+ and the solution
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+ is valid for 
+\begin_inset Formula $0\leq Q_{i}<Q_{{\rm b}}$
+\end_inset
+
+ only.
+ In Region II, 
+\begin_inset Formula $\eta_{1,i}^{(l)}\leq\eta_{1,i}\leq\eta_{1,i}^{(r)}$
+\end_inset
+
+, we have 
+\begin_inset Formula $Q_{{\rm c,i}}=Q_{0,i}<Q_{{\rm b,i}}$
+\end_inset
+
+ and the solution 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol1"
+
+\end_inset
+
+ is valid for the entire 
+\begin_inset Formula $0\leq Q_{i}\leq Q_{{\rm c,i}}$
+\end_inset
+
+ range.
+\end_layout
+
+\begin_layout Standard
+Thus, Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig1"
+
+\end_inset
+
+ is valid in every subspace, with the obvious change of axis labels to 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{1,i}$
+\end_inset
+
+.
+ So, 
+\begin_inset Formula $Q_{i}>Q_{b,i}$
+\end_inset
+
+ occurs in regions I and III and in the shaded areas the optimal FRIO measuremen
+t is an SQM while in the unshaded area it is a POVM.
+ We now illustrate the case when the FRIO measurement is a POVM in one and
+ an SQM in the other subspace on an example.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%We consider two subspaces with $
+\backslash
+eta_1 = 
+\backslash
+eta_2$ and the other parameters are listed in Table %
+\backslash
+ref{table1}.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{table}[h!]
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+caption{Alice's measurement outcomes and Bob's subsequent operations.}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+vspace{4mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+begin{tabular}{||c||c|c|c|c|c|c|c||}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%Subspace $i$ & $r_{i}$ & $s_{i}$ & $
+\backslash
+theta_{i}$ & $
+\backslash
+omega_{i}$ & $Q_{0,i} $ & $Q_{b,i}$ & $Q_{c,i}$ 
+\backslash
+
+\backslash
+ %
+\backslash
+hline 
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%1 & $
+\backslash
+frac{9}{10}$ & $
+\backslash
+frac{1}{10}$ & $
+\backslash
+frac{
+\backslash
+pi}{16}$ & $
+\backslash
+frac{1}{2}$ &$0.5885$ & $0.01665$ & %$0.96575$ 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%2 & $
+\backslash
+frac{1}{10}$ &$
+\backslash
+frac{9}{10}$  &$
+\backslash
+frac{3
+\backslash
+pi}{7}$ &$
+\backslash
+frac{1}{2}$ &$0.1335$ & $0.19745$ & $01335$ 
+\backslash
+
+\backslash
+ %
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%3 &$
+\backslash
+frac{3}{8}$  & $
+\backslash
+frac{5}{8}$  &$
+\backslash
+frac{3
+\backslash
+pi}{7}$ &$
+\backslash
+frac{1}{2}$ &$Q^{>}_3 = 29/64 
+\backslash
+approx .45$ 
+\backslash
+
+\backslash
+ 
+\backslash
+hline
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{tabular}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+%
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+label{table1}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{center} 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%For subspace 1 these parameters give $
+\backslash
+eta_{1,l}=1-
+\backslash
+eta_{1,r}=0.4903$ and since $
+\backslash
+eta_{1,1}=0.9 > %
+\backslash
+eta_{1,r}$ the optimum measuerement is a POVM for $0 
+\backslash
+leq Q 
+\backslash
+leq Q_{b,1}=0.01665$ and an SQM for %$0.01665 
+\backslash
+leq Q 
+\backslash
+leq 0.96575$.
+ Subspace 2 is in the POVM regime for all values of $Q$.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optimal distribution of the total available inconclusive rate 
+\begin_inset Formula $Q$
+\end_inset
+
+ between the two subspaces, 
+\begin_inset Formula $Q_{1}^{opt}$
+\end_inset
+
+ and 
+\begin_inset Formula $Q_{2}^{opt}$
+\end_inset
+
+ such that their sum satisfies 
+\begin_inset Formula $Q_{1}^{opt}+Q_{2}^{opt}=Q$
+\end_inset
+
+, can be found by optimizing the total error rate with respect to the failure
+ rate of the subspaces.
+ This is similar to the procedure followed in Sec.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:3"
+
+\end_inset
+
+, however we now have to use the error expression 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol2Exp"
+
+\end_inset
+
+ in subspace 1 for 
+\begin_inset Formula $Q>Q_{b,1}$
+\end_inset
+
+.
+ This leads to a numerical optimization problem, the result of which is
+ shown in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig6"
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+subsection{Second elimination}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4cm]{Fig6.png}\end{array}$
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Optimal subspace failure rates 
+\begin_inset Formula $\omega_{i}Q_{i}^{opt}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qiopt"
+
+\end_inset
+
+, for two subspaces (
+\begin_inset Formula $i=1,2,3$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\omega_{1}Q_{1}^{opt}$
+\end_inset
+
+: solid upper line.
+ 
+\begin_inset Formula $\omega_{2}Q_{2}^{opt}$
+\end_inset
+
+: solid lower line.
+ The dashed lines indicate the behavior of the corresponding quantities
+ if the POVM solution were valid for subspace 1.
+ For the figure we used 
+\begin_inset Formula $\eta_{1}=\eta_{2}=1/2$
+\end_inset
+
+ and the following parameter values: 
+\begin_inset Formula $\theta_{1}=\pi/16$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{2}=3\pi/7$
+\end_inset
+
+, 
+\begin_inset Formula $r_{1}=9/10$
+\end_inset
+
+, 
+\begin_inset Formula $r_{2}=1/10$
+\end_inset
+
+, 
+\begin_inset Formula $s_{1}=1/10$
+\end_inset
+
+ and 
+\begin_inset Formula $s_{2}=9/10$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig6"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution again exhibits a threshold structure.
+ The dashed lines in the figure indicate how the optimal 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+'s would behave if the POVM solution were valid for subspace 1 instead of
+ the SQM.
+ It is apparent that the SQM shifts the threshold toward a higher value
+ of 
+\begin_inset Formula $Q$
+\end_inset
+
+ and above the threshold the dependence on 
+\begin_inset Formula $Q$
+\end_inset
+
+ is nonlinear, while for the POVM regime it is always linear.
+\end_layout
+
+\begin_layout Standard
+The optimal inconconclusive rate for subspace 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $Q_{i}^{opt}$
+\end_inset
+
+, displayed in Fig 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig6"
+
+\end_inset
+
+, is then inserted into Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PeSol2Exp"
+
+\end_inset
+
+ for 
+\begin_inset Formula $i=1$
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Pei2"
+
+\end_inset
+
+ for 
+\begin_inset Formula $i=2$
+\end_inset
+
+.
+ This yields the optimal error rate for subspace 
+\begin_inset Formula $i$
+\end_inset
+
+, 
+\begin_inset Formula $P_{e,i}^{opt}$
+\end_inset
+
+.
+ The results are displayed in Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig7"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement ht
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\begin{array}{c}
+\includegraphics[height=4cm]{Fig7.png}\end{array}$
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Optimal subspace error rates 
+\begin_inset Formula $P_{e,i}^{opt}$
+\end_inset
+
+ vs.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ from Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "Qiopt"
+
+\end_inset
+
+, for two subspaces (
+\begin_inset Formula $i=1,2$
+\end_inset
+
+).
+ 
+\begin_inset Formula $P_{e,1}^{opt}$
+\end_inset
+
+: solid upper line.
+ 
+\begin_inset Formula $P_{e,2}^{opt}$
+\end_inset
+
+: solid lower line.
+ The dashed lines indicate the corresponding quantities if the POVM solution
+ were valid in subspace 1.
+ For the plots we used the same parameter values as for Fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig6"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig7"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optimal error rates also exhibit a threshold structure.
+ Relative to the POVM regime, the SQM shifts the threshold to a higher value
+ of 
+\begin_inset Formula $Q$
+\end_inset
+
+ and the overall error rate also increases.
+\end_layout
+
+\begin_layout Section
+summary and conclusion
+\end_layout
+
+\begin_layout Standard
+We have found analytic solutions for the optimal discrimination measurement
+ strategy when a fixed rate of inconclusive outcomes, 
+\begin_inset Formula $Q$
+\end_inset
+
+, is allowed (FRIO strategy), for a class of mixed states that exhibit a
+ Jordan Basis structure.
+ Thus our work extends the previously introduced FRIO strategy from pure
+ states 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bagan"
+
+\end_inset
+
+ to mixed states.
+ In this strategy the probability of making an error in identifying the
+ state, 
+\begin_inset Formula $P_{e}$
+\end_inset
+
+, is minimized for a fixed 
+\begin_inset Formula $Q$
+\end_inset
+
+ and the solution optimally interpolates between the minimum error (
+\begin_inset Formula $Q=0$
+\end_inset
+
+) and unambiguous discrimination (
+\begin_inset Formula $P_{e}=0$
+\end_inset
+
+) limits.
+ We found several surprising and unexpected conclusions.
+ The first is that the form of the optimal error rate remains formally the
+ same over all subspaces as in the case of two pure states, which is a consequen
+ce of the Jordan structure of the mixed states.
+ The second is a more striking feature, the emergence of a threshold structure:
+ as we increase the allowed inconclusive rate 
+\begin_inset Formula $Q$
+\end_inset
+
+, starting from 
+\begin_inset Formula $Q=0$
+\end_inset
+
+, at first only one subspace accommodates all of the available 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Above a certain threshold a second subspace starts sharing the available
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+, above yet another higher threshold a third subspace starts participating,
+ etc., until above a final threshold all of the subspaces participate.
+ It is interesting to note that in this last regime the optimal error expression
+ the second line in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "PEN"
+
+\end_inset
+
+ is formally the same as the result for two pure states.
+ This is a novel type of behavior and allows for experimental tests of our
+ findings.
+ Applications could be considered in cryptography where a key is shared
+ over different lines to enhance security without sacrificing overall error
+ rate.
+\end_layout
+
+\begin_layout Acknowledgments
+This publication was made possible through the support of a grant from the
+ John Templeton Foundation.
+ The opinions expressed in this publication are those of the authors and
+ do not necessarily reflect the views of the John Templeton Foundation.
+ Partial financial support by a Grant from PSC-CUNY is also gratefully acknowled
+ged.
+ We also acknowledge useful discussions on various aspects of this project
+ with Ed Feldman, Ulrike Herzog and Mark Hillery.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Subspaces %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "nielsen1"
+
+\end_inset
+
+M.
+ A.
+ Nielsen and I.
+ L.
+ Chuang, 
+\emph on
+Quantum Computation and Information
+\emph default
+ (Cambridge University Press, Cambridge, UK, 2000).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "bergourev"
+
+\end_inset
+
+J.
+\begin_inset space \space{}
+\end_inset
+
+A.
+\begin_inset space \space{}
+\end_inset
+
+Bergou, Journal of Modern Optics 
+\series bold
+57
+\series default
+, 160 (2010).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "helstrom"
+
+\end_inset
+
+C.
+ W.
+ Helstrom, 
+\emph on
+Quantum Detection and Estimation Theory
+\emph default
+ (Academic Press, New York, 1976).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "ivanovic"
+
+\end_inset
+
+I.
+ D.
+ Ivanovic, Phys.
+ Lett.
+ A 
+\series bold
+123
+\series default
+, 257 (1987).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "dieks"
+
+\end_inset
+
+D.
+ Dieks, Phys.
+ Lett.
+ A 
+\series bold
+126
+\series default
+, 303 (1988).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "peres"
+
+\end_inset
+
+A.
+ Peres, Phys.
+ Lett.
+ A 
+\series bold
+128
+\series default
+, 19 (1988).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "jaeger"
+
+\end_inset
+
+G.
+ Jaeger and A.
+ Shimony, Phys.
+ Lett.
+ A 
+\series bold
+197
+\series default
+, 83 (1995).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "chefles1"
+
+\end_inset
+
+A.
+ Chefles, Phys.
+ Lett.
+ A 
+\series bold
+239
+\series default
+, 339 (1998).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "croke"
+
+\end_inset
+
+ S.
+ Croke, E.
+ Andersson, S.
+ M.
+ Barnett, C.
+ R.
+ Gilson, and J.
+ Jeffers, prl 
+\series bold
+96
+\series default
+, 070401 (2006).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "herzog1"
+
+\end_inset
+
+U.
+ Herzog, 
+\series bold
+79
+\series default
+, 032323 (2009).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "chefles2"
+
+\end_inset
+
+A.
+ Chefles and S.
+ M.
+ Barnett, J.
+ Mod.
+ Opt.
+ 
+\series bold
+45
+\series default
+, 1295 (1998).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "fiurasek"
+
+\end_inset
+
+J.
+ Fiurášek and M.
+ Ježek, 
+\series bold
+67
+\series default
+, 012321 (2003).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "zhang"
+
+\end_inset
+
+C.-W.
+ Zhang, C.-F.
+ Li, and G.-C.
+ Guo, Phys.
+ Lett.
+ A 
+\series bold
+261
+\series default
+, 25 (1999).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "eldar"
+
+\end_inset
+
+Y.
+ C.
+ Eldar, 
+\series bold
+67
+\series default
+, 042309 (2003).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "touzel"
+
+\end_inset
+
+M.
+ A.
+ P.
+ Touzel, , R.
+ B.
+ Adamson, and A.
+ M.
+ Steinberg, 
+\series bold
+76
+\series default
+, 062314 (2007).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "herzog2"
+
+\end_inset
+
+U.
+ Herzog, private communication around 2006; the proof is presented in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Herzog1"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "hayashi"
+
+\end_inset
+
+A.
+ Hayashi, T.
+ Hashimoto, and M.
+ Horibe, 
+\series bold
+78
+\series default
+, 012333 (2008).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "sugimoto"
+
+\end_inset
+
+H.
+ Sugimoto, T.
+ Hashimoto, M.
+ Horibe, and A.
+ Hayashi, 
+\series bold
+80
+\series default
+, 052322 (2009).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Bagan"
+
+\end_inset
+
+ E.
+ Bagan, R Muñoz-Tapia, G.A.
+ Olivares-Rentería and J.A.
+ Bergou, 
+\series bold
+86
+\series default
+, 040303(R) (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Herzog1"
+
+\end_inset
+
+U.
+ Herzog, 
+\series bold
+86
+\series default
+, 032314 (2012).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "HB"
+
+\end_inset
+
+U.
+ Herzog and J.
+ A.
+ Bergou, 
+\series bold
+71
+\series default
+, 050301R (2005).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BFH"
+
+\end_inset
+
+J.
+ A.
+ Bergou, E.
+ Feldman, and M.
+ Hillery, 
+\series bold
+73
+\series default
+, 032107 (2006).
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BBFHH"
+
+\end_inset
+
+J.
+ A.
+ Bergou, V.
+ Bužek, E.
+ Feldman, U.
+ Herzog, and M.
+ Hillery, 
+\series bold
+73
+\series default
+, 062334 (2006).
+\end_layout
+
+\end_body
+\end_document

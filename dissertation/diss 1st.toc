@@ -1,0 +1,55 @@
+\select@language {english}
+\contentsline {part}{Part\ 1. \enspace \noindent Introduction}{5}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Hello}}{6}
+\contentsline {section}{\tocsection {}{1.1}{Introduction}}{6}
+\contentsline {subsection}{\tocsubsection {}{1.1.1}{Why Measurement Theory?}}{6}
+\contentsline {subsection}{\tocsubsection {}{1.1.2}{State Representation and the Density Matrix }}{6}
+\contentsline {subsection}{\tocsubsection {}{1.1.3}{The Measurement Process}}{7}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Pure State Discrimination}}{8}
+\contentsline {section}{\tocsection {}{2.1}{Minimum Error Measurements}}{8}
+\contentsline {section}{\tocsection {}{2.2}{Unambiguous Discrimination}}{8}
+\contentsline {section}{\tocsection {}{2.3}{Intermediate Discrimination}}{9}
+\contentsline {subsection}{\tocsubsection {}{2.3.1}{Transformation Solution}}{9}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Mixed State Discrimination in Subspaces}}{10}
+\contentsline {section}{\tocsection {}{3.1}{Jordan Basis Structure}}{10}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Mixed Qubit State Discrimination}}{13}
+\contentsline {section}{\tocsection {}{4.1}{Subspaces formalism}}{13}
+\contentsline {subsection}{\tocsubsection {}{4.1.1}{Two Subspaces}}{13}
+\contentsline {subsection}{\tocsubsection {}{4.1.2}{Generalization to n subspaces}}{15}
+\contentsline {section}{\tocsection {}{4.2}{Lagrangian Optimization}}{16}
+\contentsline {section}{\tocsection {}{4.3}{Threshold Structure}}{16}
+\contentsline {subsection}{\tocsubsection {}{4.3.1}{First iteration}}{17}
+\contentsline {subsection}{\tocsubsection {}{4.3.2}{General iteration}}{17}
+\contentsline {subsection}{\tocsubsection {}{4.3.3}{Continuity and intersection}}{18}
+\contentsline {section}{\tocsection {}{4.4}{Single-State Domain}}{19}
+\contentsline {section}{\tocsection {}{4.5}{Example}}{20}
+\contentsline {subsection}{\tocsubsection {}{4.5.1}{First elimination}}{21}
+\contentsline {subsection}{\tocsubsection {}{4.5.2}{Second elimination}}{21}
+\contentsline {section}{\tocsection {}{4.6}{summary and conclusion}}{21}
+\contentsline {section}{\tocsection {}{4.7}{Setting up the problem}}{21}
+\contentsline {section}{\tocsection {}{4.8}{b Solution}}{23}
+\contentsline {section}{\tocsection {}{4.9}{Case: p=d}}{25}
+\contentsline {section}{\tocsection {}{4.10}{Case: d = 1}}{26}
+\contentsline {subsection}{\tocsubsection {}{4.10.1}{$\eta _1 = \eta _2$}}{26}
+\contentsline {section}{\tocsection {}{4.11}{Case: ME limit}}{26}
+\contentsline {section}{\tocsection {}{4.12}{Case: MC limit}}{27}
+\contentsline {section}{\tocsection {}{4.13}{General Optimization Arguments}}{27}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Experimental Implementation}}{29}
+\contentsline {section}{\tocsection {}{5.1}{Pure State Measurements}}{29}
+\contentsline {section}{\tocsection {}{5.2}{Neumark Solution of Interpolation}}{29}
+\contentsline {subsection}{\tocsubsection {}{5.2.1}{Equal Weights Solution}}{29}
+\contentsline {section}{\tocsection {}{5.3}{Full Solution}}{30}
+\contentsline {section}{\tocsection {}{5.4}{Experimental Implementation}}{31}
+\contentsline {subsection}{\tocsubsection {}{5.4.1}{Equal aprioris}}{32}
+\contentsline {subsection}{\tocsubsection {}{5.4.2}{General case }}{34}
+\contentsline {section}{\tocsection {}{5.5}{summary}}{35}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Cloning}}{36}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Separation}}{37}
+\contentsline {section}{\tocsection {}{7.1}{Min error}}{37}
+\contentsline {section}{\tocsection {}{7.2}{UD}}{37}
+\contentsline {section}{\tocsection {}{7.3}{Intermediate}}{37}
+\contentsline {section}{\tocsection {}{7.4}{Two-step}}{37}
+\contentsline {subsection}{\tocsubsection {}{7.4.1}{Two step ME}}{37}
+\contentsline {subsection}{\tocsubsection {}{7.4.2}{Two step UD}}{37}
+\contentsline {subsection}{\tocsubsection {}{7.4.3}{General entropy considerations}}{37}
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Confidence valued measurements}}{38}

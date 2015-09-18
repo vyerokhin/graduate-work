@@ -1,0 +1,587 @@
+%% LyX 2.0.6 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[twocolumn,aps,pra,eqsecnum,showpacs]{revtex4}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\usepackage[active]{srcltx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\@ifundefined{textcolor}{}
+{%
+ \definecolor{BLACK}{gray}{0}
+ \definecolor{WHITE}{gray}{1}
+ \definecolor{RED}{rgb}{1,0,0}
+ \definecolor{GREEN}{rgb}{0,1,0}
+ \definecolor{BLUE}{rgb}{0,0,1}
+ \definecolor{CYAN}{cmyk}{1,0,0,0}
+ \definecolor{MAGENTA}{cmyk}{0,1,0,0}
+ \definecolor{YELLOW}{cmyk}{0,0,1,0}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+\usepackage{bm}\usepackage{bbm}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \newcommand{\abs}[1]{\left|{#1}\right|}
+ \newcommand{\av}[1]{\left\langle #1 \right\rangle}
+ 
+  \newcommand{\br}[1]{\langle #1|}
+  \newcommand{\ke}[1]{|#1\rangle}
+  \newcommand{\bk}[2]{\langle #1|#2\rangle}
+  \newcommand{\kb}[2]{\ke{#1}\br{#2}}
+  \newcommand{\var}[2]{\langle #1,#2\rangle} 
+  
+  \newcommand{\al}[1]{^{(#1)}}
+  \newcommand{\da}{^\dagger} 
+  
+  \newcommand{\pt}[1]{\left( #1 \right)}
+  \newcommand{\pq}[1]{\left[ #1 \right]}
+  \newcommand{\pg}[1]{\left\{ #1 \right\}} 
+  
+  \newcommand{\lpt}[1]{\left( #1 \right.}
+  \newcommand{\lpq}[1]{\left[ #1 \right.]}
+  \newcommand{\lpg}[1]{\left\{ #1 \right.}
+  \newcommand{\rpt}[1]{\left. #1 \right)}
+  \newcommand{\rpq}[1]{\left. #1 \right]}
+  \newcommand{\rpg}[1]{\left. #1 \right\}} 
+  
+  \newcommand{\pp}[2]{ {\mbox{\scriptsize$
+  \begin{array}{c}
+  #1\\
+  #2
+  \end{array}$} } }  
+  
+  
+
+\makeatother
+
+\begin{document}
+
+\title{Neumark approach to interpolation of quantum state discrimination
+and its optical implementation}
+
+
+\author{..}
+
+
+\affiliation{$^{1}$Department of Physics and Astronomy, Hunter College of the
+City University of New York, 695 Park Avenue, New York, NY 10065,
+USA }
+
+
+\date{\today}
+\begin{abstract}
+In this paper we solve the pure state discrimination problem for all ranges of parameters between the
+unambiguous discrimination and minimum error regimes via the Neumark method: by explicitly including the unitary
+matrix that performs the measurement into our equations,  we minimize the error probability for a fixed
+failure rate.  We show two different solutions.  First we write a normalization that reduces the problem
+to a well-known minimum error solution with an implicit variable, which we subsequently optimize.
+The second solution employs a Lagrange multiplier to find explicit error rates for both states. The method naturally
+lends itself to an optical implementation, and we derive it for all ranges of the interpolation
+scheme.  Our solution uses the results of the optimization to decompose the unitary transformation
+into three beam splitters and a mirror.  With minor modifications to previously done experiments, experimentalists
+can readily verify the validity of this theory.
+\end{abstract}
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   INTRODUCTION   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Introduction}
+
+\label{Intro}
+
+Quantum state discrimination is the theory by which a measurement
+on a quantum system relates to the information gathered from that
+system. This field is important for myriad applications in communication,
+cryptography, and computation. It remains important to devise better
+theoretical frameworks for these processes and to realize them experimentally.
+
+To peform a measurement in a quantum mechanical system, we must look to its state.
+The state of a quantum system contains all information about the system.
+\cite{Chefles}. Given a mixture of different states, only orthogonal
+states can be distinguished perfectly \cite{Higgins}. For non-orthogonal
+states \cite{Chefles3}, optimum discrimination will depend on the
+type of information we wish to obtain and on prior information that
+we have. Depending on the type of results needed, several different
+strategies exist.
+
+The traditional measurement minimizes the chance of incorrectly identifying
+the state \cite{Helstrom}. It is known as the Minimum Error (ME)
+strategy. In this strategy the measurements aim to identify the most
+prominent states, either pure \cite{Ban} or mixed \cite{Eldar,Chou}. It
+was first experimentally tested by  Barnett and Riis \cite{Barnett}, and quantitatively tested for
+nonorthogonal states by Clarke \textit{et al.}\cite{Clarke1}.
+
+If the states to be distinguished are linearly independent it is possible
+to construct a measurement that always correctly identifies the input
+state but does not always give an answer, ie has a certain failure
+rate. This strategy is called Unambiguous State Discrimination (UD)
+and was introduced by Ivanovic \cite{Ivanovic}. The optimal solution
+for two pure states and arbitrary a-priori probabilities was solved by
+Jaeger and Shimony \cite{Jaeger}. The solution was later extended
+to include symmetric pure states, three pure states, and other classes
+of mixed states. UD experiments fist done by Huttner \textit{et al.}\cite{Huttner}. 
+ Extended by Clarke \textit{et al.} to pure trine and tetrad states in two dimensions.\cite{Clarke2}. 
+UD was experimentally verified for discriminating pure and mixed quantum states by Mohseni \textit{et al.} \cite{Mohseni}.
+
+If the input states are not linearly independent it is not possible
+to distingiush them perfectly, but it is possible to improve on the
+error associated with the ME strategy. For this a more recent addition
+to the measurement strategy ensemble was the Maximum Confidence (MC)
+strategy\cite{Croke}. Here the idea of the Baye's rule is used to
+maximize the chance of the appropriate detector clicking for its desired
+state.  The experimental realization was suggested by Herzog and Benson \cite{HerzogImp}, and
+done by Steudle \textit{et al.} \cite{Steudle}.
+
+The MC strategy was a move in the direction of Intermediate (IM) strategies,
+where both errors and failure are permissible for a specific measurement
+goal. The IM scheme was introduced by Chefles and Barnett \cite{Chefles5}
+where they found the lower bound on the combination of error and inconclusive
+result for two pure states with equal prior probabilities. Later,
+Fiur��ek and Je�ek \cite{Fiurasek} generalized this result for mixed
+states.
+
+Recently the two pure state IM problem was first solved by Sugimoto 
+\textit{et al.} \cite{Sugimoto} using Semi-Definite Programming (SDP),
+where a fixed error rate was used to obtain an analytical solution.
+Then Bagan \textit{et al.} \cite{Bagan} solved the problem using
+an operator transformation technique that reformulated the IM problem
+into a ME problem with an extra optimization parameter. Herzog generalized
+the SDP approach to include classes of mixed states to the realm of
+IM analytic solutions \cite{Herzog,Herzog1}.
+
+
+In this paper we solve the IM problem two different ways via a strategy first developed by Neumark \cite{Neumark}. 
+Both solutions are important to our understanding of the problem.  First we describe a 
+normalization that reduces the problem, like in \cite{Bagan}, to a ME problem with an
+implicit degree of freedom, a fixed failure rate.  The main difference with the aforementioned paper is that we need not
+redefine operators, only weights for the probabilities involved.  The second solution uses 
+the method of a Lagrange multiplier and constrained failure rate to develop an explicit algebraic solution.  The
+advantage of this solution is that is allows us to extract not only the total probabilities of success and
+failure, as were derived previously, but individual probabilities for each state.
+
+Thus the Neumark method is useful because it explicitly describes the action of a unitary transformation
+on input states and correlates them with the output states and occurance probabilities thereof.
+Because of this transparent approach to the problem, we can derive the unitary matrix
+elements as functions of the probabilities of successfully and erroneously distinguishing the input states.  
+We can design a linear optical experiment for actualizing this unitary by the methods described in \cite{Reck, Sun, BergouImp}.
+Namely, we decompose the unitary into the action of three beamsplitters onto single degrees of freedom of a polarized beam
+of photons.  As this method does not require more advanced experimentalist technology than has been implemented for the
+realization of the UD experiments, we are confident that this theory can be readily verified.
+ Are there other papers in the field
+that are relevant?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Single Case %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+\section{Analytical Solution of Interpolation}
+
+In this section we derive the solution to the the Fixed Rate
+of Inconclusive Outcome (FRIO) scheme through the Neumark setup
+in two different ways.  The Neumark setup is when our system
+ is combined with an ancillary Hilbert space, and a unitary transformation
+entangles the system states with the ancilla to produce orthogonal states.
+
+Our input states are qubits, which can be expressed in general as unit
+length vectors in the two dimensional basis spanned by $|1\rangle$ and $|2\rangle$.
+In the output of the transformation, we associate the basis state 
+$|1\rangle$ with $|\psi_1\rangle$,  $|2\rangle$ with $|\psi_2\rangle$,
+and  $|0\rangle$, the ancillary space to the qubit space, gives no information about the system.
+
+The unitary transformation should do the following:
+\begin{align}
+U|\psi_{1}\rangle_{s} \oplus \alpha_1 |0\rangle & =\sqrt{p_{1}}|1\rangle+\sqrt{r_{1}}|2\rangle+\sqrt{q_{1}}|0\rangle\\
+U|\psi_{2}\rangle_{s} \oplus \alpha_2 |0\rangle & =\sqrt{r_{2}}|1\rangle+\sqrt{p_{2}}|2\rangle+\sqrt{q_{2}}|0\rangle,
+\end{align}
+
+
+where: $p_{i}$ is the probability that state $i(i=1,2)$ is correctly
+identified, $r_{i}$ is the probability that the detector mistakenly
+identifies state $i$ for $j$, and $q_{i}$ is the failure probability,
+the detector fails to identify the sate at all. Whenever we get a
+click in the $|0\rangle_{a}$ detector means the results are inconclusive.
+From the unitarity conditions we obtain the normalized probabilities
+$p_{i}+r_{i}+q_{i}=1$. 
+
+We wish to maximize the probability of success, $P_{s}=\eta_{1}p_{1}+\eta_{2}p_{2}$, and minimize the error,
+$P_{e}=\eta_{1}r_{1}+\eta_{2}r_{2}$, for a fixed failure rate
+ $Q=\eta_{1}q_{1}+\eta_{2}q_{2}$.  Clearly $P_s + P_e + Q = 1$.
+
+
+The inner product of $(2.1)$ and $(2.2)$ gives the overlap of the
+input states in terms of $r_{i},p_{i}$ and $q_{i}$, 
+\begin{equation}
+s\equiv \langle\psi_{1}|\psi_{2}\rangle=\sqrt{p_{1}r_{2}}+\sqrt{p_{2}r_{1}}+\sqrt{q_{1}q_{2}}.
+\end{equation}
+This is a constraint on the optimization.
+
+\subsection{Optimal solution with equal prior probabilities.}
+
+Let us first present the solution where the incoming states are given
+with equal a-priori probabilities, $\eta_{1}=\eta_{2}=\frac{1}{2}$.
+This implies equal error, success
+and failure rates: $r_{1}=r_{2}$ , $p_{1}=p_{2}$ and $q_{1}=q_{2}$.
+Thus the total error and failure rates reduce to: $P_{E}=\eta_{1}r_{1}+\eta_{2}r_{2}=r$
+and $Q=\eta_{1}q_{1}+\eta_{2}q_{2}=Q.$
+
+We can immediately solve our constraint equation (2.3) by replacing $p=1-r-Q$
+, solving the quadratic equation for the error rate in terms of
+the failure rate and overlap s,
+which is also the failure rate in the IDP limit for the equal priors:
+$Q_{o}\equiv2\sqrt{\eta_{1}\eta_{2}}s=s$. 
+The smaller root gives the solution with the smallest error rate,
+and subsequently the success rate, as
+\begin{eqnarray}
+r=\frac{1}{2}[(1-Q)-\sqrt{(1-Q)^{2}-(Q_{o}-Q)^{2}}],\\
+p=\frac{1}{2}[(1-Q)+\sqrt{(1-Q)^{2}-(Q_{o}-Q)^{2}}].
+\end{eqnarray}
+
+
+By varying $Q$ from zero to $Q_{o}$ we recover the Hestrom and IDP
+bounds. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+\subsection{Full Solution }
+
+Because of the recent interest in this problem, we feel it is beneficial to show two new and different approaches to its solution. The first is more conceptual: a renormalization  inspired by  E. Bagan $etal$. {[} ref here{]} allows us to rewrite the problem as a ME problem with an implicit dependence on the last free parameter, the failure rate of one state with relation to the other.  This greatly simplifies the problem as the solution to the first part is well known and the second a straight-forward derivative.  The second solution is a Lagrange multiplier method that is algebraically difficult but useful in its explicit results.
+
+\subsubsection{Transformation of the problem into the Helstrom form}
+
+We choose the following transformation to convert our problem into
+the well known Helstrom form. 
+
+First we define the useful quantity $\omega$ which will serve as normalized overlap:
+\[\omega\equiv s-\sqrt{q_{1}q_{2}}=\sqrt{p_{1}r_{2}}+\sqrt{p_{2}r_{1}}\]
+
+Next we normalize all probabilities in the problem:
+\begin{align*}
+& \tilde{p}_{i}=\frac{p_{i}}{\alpha_{i}},\\
+ &\tilde{r_{i}}=\frac{r_{i}}{\alpha_{i}}, \\
+ &\tilde{\omega}=\frac{\omega}{\alpha_{1}\alpha_{2}},\\
+\end{align*}
+where $\alpha_{i}=1-q_{i}$.  Now $\widetilde{r}_{i}+\tilde{p}_{i}=1$, and we have the overlap in terms of $\tilde{r_{i}}$ and $\tilde{p}_{i}:\tilde{\omega}=\sqrt{\tilde{p}_{1}\tilde{r}_{2}}+\sqrt{\tilde{p_{2}}\tilde{r}_{1}}.$
+
+Using the above transformation of $r_{i}$ the error rate can be expressed
+as: 
+\begin{equation}
+\tilde{P}_{E}=\tilde{\eta}_{1}\tilde{r}_{1}+\tilde{\eta}_{2}\tilde{r}_{2},
+\end{equation}
+
+
+where $\tilde{P}_{E}=\frac{P_{E}}{\eta_{1}\alpha_{1}+\eta_{2}\alpha_{2}}=\frac{P_{E}}{1-Q},\tilde{\eta}_{i}=\frac{\eta_{i}\alpha_{i}}{\eta_{1}\alpha_{1}+\eta_{2}\alpha_{2}}=\frac{\eta_{i}\alpha_{i}}{1-Q}$
+and $\tilde{\eta}_{1}+\tilde{\eta}_{2}=1$. 
+
+We have transformed the problem into a discrimination between two states with overlap $\tilde{\omega}$ and no failure rate.  Hence  we can simply write down the expression to minimum error of two
+states (the Helstrom bound), and then replace the normalized quantities with the original expressions:
+\begin{align*}
+\tilde{P}_{E} & =\frac{1}{2}[1-\sqrt{1-4\tilde{\eta}_{1}\tilde{\eta}_{2}\tilde{\omega}^{2}}],\\
+P_{E} & =\frac{1}{2}[(1-Q)-\sqrt{(1-Q)^{2}-4\eta_{1}\eta_{2}(s-\sqrt{q_{1}q_{2}})^{2}}].
+\end{align*}
+
+
+This expression is optimal when $\eta_{1}q_{1}=\eta_{2}q_{2}=\frac{Q}{2}$, giving us the minimal error rate in discriminating two pure states with a fixed rate of failure as
+\begin{equation}
+P_{E}=\frac{1}{2}[(1-Q)-\sqrt{(1-Q)^{2}-(Q_{o}-Q)^{2}}].
+\end{equation}
+
+
+Where $Q_{o}=2\sqrt{\eta_{1}\eta_{2}}s$ is the failure rate in the
+optimal unambiguous state discrimination, which our expression reaches
+when we set $P_{E}=0$. On the other hand when the failure rate is
+zero we can recover the Helstrom bound for two pure states $P_{E}=\frac{1}{2}[1-\sqrt{1-4\eta_{1}\eta_{2}s^{2}}].$
+
+
+\subsubsection{Lagrange Multipliers Method}
+
+While the above method gives a closed formed solution of the total
+error rate in terms of a FRIO it does not produce individual error
+or success rates, i.e the error rate of mistaking state $|\psi_{i}\rangle$
+for state $|\psi_{j}\rangle$ , which are needed for the implementation. To obtain these
+expressions we show another solution to the interpolation using the
+Lagrange multipliers method with constraint (2.3). 
+
+We introduce the Lagrange multiplier $\lambda$ as a new variable and study the
+function defined by:
+\begin{align*}
+F & =\eta_{1}r_{1}+\eta_{2}r_{2}+\\
+ & \lambda(s-\sqrt{(1-r_{1}-q_{1})r_{2}}-\sqrt{(1-r_{2}-q_{2})r_{1}}-\sqrt{q_{1}q_{2}})
+\end{align*}
+
+
+Setting the derivative $dF_{(r_{1},r_{2},\lambda)}/dr_{i}$ to zero
+then solving for $r_{i}(\lambda)$, we exploit the symmetry in the resulting
+equations to solve for the individual error rates $r_i$ as a function of the failure rates $q_i$.
+This step is algebraically challenging and requires the insight that the resulting equations
+can each be separated into two expressions, one depending on only $r_1$ or $r_2$ 
+and the other on both $r_1$ and $r_2$.  Because both equations have the same
+multivariable expression, their other expressions must be equal and equal to a constant.
+This greatly simplifies the problem as we can solve for the $r_i$ as quadratic equations,
+both as a function of the Lagrange multiplier $\lambda$.  Subsequent substitution into the constraint
+gives us the optimal value of $\lambda$.
+Then we can obtain the total minimum error by replacing the expressions of $r_i$ into $P_e$ and
+minimizing $P_e$ under the additional constraint that $\eta_1 q_1 + \eta_2 q_2 = Q$.
+This gives us the optimal relationship between failure rates as
+$ \eta_1 q_1 = \eta_2 q_2$ and the total optimal error rate as
+\begin{equation}
+P_{E}=\frac{1}{2}[(1-Q)-\sqrt{(1-Q)^{2}-(Q-Q_{0})^{2}}].
+\end{equation}
+
+
+The individual error and success rates are expressed explicitly in
+terms of $\eta_{i},Q_{o}$ and most importantly the fixed failure rate
+$Q$ as 
+\begin{align}
+r_{i}&=\frac{1}{2}[(1-\frac{Q}{2\eta_{i}})-\frac{(1-\frac{Q}{2\eta_{i}})(1-Q)-\frac{1}{2\eta_{i}}(Q_{o}-Q)^{2}}{\sqrt{(1-Q)^{2}-(Q-Q_{o})^{2}}}],\\
+p_{i}&=\frac{1}{2}[(1-\frac{Q}{2\eta_{i}})+\frac{(1-\frac{Q}{2\eta_{i}})(1-Q)-\frac{1}{2\eta_{i}}(Q_{o}-Q)^{2}}{\sqrt{(1-Q)^{2}-(Q-Q_{o})^{2}}}].
+\end{align}
+It is straightforward to see that these equations reduce to (2.4) and (2.5) for equal prior probabilities $\eta_1 = \eta_2 = \frac{1}{2}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+\section{Implementation}
+
+The main reason to seek a solution using the Neumark setup is because
+it lends itself into an optical implementation. This implementation, as we will see,
+can be carried out using only linear optical elements (beamsplitters
+and a mirror). The possible states are represented by single photons
+and a photodetector will carry out the measurement process at the
+output.  
+
+We use a strategy similar to that developed by J.A Bergou \textit{et al.} \cite{BergouImp},
+and seek a unitary transformation that
+transforms the states as in (2.1) and (2.2), with the qubits in the states
+ $|\psi_{1}\rangle=|1\rangle$
+, $|\psi_{2}\rangle=\cos\theta|1\rangle+\sin\theta|2\rangle$ 
+and assume the ancilla space is empty for the initial preparation,
+ i.e., $\alpha_1 = \alpha_2 = 0$:
+\begin{align}
+U|1\rangle & =\sqrt{p_{1}}|1\rangle+\sqrt{r_{1}}|2\rangle+\sqrt{q_{1}}|3\rangle\\
+U(\cos\theta|1\rangle+\sin\theta|2\rangle) & =\sqrt{r_{2}}|1\rangle+\sqrt{p_{2}}|2\rangle+\sqrt{q_{2}}|3\rangle
+\end{align}
+
+
+From these two equations we can read out six of nine elements of the
+three by three Unitary matrix, e.g., $\langle 1 | U | 1 \rangle = \sqrt {p_1}$. The rest can be calculated from the
+conditions of the unitarity, $U^{T}U=I$.  They are, up to phase,
+
+
+\begin{equation}
+U=\begin{pmatrix}\sqrt{p_{1}} & \frac{\sqrt{r_{2}}-\sqrt{p_{1}}\cos\theta}{\sin\theta} & \pm\frac{\sqrt{\sin^{2}\theta-p_{1}-r_{2}+2\sqrt{p_{1}r_{2}}\cos\theta}}{\sin\theta}\\
+\sqrt{r_{1}} & \frac{\sqrt{p_{2}}-\sqrt{r_{1}}\cos\theta}{\sin\theta} & \pm\frac{\sqrt{\sin^{2}\theta-r_{1}-p_{2}+2\sqrt{p_{2}r_{1}}\cos\theta}}{\sin\theta}\\
+\sqrt{q_{1}} & \frac{\sqrt{q_{2}}-\sqrt{q_{1}}\cos\theta}{\sin\theta} & \pm\frac{\sqrt{sin^{2}\theta-q_{1}-q_{2}+2\sqrt{q_{1}q_{2}}\cos\theta}}{\sin\theta}
+\end{pmatrix}.
+\end{equation}
+
+It is worth mentioning that all equations in this section referencing
+$r_i$ and $p_i$ are using the optimal values (2.9) and (2.10) derived
+in the previous section.
+
+Now that we have a full unitary matrix we want to express it in terms
+of linear optical devices. M. Reck \textit{et al.} \cite{Reck}, prove
+that any discrete finite-dimensional unitary operator can be constructed
+using optical devices. They derive an algorithm which gives the exact
+ordering of the beamsplitters and phase shifters. In our work we use
+the simplified version of the Reck algorithm given by Y. Sun
+$\textit{et al.}$ \cite{Sun} : the operator $U$ is decomposed into
+beamsplitters in the order of $U=M_{1}\cdot M_{2}\cdot M_{3}$,
+and no phase shifters are needed: 
+\begin{align*}
+M_{1}&=\begin{pmatrix}\sin\omega_{1} & \cos\omega_{1} & 0\\
+\cos\omega_{1} & -\sin\omega_{1} & 0\\
+0 & 0 & 1
+\end{pmatrix},\\
+M_{2}&=\begin{pmatrix}\sin\omega_{2} & 0 & \cos\omega_{2}\\
+0 & 1 & 0\\
+\cos\omega_{2} & 0 & -\sin\omega_{2}
+\end{pmatrix},\\
+M_{3}&=\begin{pmatrix}1 & 0 & 0\\
+0 & \sin\omega_{3} & \cos\omega_{3}\\
+0 & \cos\omega_{3} & -\sin\omega_{3}
+\end{pmatrix},\\
+\end{align*}
+
+where the coefficients of reflectivity and transmittance are given by $\sqrt{R_{i}}=\sin\omega_{i}$
+and $\sqrt{T_{i}}=\cos\omega_{i}$.
+
+All of the beamsplitter coefficients can be derived up to a phase by using just
+$U_{31},U_{32},U_{21}$. The sign of the coefficients
+is chosen by matching all the elements from the two matrices. The
+coefficients are:
+
+\begin{align*}
+\cos\omega_{1}&=\sqrt{\frac{r_{1}}{1-q_{1}}},\\
+\sin\omega_{1}&=\sqrt{\frac{p_{1}}{1-q_{1}}},\\
+\cos\omega_{2}&=\sqrt{q_{1}},\\
+\sin\omega_{2}&=\sqrt{1-q_{1}},\\
+\cos\omega_{3}&=-\frac{1}{\sqrt{1-q_{1}}}[\frac{\sqrt{q_{2}}-\sqrt{q_{1}}\cos\theta}{\sin\theta}],\\
+\sin\omega_{3}&=\frac{\sqrt{\sin^{2}\theta-q_{1}-q_{2}+2\sqrt{q_{1}q_{2}}\cos\theta}}{\sqrt{1-q_{1}}\sin\theta}.\\
+\end{align*}
+
+All the terms can be expressed in terms of the fixed failure rate
+and fixed a-priori probabilities. Using the optimal relationship between
+the individual failure rates $\eta_{1}q_{1}=\eta_{2}q_{2}=Q/2$,$q_{1}=Q/2\eta_{1},q_{2}=Q/2\eta_{2}$
+and the optimal expressions of success and error rates the beamsplitters
+are
+
+$M_{1}=\begin{pmatrix}\sqrt{\frac{p_{1}}{1-Q/2\eta_{1}}} & \sqrt{\frac{r_{1}}{1-Q/2\eta_{1}}} & 0\\
+\sqrt{\frac{r_{1}}{1-Q/2\eta_{1}}} & -\sqrt{\frac{p_{1}}{1-Q/2\eta_{1}}} & 0\\
+0 & 0 & 1
+\end{pmatrix},$ 
+
+$M_{2}=\begin{pmatrix}\sqrt{1-Q/2\eta_{1}} & 0 & \sqrt{Q/2\eta_{1}}\\
+0 & 1 & 0\\
+\sqrt{Q/2\eta_{1}} & 0 & -\sqrt{1-Q/2\eta_{1}}
+\end{pmatrix},$
+
+\begin{widetext} 
+
+\[M_{3}=\begin{pmatrix}1 & 0 & 0\\ 0 & \frac{\sqrt{1-Q_{o}^{2}/4\eta_{1}\eta_{2}-Q/(2\eta_{1}\eta_{2})+QQ_{o}/(2\eta_{1}\eta_{2})}}{\sqrt{(1-Q/2\eta_{1})(1-Q_{o}^{2}/4\eta_{1}\eta_{2})}} & -\frac{\sqrt{Q/2\eta_{2}}-Q_{o}/2\eta_{1}\sqrt{Q/2\eta_{2}}}{\sqrt{(1-Q/2\eta_{1})(1-Q_{o}^{2}/4\eta_{1}\eta_{2})}}\\ 0 & -\frac{\sqrt{Q/2\eta_{2}}-Q_{o}/2\eta_{1}\sqrt{Q/2\eta_{2}}}{\sqrt{(1-Q/2\eta_{1})(1-Q_{o}^{2}/4\eta_{1}\eta_{2})}} & -\frac{\sqrt{1-Q_{o}^{2}/4\eta_{1}\eta_{2}-Q/(2\eta_{1}\eta_{2})+QQ_{o}/(2\eta_{1}\eta_{2})}}{\sqrt{(1-Q/2\eta_{1})(1-Q_{o}^{2}/4\eta_{1}\eta_{2})}} \end{pmatrix}.\]
+\vspace{0.05in}
+\end{widetext} 
+
+An attractive simplification can be acheived by setting $\eta_1 = \eta_2$, the equal apriori condition.  In this case our final unitary matrix can be expressed as
+\begin{equation}
+U=\begin{pmatrix}\sqrt{p} & \frac{\sqrt{r}-\sqrt{p}Q_{o}}{\sqrt{1-Q_{o}^{2}}} & \sqrt{\frac{Q}{1+Q_{o}}}\\
+\sqrt{r} & \frac{[\sqrt{p}-\sqrt{r}Q_{o}]}{\sqrt{1-Q_{o}^{2}}} & \sqrt{\frac{Q}{1+Q_{o}}}\\
+\sqrt{Q} & \sqrt{\frac{Q(1-Q_{o})}{1+Q_{o}}} & -\frac{\sqrt{p}+\sqrt{r}}{\sqrt{1+Q_{o}}}
+\end{pmatrix},
+\end{equation}
+By choosing the FRIO this matrix minimizes the error rate and maximizes
+the rate of success. Hence, by setting the FRIO to zero we obtain
+the setup to the minimum error problem on the other hand setting the
+error rate to zero gives the setup of the optimal unambiguous discrimination
+where $ $the optimal inconclusive rate is the $Q_{o}=s$. This simplifies
+the works of the experimentalists because now they only need one setup
+and are not restrained to the extreme points.
+
+The unitary transformation for the Helstrom bound $Q=0$ implementation
+can be written using the relations $r=(\frac{\sqrt{r}-\sqrt{p}Q_{o}}{\sqrt{1-Q_{o}^{2}}})^{2}$, $p=(\frac{\sqrt{p}-\sqrt{r}Q_{o}}{\sqrt{1-Q_{o}^{2}}})^{2}$, as
+
+\begin{equation}
+U_{ME}=\begin{pmatrix}\sqrt{p} & \sqrt{r} & 0\\
+\sqrt{r} & -\sqrt{p} & 0\\
+0 & 0 & 1
+\end{pmatrix}.
+\end{equation}
+
+Clearly only the $M_1$ beamsplitter is necessary to implement the ME state discrimination.
+
+On the other extreme, the unitary transformation for the optimal UD
+bound $(P_{E}=0)$ implementation becomes:
+
+\begin{equation}
+U_{UD}=\begin{pmatrix}\sqrt{p} & -\frac{\sqrt{p}Q_{o}}{\sqrt{1-Q_{o}^{2}}} & \sqrt{\frac{Q_{0}}{1+Q_{o}}}\\
+0 & \frac{\sqrt{p}}{\sqrt{1-Q_{o}^{2}}} & \sqrt{\frac{Q_{o}}{1+Q_{o}}}\\
+\sqrt{Q_{0}} & \sqrt{\frac{Q_{o}(1-Q_{o})}{1+Q_{o}}} & -\sqrt{\frac{1-Q_{o}}{1+Q_{o}}}
+\end{pmatrix}.
+\end{equation}
+All three beamsplitters are still necessary for a general UD measurement.  This is because the measurement is essentially two-step:  in the first step we attempt to orthogonalize the states, and upon succeeding we perform a projective measurement.
+\section{summary}
+
+We derived the optimal rate of error for a fixed failure rate when
+discriminating between two pure states with fixed a-priori probabilities.
+Along the way we found expressions for the individual error rates.
+Then we created an experimental implementation of this procedure using
+the six-rail representation, and found that three beam-splitters are
+sufficient to perform this experiment. 
+
+
+\section*{Acknowledgments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{thebibliography}{10}
+\bibitem{Chefles} A. Chefles, Contemp. Phys. \textbf{41}, 401-424
+(2000).
+
+\bibitem{Higgins} B. L. Higgins, B. M. Booth, A. C. Doherty, S. D.
+Bartlett, H. M. Wiseman, and G. J. Pryde, arXiv:0909.1572v1 (2009).
+
+\bibitem{Chefles3} A. Chefles, Phys. Lett. A \textbf{239}, 339-347
+(1998).
+
+\bibitem{Helstrom} C. W. Helstrom,\textit{Quantum Detection and Estimation
+Theory,} Academic Press, New York, 1976.
+
+\bibitem{Ban} M. Ban, K. Kurokawa, R. Momose, and O. Hirota, Int.
+J. Theor. Phys. \textbf{55}, 22 (1997).
+
+\bibitem{Eldar} Y. C. Eldar, A. Megretski, and G. C. Verghese, IEEE
+Trans. Inf. Theory \textbf{IT-49}, 1007 (2003).
+
+\bibitem{Chou} C.-L. Chou and L. Y. Hsu, Phys. Rev. A \textbf{68},
+042305 (2003).
+
+\bibitem{Ivanovic} I.D. Ivanovic, Phys. Lett. A \textbf{123}, 257-259
+(1987).
+
+\bibitem{Jaeger} G.\ Jaeger and A.\ Shimony, Phys.\ Lett.\ A
+\textbf{197}, 83 (1995).
+
+\bibitem{Huttner}  B. Huttner et al., Phys. Rev. A \textbf{54}, 3783 (1996)
+
+\bibitem{Barnett} Barnett and Riis [7]. S. M. Barnett and E. Riis, J. Mod. Opt. \textbf{44}, 1061 (1997)
+
+\bibitem{Clarke2} R. B. M. Clarke et al., Phys. Rev. A \textbf{63}, 040305(R) (2001)
+
+\bibitem{Clarke1} R. B. M. Clarke et al., Phys. Rev. A \textbf{64}, 012303 (2001)
+
+\bibitem{HerzogImp} U. Herzog and O. Benson, J. Mod. Opt.\textbf{57}, 188 (2010)
+
+\bibitem{Steudle} G. A. Steudle et al., Phys. Rev. A \textbf{83}, 050304(R) (2011)
+
+\bibitem{Mohseni} Masoud Mohseni, Aephraim M. Steinberg, and János A. Bergou, Phys. Rev. Lett.\textbf{93}, 200403, (2004)
+
+\bibitem{Croke} Sarah Croke, Erika Andersson, Stephen M. Barnett,
+Claire R. Gilson, and John Jeffers, Phys. Rev. Lett. \textbf{96},
+070401 (2006).
+
+\bibitem{Chefles5} Anthony Chefles, and Stephen M. Barnett, Journal
+of Mod. Opt. Vol. \textbf{45}, 1295-1302 (1998).
+
+\bibitem{Fiurasek} Jarom�r Fiura�ek and Miroslav Je�ek, Phys. Rev.
+A \textbf{67,} 012321 (2003).
+
+\bibitem{Sugimoto} H. Sugimoto, T. Hashimoto, M. Horibe, and A. Hayashi,
+Phys. Rev. A \textbf{80}, 052322 (2009).
+
+\bibitem{Bagan} E. Bagan, R Mu�oz-Tapia, G.A. Olivares-Renter\'{i}a
+and J.A. Bergou, arXiv:quant-ph/1206.4145v1 (2012)
+
+\bibitem{Herzog} Ulrike Herzog, Phys Rev. A \textbf{85}, 032312 (2012)
+
+\bibitem{Herzog1} Ulrike Herzog, Phys Rev. A \textbf{86}, 032314
+(2012)
+
+\bibitem{Neumark} M. A. Neumark, Izv. Akad. Nauk. SSSR, Ser. Mat. \textbf{4:3},
+277-318 (1940).
+
+
+\bibitem{Li} Hui Li, Shuhao Wang, Jianlian Cui and Guilu Long, Phys.
+Rev. A \textbf{87}, 042335 (2013)
+
+\bibitem{Bae} Joonwoo Bae and Won-Young Hwang, arXiv:quant-ph/1204.2313v1
+(2012)
+\bibitem{BergouImp} J. A. Bergou, M. Hillery, and Y. Sun, Journal of mod. Opt. Vol. \textbf{47}, No. 2/3, 487-497
+
+\bibitem{Reck}M. Reck, A. Zeilinger, H. J. Bernstein, and P. Bertani, Phys. Rev. Lett. 
+\textbf{73} 58, (1994) 
+
+\bibitem{Sun} Y. Sun, M. Hillery, J. A. Bergou, Phys. Rev. A. Vol \textbf{64}, 022311
+
+\end{thebibliography}
+
+\end{document}
